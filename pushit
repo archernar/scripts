@@ -4,6 +4,9 @@ trap 'exit 0' INT HUP QUIT TERM ALRM USR1
 trap 'rm -f "$Tmp"' EXIT                                                                         
 rm -f "$Tmp"  >/dev/null 2>&1                                                                            
 
+ls | sort >  README.md
+git add README.md
+
 
 #-------------------------------------------------------------------------------------
 git commit -m "Update"

@@ -21,7 +21,10 @@ gawk
     tolower(str)
     toupper(str)
 
-#!/usr/bin/bash                                                                                          
+
+#!/usr/bin/bash
+#!/bin/bash                                                                                          
+SCR=$(echo "$0" | gawk '{n=split($0, a, "/"); print a[n];}')
 Tmp=/tmp/$$                                                                                              
 trap 'exit 0' INT HUP QUIT TERM ALRM USR1                                                                
 trap 'rm -f "$Tmp"' EXIT                                                                         

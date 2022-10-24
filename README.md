@@ -1,5 +1,6 @@
 bash.top
 ColMan.vim
+Exec.vim
 generalsheet1.fc
 LongestLine.vim
 MasterBoxer.vim
