@@ -1,0 +1,17 @@
+bash.top
+generalsheet1.fc
+my
+pushit
+README.md
+removefromfilename
+repoinit
+SharedLibrary.bash
+sitetotext
+sitetotextraw
+slapfilename
+SocketConnect.java
+tablesonly.awk
+tagit
+tagman
+utils.awk
+vimsheet1.fc
