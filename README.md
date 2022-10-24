@@ -1,5 +1,9 @@
 bash.top
+ColMan.vim
 generalsheet1.fc
+LongestLine.vim
+MasterBoxer.vim
+MasterPadder.vim
 my
 pushit
 README.md
