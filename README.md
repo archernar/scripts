@@ -10,7 +10,6 @@ moe
 pushit
 README.md
 repoinit
-SharedLibrary.bash
 SocketConnect.java
 tablesonly.awk
 tagit
