@@ -8,6 +8,5 @@ moe
 pushit
 README.md
 repoinit
-tablesonly.awk
 tags
 vimscript
