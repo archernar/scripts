@@ -9,7 +9,6 @@ LongestLine.vim
 moe
 pushit
 README.md
-removefromfilename
 repoinit
 SharedLibrary.bash
 SocketConnect.java
