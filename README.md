@@ -1,4 +1,15 @@
 
+## bash
+- [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash/bash.top)
+- [my](https://raw.githubusercontent.com/archernar/scripts/main/bash/my)
+- [removefromfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/removefromfilename)
+- [SharedLibrary.bash](https://raw.githubusercontent.com/archernar/scripts/main/bash/SharedLibrary.bash)
+- [sitetotext](https://raw.githubusercontent.com/archernar/scripts/main/bash/sitetotext)
+- [sitetotextraw](https://raw.githubusercontent.com/archernar/scripts/main/bash/sitetotextraw)
+- [slapfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/slapfilename)
+- [tagit](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagit)
+- [tagman](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagman)
+- [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash.top)
 ## vimscript
 - [addToMasterIndex.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/addToMasterIndex.vim)
 - [BufferVisible.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/BufferVisible.vim)
