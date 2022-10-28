@@ -1,4 +1,4 @@
-bash.top
+bash
 commitit
 EditHomeFile.vim
 Exec.vim
