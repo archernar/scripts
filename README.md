@@ -12,8 +12,6 @@ README.md
 removefromfilename
 repoinit
 SharedLibrary.bash
-sitetotext
-sitetotextraw
 SocketConnect.java
 tablesonly.awk
 tagit
