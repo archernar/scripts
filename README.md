@@ -3,7 +3,6 @@ bash
 commitit
 f.awk
 flashcards
-LongestLine.vim
 moe
 pushit
 README.md
