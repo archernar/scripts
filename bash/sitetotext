@@ -1,0 +1,11 @@
+#!/bin/bash                                                                                          
+Tmp=/tmp/$$                                                                                              
+trap 'exit 0' INT HUP QUIT TERM ALRM USR1                                                                
+trap 'rm -f "$Tmp"' EXIT                                                                         
+rm -f "$Tmp"  >/dev/null 2>&1                                                                            
+
+wget -O "./zed" "$1"
+
+gawk -f ./tablesonly.awk "./zed" | html2text > "$Tmp"
+
+tr -cd '\11\12\15\40-\176' < "$Tmp" | tee out
