@@ -1,10 +1,13 @@
 bash.top
 ColMan.vim
+EditHomeFile.vim
 Exec.vim
+f.awk
 generalsheet1.fc
 LongestLine.vim
 MasterBoxer.vim
 MasterPadder.vim
+moe
 my
 pushit
 README.md
@@ -18,5 +21,7 @@ SocketConnect.java
 tablesonly.awk
 tagit
 tagman
+tags
 utils.awk
+vimscript
 vimsheet1.fc
