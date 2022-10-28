@@ -45,3 +45,5 @@
 - [TabCount.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/TabCount.vim)
 - [WindowExists.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/WindowExists.vim)
 - [writeMasterIndex.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/writeMasterIndex.vim)
+## java
+- [SocketConnect.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SocketConnect.java)
