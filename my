@@ -1,0 +1,371 @@
+Tmp="/tmp/file"
+Tmp1="/tmp/MY$$"
+trap 'exit 0' INT HUP QUIT TERM ALRM USR1
+trap 'rm -f "$Tmp" "$Tmp1"' EXIT
+rm -f "$Tmp"  >/dev/null 2>&1
+rm -f "$Tmp1"  >/dev/null 2>&1
+if [ "$SCRHOME" == "" ]; then
+    echo "SCRHOME not set"
+    exit 1
+fi
+
+
+
+
+EPOCHTIME=`date --rfc-3339=seconds |gawk '{print $1 "." $2}'`
+#tar cvf #SCRHOME/taralamo/$EPOCHTIME--my.tar ./my
+#cp ./my $SCRHOME/taralamo/$EPOCHTIME--my
+    # Alamo Code
+    if [ "$ALAMO" != "" ]; then
+        F="center_$(date +"%Y_%m_%d_%I_%M_%p")"
+        F="center_$EPOCHTIME"
+        A="/tmp/_$F"
+        mkdir -p "$A"
+        cp -r $SCRHOME/*  "$A"
+        tar cf "/tmp/$F.tar" "$A" >/dev/null 2>&1
+        gzip "/tmp/$F.tar"
+        rsync -av "/tmp/$F.tar.gz" "$ALAMO"  >/dev/null 2>&1
+        rm -rf  "/tmp/$F.tar"
+        rm -rf "$A"
+    fi
+
+
+javac -d /etc/center /etc/center/SocketConnect.java
+
+# REALLY Good ANSI Site https://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html
+# static final String RESETONLY = "\u001B[0m";                                                                                 
+# static final String BLACK = "\u001B[30m";                                                                                    
+# static final String RED = "\u001B[31m";                                                                                      
+# static final String GREEN = "\u001B[32m";                                                                                    
+# static final String YELLOW = "\u001B[33m";                                                                                   
+# static final String BLUE = "\u001B[34m";                                                                                     
+# static final String DATA = "\u001B[30m\u001B[47m";                                                                           
+# static final String PURPLE = "\u001B[35m";                                                                                   
+# static final String CYAN = "\u001B[36m";                                                                                     
+# static final String WHITE = "\u001B[37m";       
+XROW="20"
+XCOL=10
+STR=$(printf '\033[%s;%sH' "$XROW" "$XCOL")
+PWD=$(pwd)
+normal=$(printf '\033[0m')
+yellow=$(printf '\033[33m')
+white=$(printf '\033[37m')
+cyan=$(printf '\033[36m')
+export COLORCYAN=36
+export COLORWHITE=37
+
+echo $white
+
+isnfs () {
+    LOCAL=`stat -f -c %T "$1"`
+    if [ "$LOCAL" == "nfs" ]; then
+        RETVAL="YES"
+    else
+        RETVAL="NO"
+    fi
+}
+
+clr () {
+   CLR=$(printf '\033[2J')
+   echo -n $CLR
+}
+
+# BLACK = 30
+# RED = 31
+# GREEN = 32
+# YELLOW = 33
+# BLUE = 34
+# PURPLE = 35
+# CYAN = 36
+# WHITE = 37
+#    static final String CYAN_BACKGROUND = "\u001B[46m";
+poscyaninvertln () {
+    echo -n $(printf '\033[46m\033[30m\033[%s;%sH%s\033[0m' "$1" "$2" "$3")
+}
+
+
+posredln () {
+    echo -n $(printf '\033[31m\033[%s;%sH%s\033[37m' "$1" "$2" "$3")
+}
+posredunderlineln () {
+    echo -n $(printf '\033[4;31m\033[%s;%sH%s\033[0m' "$1" "$2" "$3")
+}
+posblueln () {
+    echo -n $(printf '\033[34m\033[%s;%sH%s\033[37m' "$1" "$2" "$3")
+}
+posblueunderlineln () {
+    echo -n $(printf '\033[4;34m\033[%s;%sH%s\033[0m' "$1" "$2" "$3")
+}
+
+posgreenln () {
+    echo -n $(printf '\033[32m\033[%s;%sH%s\033[37m' "$1" "$2" "$3")
+}
+pospurpleln () {
+    echo -n $(printf '\033[35m\033[%s;%sH%s\033[37m' "$1" "$2" "$3")
+}
+poscyanln () {
+    echo -n $(printf '\033[36m\033[%s;%sH%s\033[37m' "$1" "$2" "$3")
+}
+posyellowln () {
+    echo -n $(printf '\033[33m\033[%s;%sH%s\033[37m' "$1" "$2" "$3")
+}
+poswhiteln () {
+    echo -n $(printf '\033[37m\033[%s;%sH%s\033[37m' "$1" "$2" "$3")
+}
+
+posln () {
+   SZ=$(printf '\033[%s;%sH%s' "$1" "$2" "$3")
+   echo -n $SZ
+}
+pos () {
+   SZ=$(printf '\033[%s;%sH' "$1" "$2")
+   echo -n $SZ
+}
+C=`tput cols`
+((C=C/3))
+((C=C-6))
+export COLLIMIT="$C"
+
+export SOFTROWS="yes"
+export ROWLIMIT="27"
+export FIRSTROW="3"
+export SECONDROW="23"
+export THIRDROW="43"
+export FOURTHROW="63"
+export FIRSTCOL="3"
+
+C=`tput cols`
+((C=C/3))
+export SECONDCOL="$C"
+((C=C*2))
+export THIRDCOL="$C"
+
+putfilezero () {
+    putfile "$1" "1" "$FIRSTCOL"
+}
+putfileone () {
+    putfile "$1" "$FIRSTROW" "$FIRSTCOL"
+    if [ "$SOFTROWS" = "yes" ]; then
+        export SECONDROW=$LASTROW
+    fi
+}
+putfiletwo () {
+    putfile "$1" "$SECONDROW" "$FIRSTCOL"
+    if [ "$SOFTROWS" = "yes" ]; then
+        export THIRDROW=$LASTROW
+    fi
+}
+putfilethree () {
+    putfile "$1" "$THIRDROW" "$FIRSTCOL"
+    if [ "$SOFTROWS" = "yes" ]; then
+        export FOURTHROW=$LASTROW
+    fi
+}
+putfilefour () {
+    putfile "$1" "$FOURTHROW" "$FIRSTCOL"
+}
+putfilefive () {
+    putfile "$1" "$FIRSTROW" "$SECONDCOL"
+    if [ "$SOFTROWS" = "yes" ]; then
+        export SECONDROW=$LASTROW
+    fi
+}
+putfilesix () {
+    putfile "$1" "$SECONDROW" "$SECONDCOL"
+    if [ "$SOFTROWS" = "yes" ]; then
+        export THIRDROW=$LASTROW
+    fi
+}
+putfileseven () {
+    putfile "$1" "$THIRDROW" "$SECONDCOL"
+    if [ "$SOFTROWS" = "yes" ]; then
+        export FOURTHROW=$LASTROW
+    fi
+}
+putfileeight () {
+    putfile "$1" "$FOURTHROW" "$SECONDCOL"
+}
+putfilenine () {
+    putfile "$1" "$FIRSTROW" "$THIRDCOL"
+    if [ "$SOFTROWS" = "yes" ]; then
+        export SECONDROW=$LASTROW
+    fi
+}
+putfileten () {
+    putfile "$1" "$SECONDROW" "$THIRDCOL"
+    if [ "$SOFTROWS" = "yes" ]; then
+        export THIRDROW=$LASTROW
+    fi
+}
+putfileeleven () {
+    putfile "$1" "$THIRDROW" "$THIRDCOL"
+    if [ "$SOFTROWS" = "yes" ]; then
+        export FOURTHROW=$LASTROW
+    fi
+}
+putfiletwelve () {
+    putfile "$1" "$FOURTHROW" "$THIRDCOL"
+}
+
+source SharedLibrary.bash
+
+L=`tput lines`
+C=`tput cols`
+H=`hostname`
+W=`whoami`
+#DNS=`systemd-resolve --status | grep Current | grep "DNS Server" | gawk '{print $4}'`
+DNS=`cat /etc/resolv.conf | grep nameserver | gawk '{print $2}'`
+IP=`ip a | grep "192.168.1." | gawk '{print $2}'`
+RELEASE=`lsb_release -a 2>/dev/null | grep Description | gawk -i $SCRHOME/utils.awk -F: '{print trim($2);}'`
+
+
+clr
+poscyaninvertln "1" "2" "My version 1.0"
+bot
+working
+# ######################################################################################33
+# #####
+# #####
+# #####
+# ######################################################################################33
+# ZERO
+bot
+
+# ONE
+reset
+figlet $H >> $Tmp
+echo $RELEASE     | gawk -i $SCRHOME/utils.awk '{ print splad("System:"); }' >> $Tmp
+echo "$H"         | gawk -i $SCRHOME/utils.awk '{ print splad("Host:"); }' >> $Tmp
+echo "$IP"        | gawk -i $SCRHOME/utils.awk '{ print splad("IP:"); }' >> $Tmp
+echo "$DNS"       | gawk -i $SCRHOME/utils.awk '{ print splad("DNS:"); }' >> $Tmp
+echo "$SCRHOME"   | gawk -i $SCRHOME/utils.awk '{ print splad("SCRHOME:"); }' >> $Tmp
+echo "$ALAMO"     | gawk -i $SCRHOME/utils.awk '{ print splad("ALAMO:"); }' >> $Tmp
+echo "---" >> $Tmp
+echo "$W"     | gawk -i $SCRHOME/utils.awk '{ print splad("User:"); }' >> $Tmp
+echo "$L $C"  | gawk -i $SCRHOME/utils.awk '{ print splad("Screen:", "x"); }' >> $Tmp
+groups $W | sed 's/^.*: //' | gawk -i $SCRHOME/utils.awk '{ print splad("Groups:"); }' >> $Tmp
+cat /etc/passwd | grep $W: | gawk -F: '{print $7}'  | gawk -i $SCRHOME/utils.awk '{ print splad("Shell:"); }' >> $Tmp
+echo "---" >> $Tmp
+if id "nemo" &>/dev/null; then
+    echo "nemo" | gawk -i $SCRHOME/utils.awk '{ print splad("User:"); }' >> $Tmp
+    groups nemo | sed 's/^.*: //' | gawk -i $SCRHOME/utils.awk '{ print splad("Groups:"); }' >> $Tmp
+    cat /etc/passwd | grep nemo: | gawk -F: '{print $7}'  | gawk -i $SCRHOME/utils.awk '{ print splad("Shell:"); }' >> $Tmp
+    echo "---" >> $Tmp
+fi
+
+isnfs "/etc/center";echo "$RETVAL" | gawk -i $SCRHOME/utils.awk '{ print splad("center mount"); }' >> $Tmp
+df -h | gawk '{if ($6=="/") print $0}'  | gawk '{printf "%4s/%-4s %4s free\n", $3,$2,$5}' | gawk -i $SCRHOME/utils.awk '{ print splad("/"); }' >> $Tmp
+df -h | gawk '{if ($6=="/etc/seab") print $0}'  | gawk '{printf "%4s/%-4s %4s free\n", $3,$2,$5}' | gawk -i $SCRHOME/utils.awk '{ print splad("/etc/seab"); }' >> $Tmp
+df -h | gawk '{if ($6=="/etc/seac") print $0}'  | gawk '{printf "%4s/%-4s %4s free\n", $3,$2,$5}' | gawk -i $SCRHOME/utils.awk '{ print splad("/etc/sead"); }' >> $Tmp
+df -h | gawk '{if ($6=="/etc/sead") print $0}'  | gawk '{printf "%4s/%-4s %4s free\n", $3,$2,$5}' | gawk -i $SCRHOME/utils.awk '{ print splad("/etc/sead"); }' >> $Tmp
+df -h | grep usbstick1 | gawk '{printf "%4s/%-4s %4s free\n", $3,$2,$5}' | gawk -i $SCRHOME/utils.awk '{ print splad("usbstick1:"); }' >> $Tmp
+df -h | grep usbstick2 | gawk '{printf "%4s/%-4s %4s free\n", $3,$2,$5}' | gawk -i $SCRHOME/utils.awk '{ print splad("usbstick2:"," "); }' >> $Tmp
+df -h | grep usbstick3 | gawk '{printf "%4s/%-4s %4s free\n", $3,$2,$5}' | gawk -i $SCRHOME/utils.awk '{ print splad("usbstick3:"," "); }' >> $Tmp
+df -h | grep usbstick4 | gawk '{printf "%4s/%-4s %4s free\n", $3,$2,$5}' | gawk -i $SCRHOME/utils.awk '{ print splad("usbstick4:"," "); }' >> $Tmp
+df -h | grep cube1     | gawk '{printf "%4s/%-4s %4s free\n", $3,$2,$5}' | gawk -i $SCRHOME/utils.awk '{ print splad("cube1:"," "); }' >> $Tmp
+df -h | grep cube2     | gawk '{printf "%4s/%-4s %4s free\n", $3,$2,$5}' | gawk -i $SCRHOME/utils.awk '{ print splad("cube2:"," "); }' >> $Tmp
+putfileone "System" 
+bot
+
+# TWO
+reset
+export ROWLIMIT="10"
+cat /etc/fstab | sed 's/192[.]168[.]1[.]//' | gawk -i $SCRHOME/utils.awk '/^[^#]/ {printf "%-16s %s\n", $2, $1}' | egrep "^[/]" > $Tmp
+putfiletwo "fstab" 
+bot
+
+# THREE
+reset
+export ROWLIMIT="22"
+USEDNS="192.168.1.1"
+java -cp /etc/center  SocketConnect | while read line
+do
+   nslookup $line $USEDNS > $Tmp1
+   cat $Tmp1 | grep "name =" | gawk -v ip=$line '{printf "%-16s %s\n",ip,$4}' >> $Tmp 
+   cat $Tmp1 | grep "find" | gawk -i $SCRHOME/utils.awk -v ip=$line '{printf "%-16s %s\n",ip,arpa($5)}' >> $Tmp 
+   rm -f $Tmp1
+done
+putfilethree "ip scan"
+bot
+
+
+# FOUR
+reset
+blkid | grep UUID | gawk '{print $2}' > $Tmp
+ls -l /etc | grep sea >> $Tmp
+putfilefour "block ids"
+bot
+
+# FIVE
+reset
+df -h | grep "192.168.1.35" | sed 's/192[.]168[.]1[.]//' | egrep -v "^.dev.loop" | gawk '{printf("%5s %5s %4s %-16s %s\n",$2,$3,$5,$6,$1)}'  > $Tmp
+putfilefive "192.168.1.35"
+bot
+
+# SIX
+reset
+df -h | grep "192.168.1.34" | sed 's/192[.]168[.]1[.]//' | egrep -v "^.dev.loop" | gawk '{printf("%5s %5s %4s %-16s %s\n",$2,$3,$5,$6,$1)}'  > $Tmp
+putfilesix "192.168.1.34"
+bot
+# SEVEN
+reset
+ls /etc/center >> $Tmp
+putfileseven "/etc/center" 
+bot
+
+# EIGHT
+reset
+figlet 8 >> $Tmp
+putfileeight "figlet" 
+bot
+
+# NINE
+reset
+pwd | gawk -i $SCRHOME/utils.awk '{print trim($0)}' > $Tmp
+du -a . | sort -n -r | head -n 12 | gawk -i $SCRHOME/utils.awk '{print $0}' | sed 's/\t/  /g' >> $Tmp
+putfilenine "Largest" 
+bot
+
+# TEN
+reset
+echo $PATH | gawk -F: '{for (i=1;i<=NF;i++) print $i}' >> $Tmp
+putfileten "Path" 
+bot
+
+# ELEVEN
+reset
+echo $PWD >> $Tmp
+putfileeleven "pwd" 
+bot
+
+# TWELVE
+reset
+echo $PWD >> $Tmp
+putfiletwelve "pwd" 
+bot
+
+
+bot
+workdone
+bot
+
+# 'hello, world'
+# du -hsx * | sort -rh | head -10 > $Tmp
+#nslookup $line $USEDNS |grep "name =" | gawk -v ip=$line '{printf "%-16s %s\n",ip,$4}' >> $Tmp 
+#nmap -n -sP 192.168.1.0/24 | grep "scan report" | gawk '{print $5;print $5 > "/tmp/iplist"} END {close("/tmp/iplist")}' > /dev/null
+# nmap -sP 192.168.1.0/24 | grep "scan report" | gawk -i $SCRHOME/utils.awk '
+# NF>=6 {
+#   gsub(/[(]/,"",$6)
+#   gsub(/[)]/,"",$6)
+#   IP=trim($6)
+#   NAME=trim($5)
+#   printf("%-14s %-s\n", IP,NAME)
+# }
+# NF==5 {
+#   gsub(/[(]/,"",$5)
+#   gsub(/[)]/,"",$5)
+#   IP=trim($5)
+#   NAME="NA"
+#   printf("%-14s %-s\n", IP,NAME)
+# }
+# ' > $Tmp
