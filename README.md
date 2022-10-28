@@ -1,8 +1,6 @@
 awk
 bash
 commitit
-EditHomeFile.vim
-Exec.vim
 f.awk
 flashcards
 LongestLine.vim
