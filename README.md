@@ -6,8 +6,6 @@ Exec.vim
 f.awk
 flashcards
 LongestLine.vim
-MasterBoxer.vim
-MasterPadder.vim
 moe
 pushit
 README.md
