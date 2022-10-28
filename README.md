@@ -14,7 +14,6 @@ repoinit
 SharedLibrary.bash
 sitetotext
 sitetotextraw
-slapfilename
 SocketConnect.java
 tablesonly.awk
 tagit
