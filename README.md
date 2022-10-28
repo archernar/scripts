@@ -12,7 +12,6 @@ README.md
 repoinit
 SocketConnect.java
 tablesonly.awk
-tagit
 tagman
 tags
 utils.awk
