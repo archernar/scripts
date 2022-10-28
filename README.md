@@ -13,5 +13,4 @@ repoinit
 SocketConnect.java
 tablesonly.awk
 tags
-utils.awk
 vimscript

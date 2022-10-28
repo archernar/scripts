@@ -1,0 +1,3 @@
+~/tagit -r; ~/tagit -y $1 -t; ~/tagit -z 0
+
+rm -f ./taggerdo
