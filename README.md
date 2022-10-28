@@ -3,11 +3,11 @@ bash
 commitit
 f.awk
 flashcards
+java
 moe
 pushit
 README.md
 repoinit
-SocketConnect.java
 tablesonly.awk
 tags
 vimscript
