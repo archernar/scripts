@@ -9,7 +9,6 @@ LongestLine.vim
 MasterBoxer.vim
 MasterPadder.vim
 moe
-my
 pushit
 README.md
 removefromfilename
