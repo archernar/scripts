@@ -1,5 +1,5 @@
 bash.top
-ColMan.vim
+commitit
 EditHomeFile.vim
 Exec.vim
 f.awk
