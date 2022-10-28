@@ -3,7 +3,7 @@ commitit
 EditHomeFile.vim
 Exec.vim
 f.awk
-generalsheet1.fc
+flashcards
 LongestLine.vim
 MasterBoxer.vim
 MasterPadder.vim
@@ -24,4 +24,3 @@ tagman
 tags
 utils.awk
 vimscript
-vimsheet1.fc
