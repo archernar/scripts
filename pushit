@@ -40,6 +40,8 @@ echo "</html>" >> README.html
 #-------------------------------------------------------------------------------------
 git add README.md
 git add pushit
+git add README.html
+git add simple.css
 git commit -m "Update"
 git push -u origin main
 REPO=scripts
