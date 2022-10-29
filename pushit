@@ -3,12 +3,43 @@ Tmp=/tmp/$$
 trap 'exit 0' INT HUP QUIT TERM ALRM USR1                                                                
 trap 'rm -f "$Tmp"' EXIT                                                                         
 rm -f "$Tmp"  >/dev/null 2>&1                                                                            
+put() {
+    find . -type f | grep "$1" | sort | gawk -v sec="$1" '
+    BEGIN {
+       print "\n## " sec
+       u = "https://raw.githubusercontent.com/archernar/scripts/main"
+    }
+    {
+        sz = $0
+        sub(/[.]/,"",sz)
+        n=split(sz, A, "/")
+        print "- [" A[n] "]"  "(" u sz ")"
+    }
+    '
+}
 
-ls | sort >  README.md
-git add README.md
+echo "" > README.md
+put "flashcards" >> README.md
+put "awk" >> README.md
+put "bash" >> README.md
+put "vimscript" >> README.md
+put "java" >> README.md
 
-
+echo "" > README.html
+echo "<!DOCTYPE html>" >> README.html
+echo "<html lang='en'>" >> README.html
+echo "" >> README.html
+echo "<head>" >> README.html
+echo "    <link rel='stylesheet' href='simple.css'>" >> README.html
+echo "    <title>Links</title>" >> README.html
+echo "</head>" >> README.html
+echo "<body>" >> README.html
+markdown README.md >> README.html
+echo "</body>" >> README.html
+echo "</html>" >> README.html
 #-------------------------------------------------------------------------------------
+git add README.md
+git add pushit
 git commit -m "Update"
 git push -u origin main
 REPO=scripts
