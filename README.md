@@ -16,7 +16,9 @@
 - [slapfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/slapfilename)
 - [tagit](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagit)
 - [tagman](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagman)
+- [tags](https://raw.githubusercontent.com/archernar/scripts/main/bash/tags)
 - [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash.top)
+- [.vim.vimsplit](https://raw.githubusercontent.com/archernar/scripts/main/bash/.vim.vimsplit)
 ## vimscript
 - [addToMasterIndex.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/addToMasterIndex.vim)
 - [BufferVisible.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/BufferVisible.vim)
