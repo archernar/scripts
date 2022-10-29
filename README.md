@@ -1,11 +1,14 @@
 
+
 ## flashcards
 - [generalsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/generalsheet1.fc)
 - [vimsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/vimsheet1.fc)
+
 ## awk
 - [functionlister.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/functionlister.awk)
 - [tablesonly.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/tablesonly.awk)
 - [utils.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/utils.awk)
+
 ## bash
 - [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash/bash.top)
 - [my](https://raw.githubusercontent.com/archernar/scripts/main/bash/my)
@@ -19,6 +22,7 @@
 - [tags](https://raw.githubusercontent.com/archernar/scripts/main/bash/tags)
 - [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash.top)
 - [.vim.vimsplit](https://raw.githubusercontent.com/archernar/scripts/main/bash/.vim.vimsplit)
+
 ## vimscript
 - [addToMasterIndex.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/addToMasterIndex.vim)
 - [BufferVisible.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/BufferVisible.vim)
@@ -47,5 +51,6 @@
 - [TabCount.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/TabCount.vim)
 - [WindowExists.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/WindowExists.vim)
 - [writeMasterIndex.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/writeMasterIndex.vim)
+
 ## java
 - [SocketConnect.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SocketConnect.java)
