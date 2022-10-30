@@ -33,6 +33,7 @@ put() {
 
 echo "" > README.md
 opentable >> README.md
+put "adlist" >> README.md
 put "flashcards" >> README.md
 put "awk" >> README.md
 put "bash" >> README.md

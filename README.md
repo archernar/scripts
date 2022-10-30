@@ -2,6 +2,11 @@
 <table valign='top'><tr valign='top'>
 <td valign=top>
 
+## adlist
+- [list.adlist](https://raw.githubusercontent.com/archernar/scripts/main/adlist/list.adlist)
+</td>
+<td valign=top>
+
 ## flashcards
 - [generalsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/generalsheet1.fc)
 - [vimsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/vimsheet1.fc)
