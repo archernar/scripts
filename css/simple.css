@@ -1,0 +1,34 @@
+body {
+	margin-top: 1px;
+	margin-left: 20px;
+	margin-right: 1px;
+	padding: 0px;
+	color: #666;
+    font: 11pt/normal 'courier new';
+	line-height: 1.40em; 
+	background-color: #dfe3ee;
+	border-collapse: collapse;
+	border-color: #f7f7f7;
+
+}
+h2 {
+	margin-top: 1px;
+	margin-left: 20px;
+	margin-right: 1px;
+	margin-bottom: 4px;
+	padding: 0px;
+	color: Black;
+    font: 14pt/bold 'courier new';
+	line-height: 1.00em; 
+	background-color: #dfe3ee;
+	border-collapse: collapse;
+	border-color: #f7f7f7;
+
+}
+
+td {
+	text-align:left;
+}
+
+a, a:link,a:visited,a:hover { color: Black; text-decoration: underline; }
+
