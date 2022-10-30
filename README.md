@@ -1,4 +1,5 @@
 
+<div width='100%'
 <table width='100%' valign='top'><tr valign='top'>
 <td width=33% valign=top>
 
@@ -29,8 +30,10 @@
 - [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash.top)
 - [.vim.vimsplit](https://raw.githubusercontent.com/archernar/scripts/main/bash/.vim.vimsplit)
 </td>
-</tr></table>
+</tr></table></div>
 
+
+<div width='100%'
 <table width='100%' valign='top'><tr valign='top'>
 <td width=33% valign=top>
 
@@ -79,4 +82,5 @@
 - [simple.css](https://raw.githubusercontent.com/archernar/scripts/main/css/simple.css)
 - [simple.css](https://raw.githubusercontent.com/archernar/scripts/main/simple.css)
 </td>
-</tr></table>
+</tr></table></div>
+
