@@ -1,14 +1,19 @@
 
 <table><tr>
+<td>
 
 ## flashcards
 - [generalsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/generalsheet1.fc)
 - [vimsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/vimsheet1.fc)
+</td>
+<td>
 
 ## awk
 - [functionlister.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/functionlister.awk)
 - [tablesonly.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/tablesonly.awk)
 - [utils.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/utils.awk)
+</td>
+<td>
 
 ## bash
 - [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash/bash.top)
@@ -23,6 +28,8 @@
 - [tags](https://raw.githubusercontent.com/archernar/scripts/main/bash/tags)
 - [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash.top)
 - [.vim.vimsplit](https://raw.githubusercontent.com/archernar/scripts/main/bash/.vim.vimsplit)
+</td>
+<td>
 
 ## vimscript
 - [addToMasterIndex.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/addToMasterIndex.vim)
@@ -52,6 +59,8 @@
 - [TabCount.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/TabCount.vim)
 - [WindowExists.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/WindowExists.vim)
 - [writeMasterIndex.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/writeMasterIndex.vim)
+</td>
+<td>
 
 ## java
 - [ANSI.java](https://raw.githubusercontent.com/archernar/scripts/main/java/ANSI.java)
@@ -60,8 +69,11 @@
 - [RollingDice.java](https://raw.githubusercontent.com/archernar/scripts/main/java/RollingDice.java)
 - [SimpleSocketServer.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SimpleSocketServer.java)
 - [SocketConnect.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SocketConnect.java)
+</td>
+<td>
 
 ## css
 - [simple.css](https://raw.githubusercontent.com/archernar/scripts/main/css/simple.css)
 - [simple.css](https://raw.githubusercontent.com/archernar/scripts/main/simple.css)
+</td>
 </tr></table>
