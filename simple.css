@@ -4,7 +4,7 @@ body {
 	margin-right: 1px;
 	padding: 0px;
 	color: #666;
-    font: 11pt/normal 'courier new';
+    font: 10pt/normal 'courier new';
 	line-height: 1.40em; 
 	background-color: #dfe3ee;
 	border-collapse: collapse;
@@ -18,7 +18,7 @@ h2 {
 	margin-bottom: 4px;
 	padding: 0px;
 	color: Black;
-    font: 14pt/bold 'courier new';
+    font: 12pt/bold 'courier new';
 	line-height: 1.00em; 
 	background-color: #dfe3ee;
 	border-collapse: collapse;
