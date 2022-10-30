@@ -3,6 +3,7 @@ Tmp=/tmp/$$
 trap 'exit 0' INT HUP QUIT TERM ALRM USR1                                                                
 trap 'rm -f "$Tmp"' EXIT                                                                         
 rm -f "$Tmp"  >/dev/null 2>&1                                                                            
+# Generate the Markdown
 put() {
     find . -type f | grep "$1" | sort | gawk -v sec="$1" '
     BEGIN {
