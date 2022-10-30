@@ -57,3 +57,7 @@
 - [NioSocketServer.java](https://raw.githubusercontent.com/archernar/scripts/main/java/NioSocketServer.java)
 - [SimpleSocketServer.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SimpleSocketServer.java)
 - [SocketConnect.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SocketConnect.java)
+
+## css
+- [simple.css](https://raw.githubusercontent.com/archernar/scripts/main/css/simple.css)
+- [simple.css](https://raw.githubusercontent.com/archernar/scripts/main/simple.css)

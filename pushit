@@ -24,6 +24,7 @@ put "awk" >> README.md
 put "bash" >> README.md
 put "vimscript" >> README.md
 put "java" >> README.md
+put "css" >> README.md
 
 echo "" > README.html
 echo "<!DOCTYPE html>" >> README.html
