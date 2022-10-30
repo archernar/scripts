@@ -29,6 +29,9 @@
 - [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash.top)
 - [.vim.vimsplit](https://raw.githubusercontent.com/archernar/scripts/main/bash/.vim.vimsplit)
 </td>
+</tr></table>
+
+<table valign='top'><tr valign='top'>
 <td valign=top>
 
 ## vimscript
