@@ -54,6 +54,7 @@
 
 ## java
 - [ANSI.java](https://raw.githubusercontent.com/archernar/scripts/main/java/ANSI.java)
+- [Die.java](https://raw.githubusercontent.com/archernar/scripts/main/java/Die.java)
 - [NioSocketServer.java](https://raw.githubusercontent.com/archernar/scripts/main/java/NioSocketServer.java)
 - [SimpleSocketServer.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SimpleSocketServer.java)
 - [SocketConnect.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SocketConnect.java)
