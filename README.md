@@ -1,5 +1,5 @@
 
-<div width=400px>
+<div width=1400px>
 <table width='100%' valign='top'><tr valign='top'>
 <td width=33% valign=top>
 
@@ -33,7 +33,7 @@
 </tr></table></div>
 
 
-<div width=400px>
+<div width=1400px>
 <table width='100%' valign='top'><tr valign='top'>
 <td width=33% valign=top>
 
