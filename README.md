@@ -1,20 +1,19 @@
 
-<div width=1400px>
-<table width='100%' valign='top'><tr valign='top'>
-<td width=33% valign=top>
+<table valign='top'><tr valign='top'>
+<td valign=top>
 
 ## flashcards
 - [generalsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/generalsheet1.fc)
 - [vimsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/vimsheet1.fc)
 </td>
-<td width=33% valign=top>
+<td valign=top>
 
 ## awk
 - [functionlister.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/functionlister.awk)
 - [tablesonly.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/tablesonly.awk)
 - [utils.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/utils.awk)
 </td>
-<td width=33% valign=top>
+<td valign=top>
 
 ## bash
 - [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash/bash.top)
@@ -30,12 +29,11 @@
 - [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash.top)
 - [.vim.vimsplit](https://raw.githubusercontent.com/archernar/scripts/main/bash/.vim.vimsplit)
 </td>
-</tr></table></div>
+</tr></table>
 
 
-<div width=1400px>
-<table width='100%' valign='top'><tr valign='top'>
-<td width=33% valign=top>
+<table valign='top'><tr valign='top'>
+<td valign=top>
 
 ## vimscript
 - [addToMasterIndex.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/addToMasterIndex.vim)
@@ -66,7 +64,7 @@
 - [WindowExists.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/WindowExists.vim)
 - [writeMasterIndex.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/writeMasterIndex.vim)
 </td>
-<td width=33% valign=top>
+<td valign=top>
 
 ## java
 - [ANSI.java](https://raw.githubusercontent.com/archernar/scripts/main/java/ANSI.java)
@@ -76,11 +74,11 @@
 - [SimpleSocketServer.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SimpleSocketServer.java)
 - [SocketConnect.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SocketConnect.java)
 </td>
-<td width=33% valign=top>
+<td valign=top>
 
 ## css
 - [simple.css](https://raw.githubusercontent.com/archernar/scripts/main/css/simple.css)
 - [simple.css](https://raw.githubusercontent.com/archernar/scripts/main/simple.css)
 </td>
-</tr></table></div>
+</tr></table>
 
