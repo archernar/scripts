@@ -61,9 +61,9 @@ echo "<body>" >> $Tmp
 markdown README.md  >> $Tmp
 echo "</body>" >> $Tmp
 echo "</html>" >> $Tmp
-cat $Tmp | sed 's/^[<].*$//' > README.html; cp README.html $Tmp;
-cat $Tmp | sed 's/^$//' > README.html;      cp README.html $Tmp;
-#cat $Tmp | sed 's/^NEWLINEHERE//' > README.html;  cp README.html $Tmp;
+cat $Tmp | sed 's/^[<].*$//'       > README.html; cp README.html $Tmp;
+cat $Tmp | sed '/^$/d'             > README.html; cp README.html $Tmp;
+cat $Tmp | sed 's/^NEWLINEHERE//'  > README.html; cp README.html $Tmp;
 
 cp README.md $Tmp
 cat $Tmp | sed 's/^NEWLINEHERE//' > README.md
