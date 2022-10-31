@@ -1,25 +1,25 @@
 
 <table valign='top'><tr valign='top'>
 <td valign=top>
-
+HERE
 ## flashcards
 - [generalsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/generalsheet1.fc)
 - [vimsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/vimsheet1.fc)
 </td>
 <td valign=top>
-
+HERE
 ## oneliners
 - [startvimnoargs](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/startvimnoargs)
 </td>
 <td valign=top>
-
+HERE
 ## awk
 - [functionlister.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/functionlister.awk)
 - [tablesonly.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/tablesonly.awk)
 - [utils.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/utils.awk)
 </td>
 <td valign=top>
-
+HERE
 ## bash
 - [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash/bash.top)
 - [my](https://raw.githubusercontent.com/archernar/scripts/main/bash/my)
@@ -39,7 +39,7 @@
 
 <table valign='top'><tr valign='top'>
 <td valign=top>
-
+HERE
 ## vimscript
 - [addToMasterIndex.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/addToMasterIndex.vim)
 - [BufferVisible.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/BufferVisible.vim)
@@ -70,7 +70,7 @@
 - [writeMasterIndex.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/writeMasterIndex.vim)
 </td>
 <td valign=top>
-
+HERE
 ## java
 - [ANSI.java](https://raw.githubusercontent.com/archernar/scripts/main/java/ANSI.java)
 - [Die.java](https://raw.githubusercontent.com/archernar/scripts/main/java/Die.java)
@@ -80,13 +80,13 @@
 - [SocketConnect.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SocketConnect.java)
 </td>
 <td valign=top>
-
+HERE
 ## css
 - [simple.css](https://raw.githubusercontent.com/archernar/scripts/main/css/simple.css)
 - [simple.css](https://raw.githubusercontent.com/archernar/scripts/main/simple.css)
 </td>
 <td valign=top>
-
+HERE
 ## adlist
 - [list.adlist](https://raw.githubusercontent.com/archernar/scripts/main/adlist/list.adlist)
 </td>
