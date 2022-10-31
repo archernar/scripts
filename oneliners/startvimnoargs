@@ -1,0 +1,2 @@
+# start vim with no plugins
+vim -u NONE      
