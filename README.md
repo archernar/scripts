@@ -9,6 +9,7 @@
 <td valign=top>
 
 ## oneliners
+- [CleanFileOfCtrlChars](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/CleanFileOfCtrlChars)
 - [startvimnoargs](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/startvimnoargs)
 </td>
 <td valign=top>
