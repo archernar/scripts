@@ -64,7 +64,7 @@ echo "</html>" >> $Tmp
 cat $Tmp | sed 's/^[<].*$//'       > README.html; cp README.html $Tmp;
 cat $Tmp | sed '/^$/d'             > README.html; cp README.html $Tmp;
 cat $Tmp | sed 's/^NEWLINEHERE//'  > README.html; cp README.html $Tmp;
-markdown $Tmp > README.html
+markdown $Tmp | sed '/^$/d' > README.html
 
 
 cp README.md $Tmp
