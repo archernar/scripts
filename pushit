@@ -47,8 +47,22 @@ put "java" >> README.md
 put "css" >> README.md
 put "adlist" >> README.md
 closetable >> README.md
+
+echo "" > README.html
+echo "<!DOCTYPE html>" >> README.html
+echo "<html lang='en'>" >> README.html
+echo "" >> README.html
+echo "<head>" >> README.html
+echo "    <link rel='stylesheet' href='simple.css'>" >> README.html
+echo "    <title>Links</title>" >> README.html
+echo "</head>" >> README.html
+echo "<body>" >> README.html
+markdown README.md | sed 's/^[<].*$//' >> README.html
+echo "</body>" >> README.html
+echo "</html>" >> README.html
 #-------------------------------------------------------------------------------------
 git add README.md
+git add README.html
 git add pushit
 git commit -m "Update"
 git push -u origin main
