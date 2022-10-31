@@ -58,7 +58,7 @@ echo "<link rel='stylesheet' href='simple.css'>" >> $Tmp
 echo "<title>Links</title>" >> $Tmp
 echo "</head>" >> $Tmp
 echo "<body>" >> $Tmp
-markdown README.md  >> $Tmp
+cat  README.md  >> $Tmp
 echo "</body>" >> $Tmp
 echo "</html>" >> $Tmp
 cat $Tmp | sed 's/^[<].*$//'       > README.html; cp README.html $Tmp;
