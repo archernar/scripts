@@ -48,18 +48,19 @@ put "css" >> README.md
 put "adlist" >> README.md
 closetable >> README.md
 
-echo "" > README.html
-echo "<!DOCTYPE html>" >> README.html
-echo "<html lang='en'>" >> README.html
-echo "" >> README.html
-echo "<head>" >> README.html
-echo "    <link rel='stylesheet' href='simple.css'>" >> README.html
-echo "    <title>Links</title>" >> README.html
-echo "</head>" >> README.html
-echo "<body>" >> README.html
-markdown README.md | sed 's/^[<].*$//' >> README.html
-echo "</body>" >> README.html
-echo "</html>" >> README.html
+echo "" > $Tmp
+echo "<!DOCTYPE html>" >> $Tmp
+echo "<html lang='en'>" >> $Tmp
+echo "" >> $Tmp
+echo "<head>" >> $Tmp
+echo "<link rel='stylesheet' href='simple.css'>" >> $Tmp
+echo "<title>Links</title>" >> $Tmp
+echo "</head>" >> $Tmp
+echo "<body>" >> $Tmp
+markdown README.md  >> $Tmp
+echo "</body>" >> $Tmp
+echo "</html>" >> $Tmp
+cat $Tmp | sed 's/^[<].*$//' > README.html
 #-------------------------------------------------------------------------------------
 git add README.md
 git add README.html
