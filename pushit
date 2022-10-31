@@ -49,7 +49,7 @@ put "css" >> README.md
 put "adlist" >> README.md
 closetable >> README.md
 cp README.md $Tmp
-cat $Tmp | sed 's/^NEWLINE//' > README.md
+cat $Tmp | sed 's/^NEWLINEHERE//' > README.md
 
 echo "" > $Tmp
 echo "<!DOCTYPE html>" >> $Tmp
