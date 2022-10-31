@@ -33,8 +33,8 @@ put() {
 
 echo "" > README.md
 opentable >> README.md
-put "adlist" >> README.md
 put "flashcards" >> README.md
+put "oneliners" >> README.md
 put "awk" >> README.md
 put "bash" >> README.md
 closetable >> README.md
@@ -45,6 +45,7 @@ opentable >> README.md
 put "vimscript" >> README.md
 put "java" >> README.md
 put "css" >> README.md
+put "adlist" >> README.md
 closetable >> README.md
 #-------------------------------------------------------------------------------------
 git add README.md

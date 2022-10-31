@@ -2,14 +2,14 @@
 <table valign='top'><tr valign='top'>
 <td valign=top>
 
-## adlist
-- [list.adlist](https://raw.githubusercontent.com/archernar/scripts/main/adlist/list.adlist)
-</td>
-<td valign=top>
-
 ## flashcards
 - [generalsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/generalsheet1.fc)
 - [vimsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/vimsheet1.fc)
+</td>
+<td valign=top>
+
+## oneliners
+- [startvimnoargs](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/startvimnoargs)
 </td>
 <td valign=top>
 
@@ -84,6 +84,11 @@
 ## css
 - [simple.css](https://raw.githubusercontent.com/archernar/scripts/main/css/simple.css)
 - [simple.css](https://raw.githubusercontent.com/archernar/scripts/main/simple.css)
+</td>
+<td valign=top>
+
+## adlist
+- [list.adlist](https://raw.githubusercontent.com/archernar/scripts/main/adlist/list.adlist)
 </td>
 </tr></table>
 
