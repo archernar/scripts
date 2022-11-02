@@ -32,7 +32,9 @@
 - [slapfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/slapfilename)
 - [tagit](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagit)
 - [tagman](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagman)
+- [tags](https://raw.githubusercontent.com/archernar/scripts/main/bash/tags)
 - [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash.top)
+- [.vim.vimsplit](https://raw.githubusercontent.com/archernar/scripts/main/bash/.vim.vimsplit)
 </td>
 </tr></table>
 
