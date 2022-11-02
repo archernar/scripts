@@ -75,6 +75,7 @@
 ## java
 - [ANSI.java](https://raw.githubusercontent.com/archernar/scripts/main/java/ANSI.java)
 - [Die.java](https://raw.githubusercontent.com/archernar/scripts/main/java/Die.java)
+- [JavaReference.html](https://raw.githubusercontent.com/archernar/scripts/main/java/JavaReference.html)
 - [NioSocketServer.java](https://raw.githubusercontent.com/archernar/scripts/main/java/NioSocketServer.java)
 - [RollingDice.java](https://raw.githubusercontent.com/archernar/scripts/main/java/RollingDice.java)
 - [SimpleSocketServer.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SimpleSocketServer.java)
