@@ -1,0 +1,2 @@
+# Copy from a list stored in a file
+rsync -a /source/directory --files-from=/full/path/to/listfile /destination/directory

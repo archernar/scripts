@@ -10,6 +10,7 @@
 
 ## oneliners
 - [CleanFileOfCtrlChars](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/CleanFileOfCtrlChars)
+- [CopyFromAListInAFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/CopyFromAListInAFile)
 - [startvimnoargs](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/startvimnoargs)
 </td>
 <td valign=top>
@@ -31,9 +32,7 @@
 - [slapfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/slapfilename)
 - [tagit](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagit)
 - [tagman](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagman)
-- [tags](https://raw.githubusercontent.com/archernar/scripts/main/bash/tags)
 - [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash.top)
-- [.vim.vimsplit](https://raw.githubusercontent.com/archernar/scripts/main/bash/.vim.vimsplit)
 </td>
 </tr></table>
 
@@ -78,6 +77,7 @@
 - [JavaReference.html](https://raw.githubusercontent.com/archernar/scripts/main/java/JavaReference.html)
 - [NioSocketServer.java](https://raw.githubusercontent.com/archernar/scripts/main/java/NioSocketServer.java)
 - [RollingDice.java](https://raw.githubusercontent.com/archernar/scripts/main/java/RollingDice.java)
+- [Runner.java](https://raw.githubusercontent.com/archernar/scripts/main/java/Runner.java)
 - [SimpleSocketServer.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SimpleSocketServer.java)
 - [SocketConnect.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SocketConnect.java)
 </td>
