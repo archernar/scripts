@@ -11,6 +11,7 @@
 ## oneliners
 - [CleanFileOfCtrlChars](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/CleanFileOfCtrlChars)
 - [CopyFromAListInAFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/CopyFromAListInAFile)
+- [FigletClock](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/FigletClock)
 - [GetWheather](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/GetWheather)
 - [MostUsedCommands](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MostUsedCommands)
 - [startvimnoargs](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/startvimnoargs)
