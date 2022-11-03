@@ -1,0 +1,2 @@
+# Display the top ten running processes - sorted by memory usage
+ps aux | sort -nk +4 | tail
