@@ -2,9 +2,22 @@
 #!/bin/bash                                                                                          
 SCR=$(echo "$0" | gawk '{n=split($0, a, "/"); print a[n];}')
 Tmp=/tmp/$$                                                                                              
+Tmp1=/tmp/$$                                                                                              
+Tmp2="/tmp/$$_$$"
 trap 'exit 0' INT HUP QUIT TERM ALRM USR1                                                                
-trap 'rm -f "$Tmp"' EXIT                                                                         
-rm -f "$Tmp"  >/dev/null 2>&1                                                                            
-
-
-
+trap 'rm -f "$Tmp" "$Tmp2"' EXIT                                                                         
+rm -f "$Tmp1" >/dev/null 2>&1                                                                            
+rm -f "$Tmp2" >/dev/null 2>&1                                                                            
+                                                                                                         
+                                                                                                         
+while getopts "g" arg                                                                                    
+do                                                                                                       
+    case $arg in                                                                                         
+        a) ITEM=$OPTARG                                                                               
+           ;;                                                                                            
+        *) exit 0                                                                                                
+           ;;                                                                                            
+    esac                                                                                                 
+done                                                                                                     
+shift $(($OPTIND - 1))                                                                                   
+                                                                                                         
