@@ -9,6 +9,7 @@
 <td valign=top>
 
 ## oneliners
+- [CaptureDesktop](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/CaptureDesktop)
 - [CleanFileOfCtrlChars](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/CleanFileOfCtrlChars)
 - [CopyFromAListInAFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/CopyFromAListInAFile)
 - [FigletClock](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/FigletClock)
