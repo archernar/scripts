@@ -15,6 +15,7 @@
 - [FigletClock](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/FigletClock)
 - [GetWheather](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/GetWheather)
 - [MostUsedCommands](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MostUsedCommands)
+- [SSHGenerateKey](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHGenerateKey)
 - [SSHPullFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHPullFile)
 - [SSHPushFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHPushFile)
 - [SSHRunACommandAndExit](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHRunACommandAndExit)
