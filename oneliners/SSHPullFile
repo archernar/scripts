@@ -1,0 +1,1 @@
+scp [remoteFile] [user]@[host]:.
