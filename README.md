@@ -17,6 +17,7 @@
 - [MostUsedCommands](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MostUsedCommands)
 - [SSHPullFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHPullFile)
 - [SSHPushFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHPushFile)
+- [SSHRunACommandAndExit](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHRunACommandAndExit)
 - [startvimnoargs](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/startvimnoargs)
 - [TopTenProcess](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/TopTenProcess)
 </td>
