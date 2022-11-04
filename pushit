@@ -49,6 +49,12 @@ put "css" >> README.md
 put "adlist" >> README.md
 closetable >> README.md
 
+echo "" >> README.md
+echo "" >> README.md
+opentable >> README.md
+put "commandfu" >> README.md
+closetable >> README.md
+
 echo "" > $Tmp
 echo "<!DOCTYPE html>" >> $Tmp
 echo "<html lang='en'>" >> $Tmp
