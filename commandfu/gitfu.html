@@ -1,0 +1,80 @@
+<pre>
+# commandlinefu.com - questions/comments: danstools00@gmail.com
+
+# Clone starred github repos in parallel with unlimited speed, this example will clone 25 repositories in parallel at same time.
+GITUSER=$(whoami); curl "https://api.github.com/users/${GITUSER}/starred?per_page=1000" | grep -o 'git@[^"]*' | parallel -j 25 'git clone {}'
+
+# Backup all starred repositories from Github
+GITUSER=$(whoami); curl "https://api.github.com/users/${GITUSER}/starred?per_page=1000" | grep -o 'git@[^"]*' | xargs -L1 git clone
+
+# Shows picture exif GPS info if any and converts coords to a decimal degree number
+identify -verbose my_image.jpg | awk 'function cf(i){split(i,a,"/");if(length(a)==2){return a[1]/a[2]}else{return a[1]}}/GPS/{if($1~/GPSLatitude:|GPSLongitude:/){s=$0;gsub(/,/,"",$0);printf("%s  (%f)\n", s, $2+cf($3)/60+cf($4)/3600)}else{print}}'
+
+# Compute newest kernel version from Makefile on Torvalds' git repository
+wget -qO - https://raw.githubusercontent.com/torvalds/linux/master/Makefile | head -n5 | grep -E '\ \=\ [0-9]{1,}' | cut -d' ' -f3 | tr '\n' '.' | sed -e "s/\.$//"
+
+# Show contents of all git objects in a git repo
+find .git/objects/ -type f \| sed 's/\.git\/objects\/\///' | sed 's/\///g' | xargs -n1 -I% echo echo "%" \$\(git cat-file -p "%"\) \0 | xargs -n1 -0 sh -c
+
+# list current   processes  writing to hard drive
+lsof | grep -e "[[:digit:]]\+w"
+
+# Delete all local git branches that have been merged and deleted from remote
+git branch -d $( git branch -vv | grep '\[[^:]\+: gone\]' | awk '{print $1}' | xargs )
+
+# Print all git repos from a user (only curl and grep)
+curl -s https://api.github.com/users/<username>/repos?per_page=1000 | grep -oP '(?<="git_url": ").*(?="\,)'
+
+# Print all git repos from a user
+curl -s "https://api.github.com/users/<username>/repos?per_page=1000" | python <(echo "import json,sys;v=json.load(sys.stdin);for i in v:; print(i['git_url']);" | tr ';' '\n')
+
+# Print all git repos from a user
+curl -s "https://api.github.com/users/<username>/repos?per_page=1000" | jq '.[].git_url'
+
+# Print all git repos from a user
+curl -s https://api.github.com/users/<username>/repos?per_page=1000 |grep git_url |awk '{print $2}'| sed 's/"\(.*\)",/\1/'
+
+# Print github url for the current url
+git remote -v | sed -n '/github.com.*push/{s/^[^[:space:]]\+[[:space:]]\+//;s|git@github.com:|https://github.com/|;s/\.git.*//;p}'
+
+# Open browser from terminal to create PR after pushing something in Git in MAC
+git remote -v |grep origin|tail -1|awk '{print $2}'|cut -d"@" -f2|sed 's/:/\//g'|xargs -I {} open -a "Google Chrome" https://{}
+
+# Pull multiple repositories in child folders (a.k.a. I'm back from leave script) [Windows]
+gci -Directory | foreach {Push-Location $_.Name; git fetch --all; git checkout master; git pull; Pop-Location}
+
+# Stage all files for commit except those that are *.config at any level within your git repo [Windows]
+git status | Where-Object {$_.Contains('modified') -and !$_.Contains('.config')} | ForEach-Object { git add $_.Replace('modified:','').Trim() }
+
+# Copy current branch to clipboard [Windows]
+(git branch | Where-Object { $_.Contains('*') } | Select-Object -First 1).Trim('*').Trim() | Set-Clipboard
+
+# Delete all local branches that are not master [Windows]
+git branch | Where-Object { !$_.Contains('master') } | ForEach-Object { git branch -D $_.Trim() }
+
+# Delete all local branches that have been merged into master [Windows]
+git branch --merged origin/master | Where-Object {  !$_.Contains('master') } | ForEach-Object { git branch -d $_.trim() }
+
+# Initialise git in working directory with latest Visual Studio .gitignore [Windows]
+git init; (Invoke-WebRequest https://raw.githubusercontent.com/github/gitignore/master/VisualStudio.gitignore -UseBasicParsing).Content | Out-File -FilePath .gitignore -Encoding utf8; git add -A
+
+# Extract all GPS positions from a AVCHD video.
+exiftool -ee -p "$gpslatitude, $gpslongitude, $gpstimestamp" a.m2ts
+
+# Generrate Cryptographically Secure RANDOM PASSWORD
+python -c "import string; import random;print(''.join(random.SystemRandom().choice(string.ascii_uppercase + string.digits + string.ascii_lowercase) for _ in range(16)))"
+
+# Push to all (different) remotes in git directory without having to combine them.
+git remote | while read line ; do git push $line; done
+
+# Get Your IP Geographic Location with curl and jq
+curl -s https://ipvigilante.com/$(curl -s https://ipinfo.io/ip) | jq '.data.latitude, .data.longitude, .data.city_name, .data.country_name'
+
+# Cleanup remote git repository of all branches already merged into master
+git branch --remotes --merged | grep -v master | sed 's@ origin/@:@' | xargs git push origin
+
+# get full git commit history of single file
+git log -p --name-only --follow <file>
+
+https://www.commandlinefu.com/commands/matching/git/Z2l0/plaintext
+</pre>
