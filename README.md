@@ -33,6 +33,7 @@
 
 ## bash
 - [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash/bash.top)
+- [CheckIfFileExists](https://raw.githubusercontent.com/archernar/scripts/main/bash/CheckIfFileExists)
 - [my](https://raw.githubusercontent.com/archernar/scripts/main/bash/my)
 - [removefromfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/removefromfilename)
 - [SharedLibrary.bash](https://raw.githubusercontent.com/archernar/scripts/main/bash/SharedLibrary.bash)
