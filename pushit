@@ -75,7 +75,7 @@ put "bash" >> README.md
 closetable >> README.md
 
 echo "" >> README.md
-puttable "bash" > $Tmp
+puttable "bash" >> README.md
 echo "" >> README.md
 
 opentable >> README.md
