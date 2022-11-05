@@ -115,7 +115,6 @@ puttable "java" >> README.md
 puttable "css" >> README.md
 puttable "adlist" >> README.md
 puttable "commandfu" >> README.md
-puttableall "All" >> README.md
 
 echo "" >> README.md
 opentable >> README.md
