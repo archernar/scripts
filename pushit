@@ -49,6 +49,43 @@ puttable() {
     }
     '
 }
+puttableall() {
+    find . -type f | sort | gawk -v sec="$1" '
+    BEGIN {
+      BASE=0
+      COLS=4
+      ct =BASE
+      dash = ":----------------------------"
+      hhhh = ".............................."
+      hhhh = "                              "
+      print ""
+      print "## " sec
+      print ""
+      print "| " hhhh " | " hhhh " | " hhhh " | " hhhh " |"
+      print "| " dash " | " dash " | " dash " | " dash " |"
+      u = "https://raw.githubusercontent.com/archernar/scripts/main"
+    }
+    {
+        if (ct == BASE) printf "%s", "| "
+        sz = $0
+        sub(/[.]/,"",sz)
+        n=split(sz, A, "/")
+        sz = "- [" A[n] "]"  "(" u sz ")"
+        printf "%s", sz " | "
+        ct++
+        if ( ct > (COLS-1) ) {
+            ct = BASE
+            print ""
+        }
+    }
+    END {
+#     if ( ct == 2 ) 
+#        printf "%s", "x |"
+      print ""
+      print ""
+    }
+    '
+}
 put() {
     find . -type f | grep "$1" | sort | gawk -v sec="$1" '
     BEGIN {
@@ -78,6 +115,7 @@ puttable "java" >> README.md
 puttable "css" >> README.md
 puttable "adlist" >> README.md
 puttable "commandfu" >> README.md
+puttableall "All" >> README.md
 
 echo "" >> README.md
 opentable >> README.md
