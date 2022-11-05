@@ -61,6 +61,14 @@
 | 
 
 
+## awk
+
+| .......................................... | .......................................... | .......................................... | .......................................... |
+| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
+| [functionlister.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/functionlister.awk) | [tablesonly.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/tablesonly.awk) | [utils.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/utils.awk) | [mdt.awk](https://raw.githubusercontent.com/archernar/scripts/main/mdt.awk) | 
+| 
+
+
 <table valign='top'><tr valign='top'>
 <td valign=top>
 

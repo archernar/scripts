@@ -78,6 +78,7 @@ closetable >> README.md
 
 echo "" >> README.md
 puttable "bash" >> README.md
+puttable "awk" >> README.md
 echo "" >> README.md
 
 opentable >> README.md
