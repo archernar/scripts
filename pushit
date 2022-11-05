@@ -69,6 +69,17 @@ put() {
     '
 }
 echo "" > README.md
+put "flashcards" >> README.md
+put "oneliners" >> README.md
+put "awk" >> README.md
+put "bash" >> README.md
+put "vimscript" >> README.md
+put "java" >> README.md
+put "css" >> README.md
+put "adlist" >> README.md
+put "commandfu" >> README.md
+
+echo "" >> README.md
 opentable >> README.md
 put "flashcards" >> README.md
 put "oneliners" >> README.md
@@ -77,9 +88,15 @@ put "bash" >> README.md
 closetable >> README.md
 
 echo "" >> README.md
-puttable "vimscript" >> README.md
-puttable "bash" >> README.md
-puttable "awk" >> README.md
+put "flashcards" >> README.md
+put "oneliners" >> README.md
+put "awk" >> README.md
+put "bash" >> README.md
+put "vimscript" >> README.md
+put "java" >> README.md
+put "css" >> README.md
+put "adlist" >> README.md
+put "commandfu" >> README.md
 echo "" >> README.md
 
 opentable >> README.md
