@@ -16,13 +16,13 @@ puttable() {
     find . -type f | grep "$1" | sort | gawk -v sec="$1" '
     BEGIN {
       BASE=0
-      COLS=3
+      COLS=4
       ct =BASE
       dash = "------------------------------------------"
       hhhh = ".........................................."
       print ""
-      print "| " hhhh " | " hhhh " | " hhhh " |"
-      print "| " dash " | " dash " | " dash " |"
+      print "| " hhhh " | " hhhh " | " hhhh " | " hhhh " |"
+      print "| " dash " | " dash " | " dash " | " dash " |"
       printf "%s", "| "
       u = "https://raw.githubusercontent.com/archernar/scripts/main"
     }
