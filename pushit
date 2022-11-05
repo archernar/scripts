@@ -21,6 +21,8 @@ puttable() {
       dash = "------------------------------------------"
       hhhh = ".........................................."
       print ""
+      print "## " sec
+      print ""
       print "| " hhhh " | " hhhh " | " hhhh " | " hhhh " |"
       print "| " dash " | " dash " | " dash " | " dash " |"
       printf "%s", "| "
