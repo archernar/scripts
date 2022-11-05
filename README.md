@@ -14,6 +14,7 @@
 - [CopyFromAListInAFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/CopyFromAListInAFile)
 - [FigletClock](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/FigletClock)
 - [GetWheather](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/GetWheather)
+- [MarkdownToHTML](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MarkdownToHTML)
 - [MostUsedCommands](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MostUsedCommands)
 - [SSHGenerateKey](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHGenerateKey)
 - [SSHPullFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHPullFile)

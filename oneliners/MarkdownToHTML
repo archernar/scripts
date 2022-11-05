@@ -1,0 +1,4 @@
+pandoc file.md -f markdown -t html -s -o file.html --metadata pagetitle="moe"
+
+
+# https://linuxhint.com/convert-markdown-files-linux/
