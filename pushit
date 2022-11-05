@@ -12,6 +12,41 @@ closetable() {
 }
 
 # Generate the Markdown
+puttable() {
+    find . -type f | grep "$1" | sort | gawk -v sec="$1" '
+    BEGIN {
+      BASE=0
+      COLS=3
+      ct =BASE
+      dash = "------------------------------------------"
+      hhhh = ".........................................."
+      print ""
+      print "| " hhhh " | " hhhh " | " hhhh " |"
+      print "| " dash " | " dash " | " dash " |"
+      printf "%s", "| "
+      u = "https://raw.githubusercontent.com/archernar/scripts/main"
+    }
+    {
+        sz = $0
+        sub(/[.]/,"",sz)
+        n=split(sz, A, "/")
+        sz = "[" A[n] "]"  "(" u sz ")"
+        printf "%s", sz " | "
+        ct++
+        if ( ct > (COLS-1) ) {
+            ct = BASE
+            print ""
+            printf "%s", "| "
+        }
+    }
+    END {
+      if ( ct == 2 ) 
+         printf "%s", "x |"
+      print ""
+      print ""
+    }
+    '
+}
 put() {
     find . -type f | grep "$1" | sort | gawk -v sec="$1" '
     BEGIN {
@@ -31,7 +66,6 @@ put() {
     }
     '
 }
-
 echo "" > README.md
 opentable >> README.md
 put "flashcards" >> README.md
@@ -40,6 +74,8 @@ put "awk" >> README.md
 put "bash" >> README.md
 closetable >> README.md
 
+echo "" >> README.md
+puttable "bash" > $Tmp
 echo "" >> README.md
 
 opentable >> README.md
@@ -71,8 +107,7 @@ cat $Tmp | sed 's/^[<].*$//'       > README.html; cp README.html $Tmp;
 cat $Tmp | sed '/^$/d'             > README.html; cp README.html $Tmp;
 cat $Tmp | sed 's/^NEWLINEHERE//'  > README.html; cp README.html $Tmp;
 markdown $Tmp | sed '/^$/d' > README.html
-https://linuxhint.com/convert-markdown-files-linux/
-pandoc "$Tmp" -f markdown -t html -s -o PRIME.html --metadata pagetitle="Page Title"
+#pandoc "$Tmp" -f markdown -t html -s -o PRIME.html --metadata pagetitle="Page Title"
 
 cp README.md $Tmp
 cat $Tmp | sed 's/^NEWLINEHERE//' > README.md
