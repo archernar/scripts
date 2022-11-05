@@ -53,7 +53,7 @@
 
 ## vimscript
 
-| .................................... | .................................... | .................................... | .................................... |
+|                                      |                                      |                                      |                                      |
 | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ |
 | [addToMasterIndex.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/addToMasterIndex.vim) | [BufferVisible.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/BufferVisible.vim) | [BuildTags.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/BuildTags.vim) | [CaptureSession.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/CaptureSession.vim) | 
 | [ColMan.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/ColMan.vim) | [CopyFiles.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/CopyFiles.vim) | [DeleteAllBuffers.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/DeleteAllBuffers.vim) | [DeleteNoNameBuffer.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/DeleteNoNameBuffer.vim) | 
@@ -66,7 +66,7 @@
 
 ## bash
 
-| .................................... | .................................... | .................................... | .................................... |
+|                                      |                                      |                                      |                                      |
 | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ |
 | [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash/bash.top) | [CheckIfFileExists](https://raw.githubusercontent.com/archernar/scripts/main/bash/CheckIfFileExists) | [my](https://raw.githubusercontent.com/archernar/scripts/main/bash/my) | [removefromfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/removefromfilename) | 
 | [SharedLibrary.bash](https://raw.githubusercontent.com/archernar/scripts/main/bash/SharedLibrary.bash) | [sitetotext](https://raw.githubusercontent.com/archernar/scripts/main/bash/sitetotext) | [sitetotextraw](https://raw.githubusercontent.com/archernar/scripts/main/bash/sitetotextraw) | [slapfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/slapfilename) | 
@@ -76,7 +76,7 @@
 
 ## awk
 
-| .................................... | .................................... | .................................... | .................................... |
+|                                      |                                      |                                      |                                      |
 | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ |
 | [functionlister.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/functionlister.awk) | [tablesonly.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/tablesonly.awk) | [utils.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/utils.awk) | [mdt.awk](https://raw.githubusercontent.com/archernar/scripts/main/mdt.awk) | 
 
