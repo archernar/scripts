@@ -25,10 +25,10 @@ puttable() {
       print ""
       print "| " hhhh " | " hhhh " | " hhhh " | " hhhh " |"
       print "| " dash " | " dash " | " dash " | " dash " |"
-      printf "%s", "| "
       u = "https://raw.githubusercontent.com/archernar/scripts/main"
     }
     {
+        if (ct == BASE) printf "%s", "| "
         sz = $0
         sub(/[.]/,"",sz)
         n=split(sz, A, "/")
@@ -38,7 +38,6 @@ puttable() {
         if ( ct > (COLS-1) ) {
             ct = BASE
             print ""
-            printf "%s", "| "
         }
     }
     END {
