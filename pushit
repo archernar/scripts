@@ -69,15 +69,15 @@ put() {
     '
 }
 echo "" > README.md
-put "flashcards" >> README.md
-put "oneliners" >> README.md
-put "awk" >> README.md
-put "bash" >> README.md
-put "vimscript" >> README.md
-put "java" >> README.md
-put "css" >> README.md
-put "adlist" >> README.md
-put "commandfu" >> README.md
+puttable "flashcards" >> README.md
+puttable "oneliners" >> README.md
+puttable "awk" >> README.md
+puttable "bash" >> README.md
+puttable "vimscript" >> README.md
+puttable "java" >> README.md
+puttable "css" >> README.md
+puttable "adlist" >> README.md
+puttable "commandfu" >> README.md
 
 echo "" >> README.md
 opentable >> README.md
