@@ -76,6 +76,7 @@ put "bash" >> README.md
 closetable >> README.md
 
 echo "" >> README.md
+puttable "vimscript" >> README.md
 puttable "bash" >> README.md
 puttable "awk" >> README.md
 echo "" >> README.md
