@@ -74,7 +74,8 @@
 
 |                                |                                |                                |                                |
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
-| - [gitfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/gitfu.html) | - [psfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/psfu.html) | - [vimfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/vimfu.html) | 
+| - [gitfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/gitfu.html) | - [.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/.html) | - [psfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/psfu.html) | - [vimfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/vimfu.html) | 
+
 
 
 <table valign='top'><tr valign='top'>
@@ -232,6 +233,7 @@
 
 ## commandfu
 - [gitfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/gitfu.html)
+- [.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/.html)
 - [psfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/psfu.html)
 - [vimfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/vimfu.html)
 </td>
@@ -299,6 +301,7 @@
 
 ## commandfu
 - [gitfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/gitfu.html)
+- [.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/.html)
 - [psfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/psfu.html)
 - [vimfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/vimfu.html)
 </td>
