@@ -1,0 +1,78 @@
+# commandlinefu.com - questions/comments: danstools00@gmail.com
+
+# Show a zoomable world map
+telnet mapscii.me
+
+# List all packages in Ubuntu/Debian that no package depends on
+dpkg-query --show --showformat='${Package}\t${Status}\n' | tac | awk '/installed$/ {print $1}' | xargs apt-cache rdepends --installed | tac | awk '{ if (/^ /) ++deps; else if (!/:$/) { if (!deps) print; deps = 0 } }'
+
+# Output requirements.txt packages pinned to latest version
+pip install -r requirements.txt --dry-run --no-deps --ignore-installed | tail -n1 | tr ' ' '\n' | tail -n+3 | sed -e "s/\(.*\)-/\1==/"
+
+# Track flight information from the command line
+flight_status() { curl --silent --stderr - "https://mobile.flightview.com/TrackByRoute.aspx?view=detail&al=$1&fn=$2&dpdat=$(date +%Y%m%d)" | html2text | grep -A19 "Status" ; } ; flight_status $1 $2
+
+# Check out Gate number for your flight from CLI with Chrome
+google-chrome-stable --headless --dump-dom --disable-gpu "https://avinor.no/flight/?flightLegId=dy754-osl-trd-20220726&airport=OSL" 2>/dev/null | html2text | grep -A2 Gate
+
+# Run a command after the process you choose finishes
+tail --pid="$(ps -A -o pid,args | fzf | awk '{print $1}')" -f /dev/null && echo DONE
+
+# Clone starred github repos in parallel with unlimited speed, this example will clone 25 repositories in parallel at same time.
+GITUSER=$(whoami); curl "https://api.github.com/users/${GITUSER}/starred?per_page=1000" | grep -o 'git@[^"]*' | parallel -j 25 'git clone {}'
+
+# Backup all starred repositories from Github
+GITUSER=$(whoami); curl "https://api.github.com/users/${GITUSER}/starred?per_page=1000" | grep -o 'git@[^"]*' | xargs -L1 git clone
+
+# Write a bootable Linux .iso file directly to a USB-stick (macOS edition)
+sudo curl -L -o /dev/disk4 https://some-distributor.org/some-distro.iso
+
+# Download audio from youtube video
+yt-dlp -f 'ba' -x --audio-format mp3 https://www.youtube.com/watch?v=1La4QzGeaaQ -o '%(id)s.%(ext)s'
+
+# Lower PowerShell priority
+PS C:\Users\pascalv> Get-WmiObject Win32_process -filter 'name = "powershell.exe"' | Foreach-Object { $_.SetPriority(16384) }
+
+# Run 10 curl commands in parallel via xargs (v2, faster then v1)
+xargs -I% -P10 curl -sL "https://iconfig.co" < <(printf '%s\n' {1..10})
+
+# youtube2m3u
+yt-dlp -N3 -O '#EXTINF:%(duration_string)s tvg-id="" tvg-logo="%(thumbnail)s" group-title="Music | %(channel)s (%(extractor)s)",%(title)s' -O webpage_url --playlist-end 10 https://www.youtube.com/channel/UC2eTX3jDug-6fUt89uWaPCQ
+
+# Get an embedded Rust development environment set up without prompting
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | bash -s -- --default-toolchain nightly --component rust-analyzer-preview --component llvm-tools-preview --component rust-src --component rustc-dev --no-modify-path -y
+
+# Shows picture exif GPS info if any and converts coords to a decimal degree number
+identify -verbose my_image.jpg | awk 'function cf(i){split(i,a,"/");if(length(a)==2){return a[1]/a[2]}else{return a[1]}}/GPS/{if($1~/GPSLatitude:|GPSLongitude:/){s=$0;gsub(/,/,"",$0);printf("%s  (%f)\n", s, $2+cf($3)/60+cf($4)/3600)}else{print}}'
+
+# Quickly add a new user to all groups the default user is in
+groups pi | xargs -n 1 | tail -n +4 | xargs -n 1 sudo adduser kostis
+
+# Download entire website
+wget -r -p -U Mozilla --wait=10 --limit-rate=35K https://www.thegeekstuff.com
+
+# Shows a specific process memory usage
+mem() { ps -C "$1" -O rss | awk '{ count ++; sum += $2 }; END {count --; print "Number of processes:\t",count; print "Mem. usage per process:\t",sum/1024/count, "MB"; print "Total memory usage:\t", sum/1024, "MB" ;};'; }
+
+# Download mp3 files linked in a RSS podcast feed
+curl http://radiofrance-podcast.net/podcast09/rss_14726.xml | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*mp3" | sort -u | xargs wget
+
+# Combine multiple images into a video using ffmpeg
+ffmpeg -start_number 0053 -r 1/5 -i IMG_%04d.JPG -c:v libx264 -vf fps=25 -pix_fmt yuv420p out.mp4
+
+# premiumize - create a ddl & save the URL in variable MYLINK
+MYLINK=$(curl  'https://www.premiumize.me/api/transfer/directdl?apikey=XXXXXXX' \   -H 'accept: application/json' \   -H 'Content-Type: application/x-www-form-urlencoded'  --data-raw 'src='$URL | jq -r '.content[] | .link' )
+
+# Offcloud - add a link as remote download
+curl  'https://offcloud.com/api/remote?key=XXXXXX' \   -H 'accept: application/json' \   -H 'Content-Type: application/x-www-form-urlencoded'  --data-raw "url=$MYLINK&remoteOptionId=XXXXX"
+
+# Remove all the characters before last space per line including it
+echo 'The quick brown fox jumps over the lazy dog' | sed 's|.* ||'
+
+# Remove all the characters after last space per line including it
+echo 'The quick brown fox jumps over the lazy dog' | sed 's|\(.*\) .*|\1|'
+
+# Compute newest kernel version from Makefile on Torvalds' git repository
+wget -qO - https://raw.githubusercontent.com/torvalds/linux/master/Makefile | head -n5 | grep -E '\ \=\ [0-9]{1,}' | cut -d' ' -f3 | tr '\n' '.' | sed -e "s/\.$//"
+
+https://www.commandlinefu.com/commands/matching/ps/cHM=/plaintext
