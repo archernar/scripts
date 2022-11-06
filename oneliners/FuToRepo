@@ -1,0 +1,1 @@
+M="ln";./fu $M > $M"fu.html"; pjava -u $M"fu.html"
