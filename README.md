@@ -74,8 +74,8 @@
 
 |                                |                                |                                |                                |
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
-| - [gitfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/gitfu.html) | - [.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/.html) | - [psfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/psfu.html) | - [umountfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/umountfu.html) | 
-| - [vimfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/vimfu.html) | 
+| - [gitfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/gitfu.html) | - [.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/.html) | - [mountfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/mountfu.html) | - [psfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/psfu.html) | 
+| - [umountfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/umountfu.html) | - [vimfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/vimfu.html) | 
 
 
 <table valign='top'><tr valign='top'>
@@ -234,6 +234,7 @@
 ## commandfu
 - [gitfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/gitfu.html)
 - [.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/.html)
+- [mountfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/mountfu.html)
 - [psfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/psfu.html)
 - [umountfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/umountfu.html)
 - [vimfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/vimfu.html)
@@ -303,6 +304,7 @@
 ## commandfu
 - [gitfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/gitfu.html)
 - [.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/.html)
+- [mountfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/mountfu.html)
 - [psfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/psfu.html)
 - [umountfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/umountfu.html)
 - [vimfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/vimfu.html)

@@ -1,0 +1,78 @@
+# commandlinefu.com - questions/comments: danstools00@gmail.com
+
+# emulate a root (fake) environment without fakeroot nor privileges
+unshare -r --fork --pid unshare -r --fork --pid --mount-proc bash
+
+# Trim disk image for best compression before distributing
+kpartx -av disk.img && mkdir disk && mount /dev/mapper/loop0p1 disk && fstrim -v disk && umount disk && kpartx -d disk.img
+
+# Manually trim SSD
+sudo fstrim -v /
+
+# du command without showing other mounted file systems
+du -h --max-depth=1 --one-file-system /
+
+# Shows space used by each directory of the root filesystem excluding mountpoints/external filesystems (and sort the output)
+find / -maxdepth 1 -mindepth 1 -type d \! -empty \! -exec mountpoint -q {} \; -exec du -xsh {} + | sort -h
+
+# Shows space used by each directory of the root filesystem excluding mountpoints/external filesystems (and sort the output)
+find / -maxdepth 1 -mindepth 1 -type d -exec du -skx {} \; | sort -n
+
+# Shows space used by each directory of the root filesystem excluding mountpoints/external filesystems (and sort the output)
+find / -maxdepth 1 -type d | xargs -I {} sh -c "mountpoint -q {} || du -sk {}" | sort -n
+
+# The Chromium OS rootfs is mounted read-only. In developer mode you can disable the rootfs verification, enabling it to be modified.
+for x in 2 4; do /usr/share/vboot/bin/make_dev_ssd.sh --remove_rootfs_verification --partitions $x; done
+
+# List docker volumes by container
+docker ps -a --format '{{ .ID }}' | xargs -I {} docker inspect -f '{{ .Name }}{{ printf "\n" }}{{ range .Mounts }}{{ printf "\n\t" }}{{ .Type }} {{ if eq .Type "bind" }}{{ .Source }}{{ end }}{{ .Name }} => {{ .Destination }}{{ end }}{{ printf "\n" }}' {}
+
+# FSTAB Ubuntu mount NFS Share
+192.168.1.7:/mnt/tank/media/music       /home/user/music      nfs auto,nofail,noatime,nolock,intr,tcp,actimeo=1800 0 0
+
+# Copy file to a Windows/Samba share without mounting it
+smbclient --user=user%password --directory "<subdirectory>" --command "put <file>" //<server>/<share-name>
+
+# list block devices
+sudo lsblk -o name,type,fstype,label,partlabel,model,mountpoint,size
+
+# List sub dir, sort by size, the biggest at the end, with human presentation
+du --max-depth=1 -x -k | sort -n | awk 'function human(x) { s="KMGTEPYZ"; while (x>=1000 && length(s)>1) {x/=1024; s=substr(s,2)} return int(x+0.5) substr(s,1,1)"iB" } {gsub(/^[0-9]+/, human($1)); print}'
+
+# Mount folder/filesystem through SSH
+sshfs name@server:/path/to/folder /path/to/mount/point
+
+# progress bar while using dd
+sudo dd if=file.iso |pv| sudo dd of=/dev/sdX
+
+# Disk usage summary
+echo $(df -BG | grep sd | awk '{print $3}' | paste -sd+ | tr -d G | bc) GiB used in total
+
+# Ad blocking on Ubuntu phone/tablet with hosts file
+sudo mount -o remount,rw / && sudo cp /etc/hosts /etc/hosts.old && wget http://winhelp2002.mvps.org/hosts.txt && cp /etc/hosts ~/ && cat hosts.txt >> hosts && sudo cp hosts /etc/hosts
+
+# Make Ubuntu Phone root image read/write until reboot
+sudo mount -o remount,rw /
+
+# Finding all files on local file system with SUID and SGID set
+find / \( -mount -o -prune \) \( -perm -4000 -o -perm -2000 \) -type f -exec ls -l {} \;
+
+# mount -n -o remount /
+mount -n -o remount /
+
+# display text file within an editor on whatever workspace is in front of you
+env DISPLAY=:0 /usr/bin/gedit  ~/df.txt  && wmctl -a gedit
+
+# Enter/attach any namespace/container, regardless of being Docker/LXC/Systemd...
+sudo nsenter -i <pid-of-process-in-that-namespace> -u -p -i -n -m /bin/bash
+
+# Dumpe2fs, FSck running
+dumpe2fs -h /dev/xvda1 | egrep -i 'mount count|check'
+
+# Mount a VMware virtual disk (.vmdk) file on a Linux box
+kpartx -av <image-flat.vmdk>; mount -o /dev/mapper/loop0p1 /mnt/vmdk
+
+# find the device when you only know the mount point
+awk '$2 == "/media/KINGSTON" {print $1}' /etc/mtab
+
+https://www.commandlinefu.com/commands/matching/mount/bW91bnQ=/plaintext
