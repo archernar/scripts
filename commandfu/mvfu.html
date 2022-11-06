@@ -1,0 +1,78 @@
+# commandlinefu.com - questions/comments: danstools00@gmail.com
+
+# macOS: Save disk space by moving apps to external drives
+sudo mv /Applications/foo /Volumes/bar/Applications/foo && sudo ln -s /Volumes/bar/Applications/foo /Applications/foo
+
+# rename / move Uppercase filenames to lowercase filenames current directory
+FileList=$(ls); for FName in $FileList; do LowerFName=$(echo "$FName" | tr '[:upper:]' '[:lower:]'); echo $FName" rename/move to $LowerFName"; mv $FName $LowerFName;  done
+
+# Moving large number of files
+find /source/directory -mindepth 1 -maxdepth 1 -name '*'  -print0 | xargs -0 mv -t /target/directory;
+
+# Rename all subtitles files with the same name of mp4 files in same folder
+paste -d: <(ls -1 *.mp4) <(ls -1 *.srt) | while read line; do movie="${line%%:*}"; subtitle="${line##*:}"; mv "${subtitle}" "${movie%.*}.srt"; done
+
+# Fix time-stamped filenames of JPEG images according to the EXIF date the photo was taken
+(IFS=': '; for i in *.(#i)jpg; do set $(exiv2 -K 'Exif.Image.DateTime' -Pv $i 2> /dev/null); mv -v $i "$1-$2-$3${i#[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]}"; done)
+
+# Add timestamp of photos created by the “predictive capture” feature of Sony's Xperia camera app at the beginning of the filename
+(setopt CSH_NULL_GLOB; cd /path/to/Camera\ Uploads; for i in DSCPDC_000*; do mv -v $i "$(echo $i | perl -lpe 's/(DSCPDC_[0-9]{4}_BURST)([0-9]{4})([0-9]{2})([0-9]{2})/$2-$3-$4 $1$2$3$4/')"; done)
+
+# Add date stamp to filenames of photos by Sony Xperia camera app
+(setopt CSH_NULL_GLOB; cd /path/to/Camera\ Uploads; for i in DSC_* MOV_*; do mv -v $i "$(date +%F -d @$(stat -c '%Y' $i)) $i"; done)
+
+# Massive change of file extension (bash)
+for file in *.txt; do mv "${file%.txt}{.txt,.xml}"; done
+
+# Massive change of file extension (bash)
+for file in *.txt; do mv "$file" "${file%.txt}.xml"; done
+
+# Rename all files in a directory to the md5 hash
+for i in *; do sum=$(md5sum $i); mv  -- "$i" "${sum%% *}"; done
+
+# Convert & rename all filenames to lower case
+convmv --lower --notest FILE
+
+# Identifies the file types in a directory and adds or replaces their file extensions.
+find "$(realpath .)" -type f -exec bash -c 'p="{}"; b="${p##*/}"; e=${b#"${b%.*}"}; e2=$(file -b -F="" --extension "$p"| awk -F/ '\''$1~/^\w+$/ {print $1} '\''); if [ "$e" != ".$e2" ] && [ ! -z $e2 ]; then mv "$p" "${p%$b}${b%$e}.$e2"; fi;' \;
+
+# Rename all files in lower case
+for f in `find`; do mv -v "$f" "`echo $f | tr '[A-Z]' '[a-z]'`"; done
+
+# Download all default installed apk files from your android.
+for i in $(adb shell pm list packages | awk -F':' '{print $2}'); do adb pull "$(adb shell pm path $i | awk -F':' '{print $2}')"; mv *.apk $i.apk 2&> /dev/null ;done
+
+# Insert a line at the top of a text file without sed or awk or bash loops
+echo "New first line" | cat - file.txt > newfile.txt; mv newfile.txt file.txt
+
+# Adding Prefix to File name
+mv {,prefix_}yourfile.txt
+
+# Sort files in folders alphabetically
+for i in *; do I=`echo $i|cut -c 1|tr a-z A-Z`;  if [ ! -d "$I" ]; then mkdir "$I"; fi; mv "$i" "$I"/"$i"; done
+
+# Adding Prefix to File name
+for i in *.pdf; do mv "$i" CS749__"$i"; done
+
+# rename file to *.old
+mv filename{,.old}
+
+# mv argument list too long
+find $_SOURCE -type f -name '*' -exec mv {}  $_DESTINATION \;
+
+# bulk rename files with sed, one-liner
+for i in *; do mv $i $(echo $i | sed 's/foo/bar/'); done
+
+# Copying part of the files from one directory to another
+find dir1 -maxdepth 1 -type f | head -100000 | xargs mv -t dir2/subdir
+
+# Move lots files with AWK
+find . -maxdepth 1 -type f | awk 'BEGIN { c=0 } { if( c == <quantity_at_a_time> ) { print l; l=$0; c=1 } else { if( l != "") { l=l" "$0 } else { l=$0 }; c++}} END { print l }' | xargs mv -t <dir_dest>
+
+# Copy files (.pdfs in this case) from a directory hierarchy to a different directory, ignoring the original structure
+find <source_directory> -name *.pdf -exec mv {} <destination_dir> \;
+
+# List movie size in current directory
+find . -regex '\(.*mp4\|.*mpg\|.*mpeg\|.*mov\|.*wmv\|.*mkv\|.*avi\)' -exec exiftool -directory -fileName -imageSize {} \;
+
+https://www.commandlinefu.com/commands/matching/mv/bXY=/plaintext
