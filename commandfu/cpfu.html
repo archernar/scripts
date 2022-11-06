@@ -1,0 +1,78 @@
+# commandlinefu.com - questions/comments: danstools00@gmail.com
+
+# Find non ascii characters in files in folder
+find . -type f -regex '.*\.\(cpp\|h\)' -exec grep -Pl "[\x80-\xFF]" {} \; | xargs -I % bash -c 'echo "%"; grep --color='auto' -P -n "[\x80-\xFF]" "%"'
+
+# Convert indentation to tabs
+find . -type f -regex '.*\.\(cpp\|h\)' -exec bash -c 'unexpand -t 4 --first-only "$0" | sponge "$0"' {} \;
+
+# Change Windows line endings to Unix version
+find . -type f -regex '.*\.\(cpp\|h\)' -exec egrep -l $'\r'\$ {} \;  | xargs dos2unix
+
+# Developer: Add an IDT map design reference to your source tree
+cp /proc/interrupts irq-ref.txt
+
+# Banner Grabber
+bash -c 'exec 3<>/dev/tcp/google.com/80; echo EOF>&3; cat<&3'
+
+# Quick and dirty hardware summary
+alias gethw='(printf "\nCPU\n\n"; lscpu; printf "\nMEMORY\n\n"; free -h; printf "\nDISKS\n\n"; lsblk; printf "\nPCI\n\n"; lspci; printf "\nUSB\n\n"; lsusb; printf "\nNETWORK\n\n"; ifconfig) | less'
+
+# display information about the CPU
+lscpu | egrep 'Model name|Socket|Thread|NUMA|CPU\(s\)'
+
+# Find non-ASCII and UTF-8 files in the current directory
+find . -type f -regex '.*\.\(cpp\|h\)' -exec file {} \; | grep "UTF-8\|extended-ASCII"
+
+# Replace lines in files with only spaces/tabs with simple empty line (within current directory - recursive)
+find . -type f -regex '.*\.\(cpp\|h\)' -exec sed -i 's/^[[:blank:]]\+$//g' {} \;
+
+# parse and format IP:port currently in listen state without net tools
+cat /proc/net/tcp | grep " 0A " | sed 's/^[^:]*: \(..\)\(..\)\(..\)\(..\):\(....\).*/echo $((0x\4)).$((0x\3)).$((0x\2)).$((0x\1)):$((0x\5))/g' | bash
+
+# Check if port is open on remote machine
+echo >  /dev/tcp/127.0.0.123/8085 && echo "Port is open"
+
+# Add timestamp of photos created by the “predictive capture” feature of Sony's Xperia camera app at the beginning of the filename
+(setopt CSH_NULL_GLOB; cd /path/to/Camera\ Uploads; for i in DSCPDC_000*; do mv -v $i "$(echo $i | perl -lpe 's/(DSCPDC_[0-9]{4}_BURST)([0-9]{4})([0-9]{2})([0-9]{2})/$2-$3-$4 $1$2$3$4/')"; done)
+
+# mysql backup utility
+mysqlbackup --port=3306 --protocol=tcp --user=dba --password=dba  --with-timestamp  --backup-dir=/tmp/toback/ --slave-info backup-and-apply-log  --innodb_data_file_path=ibdata1:10M:autoextend --innodb_log_files_in_group=2 --innodb_log_file_size=5242880
+
+# check mysql capacity to handle traffic
+mysqlslap  --query=/root/select_query_cp.sql --concurrency=10 --iterations=5  --create-schema=cvts1
+
+# Find a file and then copy to tmp folder
+for file in `ls | grep -i 'mumbai|pune|delhi'` ; do cp $file /tmp/ ; done 
+
+# Print your cpu intel architecture family
+cat /sys/devices/cpu/caps/pmu_name
+
+# Show top 50 running processes ordered by highest memory/cpu usage refreshing every 1s
+watch -n1 "ps aux --sort=-%mem,-%cpu | head -n 50"
+
+# Create backup copy of file, adding suffix of the date of the file modification (NOT today's date)
+cp file{,.$(date -r file "+%y%m%d")}
+
+# Create backup copy of file, adding suffix of the date of the file modification (NOT today's date)
+cp file{,.$(date -d @$(stat -c '%Y' file) "+%y%m%d")}
+
+# Perform Real-time Process Monitoring Using Watch Utility
+watch -n 1 'ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head'
+
+# Get CPU thermal data on MacOS
+sysctl machdep.xcpm.cpu_thermal_level
+
+# Initialise git in working directory with latest Visual Studio .gitignore [Windows]
+git init; (Invoke-WebRequest https://raw.githubusercontent.com/github/gitignore/master/VisualStudio.gitignore -UseBasicParsing).Content | Out-File -FilePath .gitignore -Encoding utf8; git add -A
+
+# Create backup copy of file, adding suffix of the date of the file modification (NOT today's date)
+cp file file.$(date -d @$(stat -c '%Y' file) "+%y%m%d")
+
+# Sort processes by CPU Usage
+ps auxk -%cpu | head -n10
+
+# Scan all open ports without any required program
+for i in {1..65535}; do (echo < /dev/tcp/127.0.0.1/$i) &>/dev/null && printf "\n[+] Open Port at\n: \t%d\n" "$i" || printf "."; done
+
+https://www.commandlinefu.com/commands/matching/cp/Y3A=/plaintext
