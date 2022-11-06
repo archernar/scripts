@@ -1,2 +1,3 @@
 cat /proc/cpuinfo  | grep 'name'| uniq
 cat /proc/cpuinfo  | grep process| wc -l
+lscpu
