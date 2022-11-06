@@ -1,0 +1,78 @@
+# commandlinefu.com - questions/comments: danstools00@gmail.com
+
+# Show a zoomable world map
+telnet mapscii.me
+
+# macOS: Save disk space by moving apps to external drives
+sudo mv /Applications/foo /Volumes/bar/Applications/foo && sudo ln -s /Volumes/bar/Applications/foo /Applications/foo
+
+# extract email addresses from some file (or any other pattern)
+grep -Eio '([[:alnum:]_.-]{1,64}@[[:alnum:]_.-]{1,252}?\.[[:alpha:].]{2,6})'
+
+# edit, view or execute last modified file with a single key-press
+f() { ls -lart;e="ls -tarp|grep -v /|tail -9";j=${e/9/1};g=${e/9/9|nl -nln};h=$(eval $j);eval $g;read -p "e|x|v|1..9 $(eval $j)?" -n 1 -r;case $REPLY in e) joe $h;;v)cat $h;;x) eval $h;;[1-9]) s=$(eval $g|egrep ^$REPLY) && touch "${s:7}" && f;;esac ; }
+
+# Generrate Cryptographically Secure RANDOM PASSWORD
+cat /dev/urandom |tr -c -d '[:alnum:]'|head -c 16;echo
+
+# Slugify: converts strings in any language into Slugs (friendly names to use in URLs and filenames)
+function slugify() { tr '[:upper:]' '[:lower:]' <<< "$(sed -z -r -e 's~[^[:alnum:]]+~ ~g' -e 's~^ *~~;s~ *$~~' -e 's~ +~-~g' - <<< "$(iconv -c -t ASCII//TRANSLIT//IGNORE - <<< "$@" )")"; }
+
+# Instead of saying RTFM!
+echo "[q]sa[ln0=aln256%Pln256/snlbx]sb729901041524823122snlbxq"|dc
+
+# Capture all plaintext passwords
+sudo tcpdump port http or port ftp or port smtp or port imap or port pop3 or port telnet -l -A | egrep -i -B5 'pass=|pwd=|log=|login=|user=|username=|pw=|passw=|passwd=|password=|pass:|user:|username:|password:|login:|pass |user '
+
+# An alias to re-run last command with sudo. Similar to "sudo !!"
+alias please='sudo $(fc -ln -1)'
+
+# Kill all processes that listen to ports begin with 50 (50, 50x, 50xxx,...)
+sudo netstat -plnt | awk '($4 ~ /:50$/){sub(/\/.*/, "", $7); system("sudo kill " $7)}'
+
+# Kill all processes that listen to ports begin with 50 (50, 50x, 50xxx,...)
+sudo netstat -plnt | grep :50 | awk '{print $7}' | awk -F/ '{print $1}' | xargs kill -9
+
+# NSA codename generator
+shuf -n 2 /usr/share/dict/words | tr -dc [:alnum:] | tr '[:lower:]' '[:upper:]'; echo
+
+# Update all outdated Python packages through pip.
+pip list --outdated --format=freeze | grep -o "[[:alnum:][:punct:]]\{,\}==" | sed 's#==$##g' | xargs -I '{}' pip install {} --upgrade
+
+# Extract binary from .text section (shellcode)
+objdump -d -j .text ExeHere | grep -e '^ ' | tr '[[:space:]]' '\n' | egrep '^[[:alnum:]]{2}$' | xargs | sed 's/ /\\x/g' | sed -e 's/^/\\x/g'
+
+# Create a new subfolder with randomly shuffled symlinks of the files in current folder for further non-destructive processing.
+SHUFDIR=shuffled && mkdir $SHUFDIR && for file in ./*; do ln -s "$PWD/$file" "$PWD/$SHUFDIR/$(od -A n -N 8 -t x8 /dev/urandom | tr -dc '[:print:]')-${file##*/}" ; done
+
+# Test remote SSH server status using telnet (no login required)
+$if [[ "$(sleep 1 | telnet -c <host> <port> 2>&1 | grep '^SSH')" == SSH* ]]; then <command when up>; else <command when down>; fi;
+
+# search APT's cache for a regex and let it display name and short description of matches
+apt-cache search byo | sed "s/^\([[:alnum:]\.-]*\) - /\1=%%%=- /" | column -s '=%%%=' -t
+
+# Epoch from time protocol port 37
+telnet time.nist.gov 37 2>/dev/null |tail -1 | xxd | awk '{print $2 $3}'|tr -d '\n' | perl -nwe "print scalar(hex($1)-2208988800).\"\n\""
+
+# Search and play youtube videos directly to terminal (no X needed)
+pyt() { id=$(curl -s 'https://www.youtube.com/results?search_query='$(tr ' ' + <<<"$1") | grep -om3 '"[[:alnum:]]\{11\}"' | awk NR==3 | tr -d \"); youtube-dl -q 'https://www.youtube.com/watch?v='"$id" -o - | mplayer -vo null /dev/fd/3 3<&0 </dev/tty; }
+
+# RELINK a lot of broken symlinks - FIX broken symlinks after rsync site to new server
+find /PATHNAME -type l | while read nullsymlink ; do wrongpath=$(readlink "$nullsymlink") ; right=$(echo "$wrongpath" | sed s'|OLD_STRING|NEW_STRING|') ; ln -fs "$right" "$nullsymlink" ; done
+
+# make soft links from a downloaded bin folder
+ls | while read line; do ln -s "$(pwd)/$line" "/usr/bin/$line"; done
+
+# Generate a random alphanumeric string (works on Mac)
+cat /dev/urandom | strings | grep -o '[[:alnum:]]' | head -n 15 | tr -d '\n'; echo
+
+# Generate a random password 30 characters long
+strings /dev/urandom | tr -cd '[:alnum:]' | fold -w 30 | head -n 1
+
+# MAMP: "Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)" solution
+sudo ln -s /Applications/MAMP/tmp/mysql/mysql.sock /tmp/mysql.sock
+
+# urldecoding
+perl -M URI::Escape -lne 'print uri_unescape($_)'
+
+https://www.commandlinefu.com/commands/matching/ln/bG4=/plaintext
