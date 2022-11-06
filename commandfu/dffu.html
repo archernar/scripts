@@ -1,0 +1,78 @@
+# commandlinefu.com - questions/comments: danstools00@gmail.com
+
+# url redirect tracer with curl
+curl --silent -I -L shorturl.at/dfIJQ | grep -i location
+
+# Remove metadata from pdf file (e.g. creation date)
+qpdf --pages source.pdf 1-z -- --empty clean-file.pdf
+
+# Remove password from Bank Statement
+pdftk INPUT.PDF input_pw 0123456789 cat output OUTPUT.PDF
+
+# From all PDF files in all subdirectories, extract two metadata fields (here: Creator and Producer) into a CSV table
+echo "File;Creator;Producer";find . -name '*.pdf' -print0 | while IFS= read -d $'\0' line;do echo -n "$line;";pdfinfo "$line"|perl -ne 'if(/^(Creator|Producer):\s*(.*)$/){print"$2";if ($1 eq "Producer"){exit}else{print";"}}';echo;done 2>/dev/null
+
+# get partitions that are over 50% usage
+df -h |awk '{a=$5;gsub(/%/,"",a);if(a > 50){print $0}}'
+
+# Create a file and manipulate the date
+touch -d '-1 year' /tmp/oldfile
+
+# Reduce PDF Filesize
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dBATCH  -dQUIET  -dColorImageResolution=600 -dMonoImageResolution=600 -sOutputFile=output.pdf input.pdf
+
+# Show used disk space:
+df -klP -t xfs -t ext2 -t ext3 -t ext4 -t reiserfs | grep -oE ' [0-9]{1,}( +[0-9]{1,})+' | awk '{sum_used += $2} END {printf "%.0f GB\n", sum_used/1024/1024}'
+
+# Show allocated disk space:
+df -klP -t xfs -t ext2 -t ext3 -t ext4 -t reiserfs | grep -oE ' [0-9]{1,}( +[0-9]{1,})+' | awk '{sum_used += $1} END {printf "%.0f GB\n", sum_used/1024/1024}'
+
+# Get all documents (doc,docx,xls,xlsx,pdf,ppt,pptx,...) linked in a webpage
+curl https://www.domain.com/ | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*.*(doc|docx|xls|xlsx|ppt|pptx|pdf)" | sort | uniq > list.txt | wget list.txt
+
+# Convert libreoffice files :  .odt   .odg and other to .pdf
+find /home/foo/Documents/ -type f -iname "*.odt" -exec libreoffice --headless --convert-to pdf '{}' \;
+
+# Add a TOC to a pdf
+k2pdfopt -mode copy -n -toclist $tocFile $inFile -o $outFile
+
+# Fulltext search in multiple OCR'd pdfs
+find /path -name '*.pdf' -exec sh -c 'pdftotext "{}" - | grep --with-filename --label="{}" --color "your pattern"' \;
+
+# Adding Prefix to File name
+for i in *.pdf; do mv "$i" CS749__"$i"; done
+
+# Determines latest pdf file downloaded by firefox in ~/Downloads directory
+ls -tr ~/Downloads/*.pdf|tail -1
+
+# Disk Free with column and Fs and Size human readble
+df -PhT
+
+# To rotate all PDF pages clockwise:
+pdftk in.pdf cat 1-endeast output out.pdf
+
+# Convert YAML to JSON
+perl -MYAML::XS=LoadFile -MJSON::XS=encode_json -e 'for (@ARGV) { for (LoadFile($_)) { print encode_json($_),"\n" } }' *.yaml
+
+# check hardisk volume
+df -h
+
+# Convert pdf to pure text.
+java -jar pdfbox-app-2.0.6.jar ExtractText input.pdf
+
+# Convert a pdf image to a high-quality PNG
+convert -density 300 -trim image.pdf -quality 100 image.png
+
+# GREP a PDF file.
+pdfgrep pattern /the/path
+
+# Download just html of a whole website
+wget --mirror --random-wait --recursive robots=off -U mozilla  -R gif,jpg,pdf --reject-regex '((.*)\?(.*))|(.*)' -c [URLGOESHERE]
+
+# df output, sorted by Use% and correctly maintaining header row
+df -h | sort -r -k 5 -i
+
+# List cloudfront distributions based on domain
+aws cloudfront list-distributions | jq -r '.DistributionList | .Items | .[] | .Id + " " + .Aliases.Items[]'
+
+https://www.commandlinefu.com/commands/matching/df/ZGY=/plaintext
