@@ -14,8 +14,9 @@
 | - [CaptureDesktop](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/CaptureDesktop) | - [CleanFileOfCtrlChars](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/CleanFileOfCtrlChars) | - [CopyFromAListInAFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/CopyFromAListInAFile) | - [FigletClock](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/FigletClock) | 
 | - [FuToRepo](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/FuToRepo) | - [GetProcessorName](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/GetProcessorName) | - [GetWheather](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/GetWheather) | - [InstallNFSCommon](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/InstallNFSCommon) | 
 | - [InstallopenJDK8](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/InstallopenJDK8) | - [ListFilesModInPeriod](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ListFilesModInPeriod) | - [MarkdownToHTML](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MarkdownToHTML) | - [MostUsedCommands](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MostUsedCommands) | 
-| - [ShutdownRemote](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ShutdownRemote) | - [SSHGenerateKey](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHGenerateKey) | - [SSHPullFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHPullFile) | - [SSHPushFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHPushFile) | 
-| - [SSHRunACommandAndExit](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHRunACommandAndExit) | - [startvimnoargs](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/startvimnoargs) | - [TopTenProcess](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/TopTenProcess) | 
+| - [ShutDownAll](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ShutDownAll) | - [ShutdownRemote](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ShutdownRemote) | - [SSHGenerateKey](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHGenerateKey) | - [SSHPullFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHPullFile) | 
+| - [SSHPushFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHPushFile) | - [SSHRunACommandAndExit](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHRunACommandAndExit) | - [startvimnoargs](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/startvimnoargs) | - [TopTenProcess](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/TopTenProcess) | 
+
 
 
 ## awk
@@ -102,6 +103,7 @@
 - [ListFilesModInPeriod](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ListFilesModInPeriod)
 - [MarkdownToHTML](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MarkdownToHTML)
 - [MostUsedCommands](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MostUsedCommands)
+- [ShutDownAll](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ShutDownAll)
 - [ShutdownRemote](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ShutdownRemote)
 - [SSHGenerateKey](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHGenerateKey)
 - [SSHPullFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHPullFile)
@@ -158,6 +160,7 @@
 - [ListFilesModInPeriod](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ListFilesModInPeriod)
 - [MarkdownToHTML](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MarkdownToHTML)
 - [MostUsedCommands](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MostUsedCommands)
+- [ShutDownAll](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ShutDownAll)
 - [ShutdownRemote](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ShutdownRemote)
 - [SSHGenerateKey](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHGenerateKey)
 - [SSHPullFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHPullFile)
