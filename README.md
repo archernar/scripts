@@ -31,10 +31,10 @@
 
 |                                |                                |                                |                                |
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
-| - [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash/bash.top) | - [CheckIfFileExists](https://raw.githubusercontent.com/archernar/scripts/main/bash/CheckIfFileExists) | - [my](https://raw.githubusercontent.com/archernar/scripts/main/bash/my) | - [removefromfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/removefromfilename) | 
-| - [SharedLibrary.bash](https://raw.githubusercontent.com/archernar/scripts/main/bash/SharedLibrary.bash) | - [sitetotext](https://raw.githubusercontent.com/archernar/scripts/main/bash/sitetotext) | - [sitetotextraw](https://raw.githubusercontent.com/archernar/scripts/main/bash/sitetotextraw) | - [slapfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/slapfilename) | 
-| - [tagit](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagit) | - [tagman](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagman) | - [tags](https://raw.githubusercontent.com/archernar/scripts/main/bash/tags) | - [.vim.vimsplit](https://raw.githubusercontent.com/archernar/scripts/main/bash/.vim.vimsplit) | 
-
+| - [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash/bash.top) | - [CheckIfFileExists](https://raw.githubusercontent.com/archernar/scripts/main/bash/CheckIfFileExists) | - [IsNFS](https://raw.githubusercontent.com/archernar/scripts/main/bash/IsNFS) | - [my](https://raw.githubusercontent.com/archernar/scripts/main/bash/my) | 
+| - [removefromfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/removefromfilename) | - [SharedLibrary.bash](https://raw.githubusercontent.com/archernar/scripts/main/bash/SharedLibrary.bash) | - [sitetotext](https://raw.githubusercontent.com/archernar/scripts/main/bash/sitetotext) | - [sitetotextraw](https://raw.githubusercontent.com/archernar/scripts/main/bash/sitetotextraw) | 
+| - [slapfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/slapfilename) | - [tagit](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagit) | - [tagman](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagman) | - [tags](https://raw.githubusercontent.com/archernar/scripts/main/bash/tags) | 
+| - [.vim.vimsplit](https://raw.githubusercontent.com/archernar/scripts/main/bash/.vim.vimsplit) | 
 
 
 ## vimscript
@@ -125,6 +125,7 @@
 ## bash
 - [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash/bash.top)
 - [CheckIfFileExists](https://raw.githubusercontent.com/archernar/scripts/main/bash/CheckIfFileExists)
+- [IsNFS](https://raw.githubusercontent.com/archernar/scripts/main/bash/IsNFS)
 - [my](https://raw.githubusercontent.com/archernar/scripts/main/bash/my)
 - [removefromfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/removefromfilename)
 - [SharedLibrary.bash](https://raw.githubusercontent.com/archernar/scripts/main/bash/SharedLibrary.bash)
@@ -182,6 +183,7 @@
 ## bash
 - [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash/bash.top)
 - [CheckIfFileExists](https://raw.githubusercontent.com/archernar/scripts/main/bash/CheckIfFileExists)
+- [IsNFS](https://raw.githubusercontent.com/archernar/scripts/main/bash/IsNFS)
 - [my](https://raw.githubusercontent.com/archernar/scripts/main/bash/my)
 - [removefromfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/removefromfilename)
 - [SharedLibrary.bash](https://raw.githubusercontent.com/archernar/scripts/main/bash/SharedLibrary.bash)
