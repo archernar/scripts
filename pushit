@@ -185,6 +185,7 @@ cat $Tmp | sed 's/^NEWLINEHERE//' > README.md
 #-------------------------------------------------------------------------------------
 git add README.md
 git add README.html
+git add simple.css
 git add pushit
 git commit -m "Update"
 git push -u origin main

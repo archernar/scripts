@@ -1,5 +1,5 @@
 body {
-	margin-top: 1px;
+	margin-top: 20px;
 	margin-left: 20px;
 	margin-right: 1px;
 	padding: 0px;
@@ -12,13 +12,13 @@ body {
 
 }
 h2 {
-	margin-top: 1px;
+	margin-top: 10px;
 	margin-left: 20px;
 	margin-right: 1px;
 	margin-bottom: 4px;
 	padding: 0px;
 	color: Black;
-    font: 12pt/bold 'courier new';
+    font: bold 1.5em "courier new", serif;
 	line-height: 1.00em; 
 	background-color: #dfe3ee;
 	border-collapse: collapse;
@@ -26,9 +26,24 @@ h2 {
 
 }
 
-td {
-	text-align:left;
+a, a:link,a:visited,a:hover { 
+color: Black; 
+font: bold 1.2em "courier new", serif;
+text-decoration: underline;
+}
+tr.odd {
+}
+table{
+margin-left: 20px;
+border-collapse:collapse;
+border:1px solid #A9A9A9;
+width: 50%;
 }
 
-a, a:link,a:visited,a:hover { color: Black; text-decoration: underline; }
-
+table td{
+text-align:left;
+border:1px solid #A9A9A9;
+margin: 4px;
+padding: 4px;
+width: 25%;
+}
