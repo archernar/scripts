@@ -13,18 +13,17 @@
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
 | - [CaptureDesktop](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/CaptureDesktop) | - [CleanFileOfCtrlChars](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/CleanFileOfCtrlChars) | - [CopyFromAListInAFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/CopyFromAListInAFile) | - [FigletClock](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/FigletClock) | 
 | - [FuToRepo](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/FuToRepo) | - [GetProcessorName](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/GetProcessorName) | - [GetWheather](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/GetWheather) | - [InstallNFSCommon](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/InstallNFSCommon) | 
-| - [InstallopenJDK8](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/InstallopenJDK8) | - [ListFilesModInPeriod](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ListFilesModInPeriod) | - [MarkdownToHTML](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MarkdownToHTML) | - [MostUsedCommands](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MostUsedCommands) | 
-| - [ShutDownAll](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ShutDownAll) | - [ShutdownRemote](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ShutdownRemote) | - [SSHGenerateKey](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHGenerateKey) | - [SSHPullFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHPullFile) | 
-| - [SSHPushFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHPushFile) | - [SSHRunACommandAndExit](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHRunACommandAndExit) | - [startvimnoargs](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/startvimnoargs) | - [TopTenProcess](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/TopTenProcess) | 
-
+| - [InstallopenJDK8](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/InstallopenJDK8) | - [ListAllGitRepos](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ListAllGitRepos) | - [ListFilesModInPeriod](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ListFilesModInPeriod) | - [MarkdownToHTML](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MarkdownToHTML) | 
+| - [MostUsedCommands](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MostUsedCommands) | - [ShutDownAll](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ShutDownAll) | - [ShutdownRemote](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ShutdownRemote) | - [SSHGenerateKey](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHGenerateKey) | 
+| - [SSHPullFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHPullFile) | - [SSHPushFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHPushFile) | - [SSHRunACommandAndExit](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHRunACommandAndExit) | - [startvimnoargs](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/startvimnoargs) | 
+| - [TopTenProcess](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/TopTenProcess) | 
 
 
 ## awk
 
 |                                |                                |                                |                                |
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
-| - [functionlister.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/functionlister.awk) | - [tablesonly.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/tablesonly.awk) | - [utils.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/utils.awk) | - [mdt.awk](https://raw.githubusercontent.com/archernar/scripts/main/mdt.awk) | 
-
+| - [functionlister.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/functionlister.awk) | - [tablesonly.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/tablesonly.awk) | - [utils.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/utils.awk) | 
 
 
 ## bash
@@ -34,8 +33,7 @@
 | - [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash/bash.top) | - [CheckIfFileExists](https://raw.githubusercontent.com/archernar/scripts/main/bash/CheckIfFileExists) | - [FileExistsNotEmpty](https://raw.githubusercontent.com/archernar/scripts/main/bash/FileExistsNotEmpty) | - [IsFileEmpty](https://raw.githubusercontent.com/archernar/scripts/main/bash/IsFileEmpty) | 
 | - [IsHostUp](https://raw.githubusercontent.com/archernar/scripts/main/bash/IsHostUp) | - [IsNFS](https://raw.githubusercontent.com/archernar/scripts/main/bash/IsNFS) | - [my](https://raw.githubusercontent.com/archernar/scripts/main/bash/my) | - [removefromfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/removefromfilename) | 
 | - [SharedLibrary.bash](https://raw.githubusercontent.com/archernar/scripts/main/bash/SharedLibrary.bash) | - [sitetotext](https://raw.githubusercontent.com/archernar/scripts/main/bash/sitetotext) | - [sitetotextraw](https://raw.githubusercontent.com/archernar/scripts/main/bash/sitetotextraw) | - [slapfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/slapfilename) | 
-| - [tagit](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagit) | - [tagman](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagman) | - [tags](https://raw.githubusercontent.com/archernar/scripts/main/bash/tags) | - [UpperToLowerCase](https://raw.githubusercontent.com/archernar/scripts/main/bash/UpperToLowerCase) | 
-| - [.vim.vimsplit](https://raw.githubusercontent.com/archernar/scripts/main/bash/.vim.vimsplit) | 
+| - [tagit](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagit) | - [tagman](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagman) | - [UpperToLowerCase](https://raw.githubusercontent.com/archernar/scripts/main/bash/UpperToLowerCase) | 
 
 
 ## vimscript
@@ -101,6 +99,7 @@
 - [GetWheather](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/GetWheather)
 - [InstallNFSCommon](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/InstallNFSCommon)
 - [InstallopenJDK8](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/InstallopenJDK8)
+- [ListAllGitRepos](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ListAllGitRepos)
 - [ListFilesModInPeriod](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ListFilesModInPeriod)
 - [MarkdownToHTML](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MarkdownToHTML)
 - [MostUsedCommands](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MostUsedCommands)
@@ -119,7 +118,6 @@
 - [functionlister.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/functionlister.awk)
 - [tablesonly.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/tablesonly.awk)
 - [utils.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/utils.awk)
-- [mdt.awk](https://raw.githubusercontent.com/archernar/scripts/main/mdt.awk)
 </td>
 <td valign=top>
 
@@ -138,9 +136,7 @@
 - [slapfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/slapfilename)
 - [tagit](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagit)
 - [tagman](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagman)
-- [tags](https://raw.githubusercontent.com/archernar/scripts/main/bash/tags)
 - [UpperToLowerCase](https://raw.githubusercontent.com/archernar/scripts/main/bash/UpperToLowerCase)
-- [.vim.vimsplit](https://raw.githubusercontent.com/archernar/scripts/main/bash/.vim.vimsplit)
 </td>
 </tr></table>
 
@@ -163,6 +159,7 @@
 - [GetWheather](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/GetWheather)
 - [InstallNFSCommon](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/InstallNFSCommon)
 - [InstallopenJDK8](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/InstallopenJDK8)
+- [ListAllGitRepos](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ListAllGitRepos)
 - [ListFilesModInPeriod](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ListFilesModInPeriod)
 - [MarkdownToHTML](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MarkdownToHTML)
 - [MostUsedCommands](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MostUsedCommands)
@@ -181,7 +178,6 @@
 - [functionlister.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/functionlister.awk)
 - [tablesonly.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/tablesonly.awk)
 - [utils.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/utils.awk)
-- [mdt.awk](https://raw.githubusercontent.com/archernar/scripts/main/mdt.awk)
 </td>
 <td valign=top>
 
@@ -200,9 +196,7 @@
 - [slapfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/slapfilename)
 - [tagit](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagit)
 - [tagman](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagman)
-- [tags](https://raw.githubusercontent.com/archernar/scripts/main/bash/tags)
 - [UpperToLowerCase](https://raw.githubusercontent.com/archernar/scripts/main/bash/UpperToLowerCase)
-- [.vim.vimsplit](https://raw.githubusercontent.com/archernar/scripts/main/bash/.vim.vimsplit)
 </td>
 <td valign=top>
 
