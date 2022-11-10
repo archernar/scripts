@@ -165,7 +165,7 @@ cat $Tmp | sed 's/^[<].*$//'       > README.html; cp README.html $Tmp;
 cat $Tmp | sed '/^$/d'             > README.html; cp README.html $Tmp;
 cat $Tmp | sed 's/^NEWLINEHERE//'  > README.html; cp README.html $Tmp;
 markdown $Tmp | sed '/^$/d' > README.html
-#pandoc "$Tmp" -f markdown -t html -s -o PRIME.html --metadata pagetitle="Page Title"
+pandoc "$Tmp" -f markdown -t html -s -o PRIME.html --metadata pagetitle="Page Title"
 
 cp README.md $Tmp
 cat $Tmp | sed 's/^NEWLINEHERE//' > README.md
