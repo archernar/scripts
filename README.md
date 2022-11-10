@@ -4,7 +4,7 @@
 
 |                                |                                |                                |                                |
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
-| - [generalsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/generalsheet1.fc) | - [vimsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/vimsheet1.fc) | 
+| - [gawk.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/gawk.fc) | - [generalsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/generalsheet1.fc) | - [vimsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/vimsheet1.fc) | 
 
 
 ## oneliners
@@ -23,8 +23,8 @@
 
 |                                |                                |                                |                                |
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
-| - [functionlister.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/functionlister.awk) | - [tablesonly.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/tablesonly.awk) | - [utils.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/utils.awk) | - [mdt.awk](https://raw.githubusercontent.com/archernar/scripts/main/mdt.awk) | 
-
+| - [functionlister.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/functionlister.awk) | - [tablesonly.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/tablesonly.awk) | - [utils.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/utils.awk) | - [gawk.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/gawk.fc) | 
+| - [mdt.awk](https://raw.githubusercontent.com/archernar/scripts/main/mdt.awk) | 
 
 
 ## bash
