@@ -116,56 +116,69 @@ puttable "css" >> README.md
 puttable "adlist" >> README.md
 puttable "commandfu" >> README.md
 
-echo "" >> README.md
-opentable >> README.md
-put "flashcards" >> README.md
-put "oneliners" >> README.md
-put "awk" >> README.md
-put "bash" >> README.md
-closetable >> README.md
+# echo "" >> README.md
+# opentable >> README.md
+# put "flashcards" >> README.md
+# put "oneliners" >> README.md
+# put "awk" >> README.md
+# put "bash" >> README.md
+# closetable >> README.md
+# 
+# echo "" >> README.md
+# put "flashcards" >> README.md
+# put "oneliners" >> README.md
+# put "awk" >> README.md
+# put "bash" >> README.md
+# put "vimscript" >> README.md
+# put "java" >> README.md
+# put "css" >> README.md
+# put "adlist" >> README.md
+# put "commandfu" >> README.md
+# echo "" >> README.md
+# 
+# opentable >> README.md
+# put "vimscript" >> README.md
+# put "java" >> README.md
+# put "css" >> README.md
+# put "adlist" >> README.md
+# closetable >> README.md
 
-echo "" >> README.md
-put "flashcards" >> README.md
-put "oneliners" >> README.md
-put "awk" >> README.md
-put "bash" >> README.md
-put "vimscript" >> README.md
-put "java" >> README.md
-put "css" >> README.md
-put "adlist" >> README.md
-put "commandfu" >> README.md
-echo "" >> README.md
+# echo "" >> README.md
+# echo "" >> README.md
+# opentable >> README.md
+# put "commandfu" >> README.md
+# closetable >> README.md
+# 
+# echo "" > $Tmp
+# echo "<!DOCTYPE html>" >> $Tmp
+# echo "<html lang='en'>" >> $Tmp
+# echo "" >> $Tmp
+# echo "<head>" >> $Tmp
+# echo "<link rel='stylesheet' href='simple.css'>" >> $Tmp
+# echo "<title>Links</title>" >> $Tmp
+# echo "</head>" >> $Tmp
+# echo "<body>" >> $Tmp
+# cat  README.md  >> $Tmp
+# echo "</body>" >> $Tmp
+# echo "</html>" >> $Tmp
+# cat $Tmp | sed 's/^[<].*$//'       > README.html; cp README.html $Tmp;
+# cat $Tmp | sed '/^$/d'             > README.html; cp README.html $Tmp;
+# cat $Tmp | sed 's/^NEWLINEHERE//'  > README.html; cp README.html $Tmp;
+# markdown $Tmp | sed '/^$/d' > README.html
 
-opentable >> README.md
-put "vimscript" >> README.md
-put "java" >> README.md
-put "css" >> README.md
-put "adlist" >> README.md
-closetable >> README.md
+cat  README.md > $Tmp
+rm -f README.html
+pandoc --css=simple.css "$Tmp" -f markdown -t html -s -o README.html --metadata pagetitle="README"
+cp README.html $Tmp
+cat $Tmp | gawk '
+/^.*<style/, /^.*<[/]style/ {
+    next
+}
+{
+    print $0
+}
+' > README.html
 
-echo "" >> README.md
-echo "" >> README.md
-opentable >> README.md
-put "commandfu" >> README.md
-closetable >> README.md
-
-echo "" > $Tmp
-echo "<!DOCTYPE html>" >> $Tmp
-echo "<html lang='en'>" >> $Tmp
-echo "" >> $Tmp
-echo "<head>" >> $Tmp
-echo "<link rel='stylesheet' href='simple.css'>" >> $Tmp
-echo "<title>Links</title>" >> $Tmp
-echo "</head>" >> $Tmp
-echo "<body>" >> $Tmp
-cat  README.md  >> $Tmp
-echo "</body>" >> $Tmp
-echo "</html>" >> $Tmp
-cat $Tmp | sed 's/^[<].*$//'       > README.html; cp README.html $Tmp;
-cat $Tmp | sed '/^$/d'             > README.html; cp README.html $Tmp;
-cat $Tmp | sed 's/^NEWLINEHERE//'  > README.html; cp README.html $Tmp;
-markdown $Tmp | sed '/^$/d' > README.html
-pandoc "$Tmp" -f markdown -t html -s -o PRIME.html --metadata pagetitle="Page Title"
 
 cp README.md $Tmp
 cat $Tmp | sed 's/^NEWLINEHERE//' > README.md
