@@ -1,0 +1,78 @@
+# commandlinefu.com - questions/comments: danstools00@gmail.com
+
+# KDE Console Logout command (with confirmation dialog)
+$ qdbus org.kde.ksmserver /KSMServer logout 1 0 0
+
+# Last shutdown date and time of a system
+last -x | grep shutdown | head -1
+
+# Shutdown and restart Windoze from the command line
+C:\> shutdown /f /r /t 0
+
+# Shutdown ubuntu
+sudo shutdown -h now
+
+# Wait the set time and then Power off
+sudo shutdown -h <hour:minute>
+
+# Wait a moment and then Power off
+sudo shutdown 3600 -P
+
+# Reboot
+shutdown now -r
+
+# Remove Suspend option from XFCE logoff dialog
+xfconf-query -c xfce4-session -np '/shutdown/ShowSuspend' -t 'bool' -s 'false'
+
+# shutdown if wget exit
+while pgrep wget || sudo shutdown -P now; do sleep 1m; done
+
+# Killing a process in Windows 7 command line
+Taskkill /?
+
+# Shutdown all VMWare ESX VMs from commandline
+for vm in `/usr/bin/vmware-cmd -l`; do      /usr/bin/vmware-cmd "${vm}" stop trysoft; done
+
+# View files opened by a program on startup and shutdown
+sudo lsof -rc command >> /tmp/command.txt
+
+# if you want the script run at shutdown
+sudo update-rc.d -f nomescript stop 90 0 6
+
+# shutdown pc in 4 hours without needing to keep terminal open / user logged in.
+shutdown 60*4 & disown
+
+# shutdown pc in a 4 hours
+shutdown -h +240
+
+# shutdown pc in 4 hours without needing to keep terminal open / user logged in.
+shutdown -h 240 & disown
+
+# shutdown pc in a 4 hours
+echo "shutdown -h now" | sudo at now + 4 hours
+
+# shutdown pc in a 4 hours
+sleep 4h && halt
+
+# shutdown pc in a 4 hours
+shutdown -h $((60 * 4))
+
+# orderly shutdown system and reboot.
+shutdown -r now
+
+# if download end,shutdown
+for ((;;)) do pgrep wget ||shutdown -h now; sleep 5; done
+
+# Force an fsck on reboot
+shutdown -rF now
+
+# power off system in X minutes
+shutdown -h 60
+
+# sun solaris 9 complete restart
+init 6
+
+# Mac Sleep Timer
+sudo pmset schedule sleep "08/31/2009 00:00:00"
+
+https://www.commandlinefu.com/commands/matching/shutdown/c2h1dGRvd24=/plaintext
