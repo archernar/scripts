@@ -1,0 +1,47 @@
+#!/usr/bin/bash
+Tmp="/tmp/$$"
+
+
+
+googlechromebookmarks() {
+  cat ~/.config/google-chrome/Default/Bookmarks | \
+  grep -E '\"name|\"url' | \
+  grep -vE '\"type\"\:' | \
+  awk '{print $1 substr($0,index($0,$2))}' | \
+  sed s'/^\"name\"\:/title \= /' | \
+  sed s'/^\"url\"\:/url \= /' | \
+  sed s'/\,$//' |  \
+  awk 'BEGIN {
+              title="";
+              re=""
+              md=""
+             }
+             {
+              if ( $1 ~ /^url/) {
+                sz = $0
+                sub(/url = /,"",sz)
+                gsub(/["]/,"",sz)
+                re=re""title"  "$0"\n\n";
+                md=md "- [" title "]"  "(" sz ")" "\n"
+              } else if ( $1 ~ /^title/ ) {
+                title=$0;
+                sub(/title = /,"",title)
+                gsub(/["]/,"",title)
+              }
+            }
+       END {
+        print md;
+       }'
+}
+
+
+googlechromebookmarks | tr -cd '\11\12\15\40-\176' | \
+    grep -v  Amazon  | \
+    grep -vi estes   | \
+    grep -vi xan     | \
+    grep -vi gastro  | \
+    grep -vi doctor  | \
+    grep -vi fidelity | \
+    grep -vi $USER   | \
+    grep -vi google  | \
+    sort | uniq | tee | markdown | tee /etc/center/BOOKMARKS.html 

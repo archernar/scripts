@@ -35,7 +35,7 @@
 | - [IsHostUp](https://raw.githubusercontent.com/archernar/scripts/main/bash/IsHostUp) | - [IsNFS](https://raw.githubusercontent.com/archernar/scripts/main/bash/IsNFS) | - [my](https://raw.githubusercontent.com/archernar/scripts/main/bash/my) | - [removefromfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/removefromfilename) | 
 | - [SharedLibrary.bash](https://raw.githubusercontent.com/archernar/scripts/main/bash/SharedLibrary.bash) | - [sitetotext](https://raw.githubusercontent.com/archernar/scripts/main/bash/sitetotext) | - [sitetotextraw](https://raw.githubusercontent.com/archernar/scripts/main/bash/sitetotextraw) | - [slapfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/slapfilename) | 
 | - [tagit](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagit) | - [tagman](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagman) | - [tags](https://raw.githubusercontent.com/archernar/scripts/main/bash/tags) | - [UpperToLowerCase](https://raw.githubusercontent.com/archernar/scripts/main/bash/UpperToLowerCase) | 
-| - [.vim.vimsplit](https://raw.githubusercontent.com/archernar/scripts/main/bash/.vim.vimsplit) | 
+| - [.vim.vimsplit](https://raw.githubusercontent.com/archernar/scripts/main/bash/.vim.vimsplit) | - [zz](https://raw.githubusercontent.com/archernar/scripts/main/bash/zz) | 
 
 
 ## vimscript
