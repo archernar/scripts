@@ -4,7 +4,8 @@
 
 |                                |                                |                                |                                |
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
-| - [gawk.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/gawk.fc) | - [generalsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/generalsheet1.fc) | - [vimsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/vimsheet1.fc) | 
+| - [gawk.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/gawk.fc) | - [generalsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/generalsheet1.fc) | - [mp3fu](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/mp3fu) | - [vimsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/vimsheet1.fc) | 
+
 
 
 ## oneliners
@@ -81,5 +82,5 @@
 | - [cpfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/cpfu.html) | - [dffu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/dffu.html) | - [gitfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/gitfu.html) | - [lnfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/lnfu.html) | 
 | - [lsfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/lsfu.html) | - [mountfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/mountfu.html) | - [mvfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/mvfu.html) | - [nfsfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/nfsfu.html) | 
 | - [psfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/psfu.html) | - [shutdownfu](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/shutdownfu) | - [umountfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/umountfu.html) | - [vimfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/vimfu.html) | 
-
+| - [zed](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/zed) | 
 
