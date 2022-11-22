@@ -1,0 +1,2 @@
+sed -i '/^$/d' file.txt
+# -i means edit file in-place
