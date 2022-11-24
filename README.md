@@ -4,8 +4,8 @@
 
 |                                |                                |                                |                                |
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
-| - [gawk.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/gawk.fc) | - [generalsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/generalsheet1.fc) | - [mpv.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/mpv.fc) | - [vimsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/vimsheet1.fc) | 
-
+| - [gawk.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/gawk.fc) | - [generalsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/generalsheet1.fc) | - [mpv.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/mpv.fc) | - [tags](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/tags) | 
+| - [vimsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/vimsheet1.fc) | - [.vim.vimsplit](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/.vim.vimsplit) | 
 
 
 ## oneliners
