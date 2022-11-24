@@ -1,2 +1,0 @@
- # number each line of a file (number on left, right-aligned)
- sed = filename | sed 'N; s/^/     /; s/ *\(.\{6,\}\)\n/\1  /'
