@@ -33,7 +33,7 @@ puttable() {
         sz = $0
         sub(/[.]/,"",sz)
         n=split(sz, A, "/")
-        sz = "- [" A[n] "]"  "(" u sz ")"
+        sz = "[" A[n] "]"  "(" u sz ")"
         printf "%s", sz " | "
         ct++
         if ( ct > (COLS-1) ) {
