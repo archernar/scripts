@@ -1,0 +1,32 @@
+    ARGC         --  Implies the number of arguments provided at the command line.                       
+    ARGV         --  Array that stores the cmd-line args. Valid index ranges from 0 to ARGC-1.           
+    CONVFMT      --  The conversion format for numbers. Its default value is %.6g.                       
+    ENVIRON      --  An associative array of environment variables.                                      
+    FILENAME     --  The current file name.                                                              
+    FS           --  The (input) field separator and its default value is space.                         
+                     You can also change this by using -F command line option.                           
+    NF           --  The number of fields in the current record.                                         
+    NR           --  The number of the current record.                                                   
+    FNR          --  Similar to NR, but relative to the current file.                                    
+    OFMT         --  The output format number and its default value is %.6g.                             
+    OFS          --  The output field separator and its default value is space.                          
+    ORS          --  The output record separator and its default value is newline.                       
+    RLENGTH      --  The length of the string matched by match function.                                 
+                     AWK's match function searches for a given string in the input-string.               
+    RS           --  It represents (input) record separator and its default value is newline.            
+    RSTART       --  The first position in the string matched by match function.                         
+    SUBSEP       --  The separator character for array subscripts                                        
+    $0           --  The entire input record.                                                            
+    $n           --  The nth field in the current record where the fields are separated by FS.           
+    ARGIND       --  The index in ARGV of the current file being processed.                              
+    BINMODE      --  Specifies binary mode for all file I/O on non-POSIX systems.                        
+    ERRNO        --  A string indicates an error when a redirection fails                                
+    FIELDWIDTHS  --  A space separated list of field widths variable is set,                             
+                     GAWK parses the input into fields of fixed width, instead of usingi                 
+                     the value of the FS variable as the field separator.                                
+    IGNORECASE   --  When this variable is set, GAWK becomes case-insensitive.                           
+    LINT         --  Provides dynamic control of the lint option from the GAWK program.                  
+    PROCINFO     --  This is an associative array containing information about the process,              
+                     such as real and effective UID numbers, process ID number, and so on.               
+    TEXTDOMAIN   --  The text domain of the AWK program. Used to find the localized translations         
+                     for the program's strings.                                                          
