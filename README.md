@@ -25,8 +25,8 @@
 
 |                                |                                |                                |                                |
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
-| - [MostUsedCommands](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MostUsedCommands) | - [DOS-UnixConversions](https://raw.githubusercontent.com/archernar/scripts/main/sed/DOS-UnixConversions) | - [LeadingTraining](https://raw.githubusercontent.com/archernar/scripts/main/sed/LeadingTraining) | - [NumberEachLine](https://raw.githubusercontent.com/archernar/scripts/main/sed/NumberEachLine) | 
-
+| - [MostUsedCommands](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MostUsedCommands) | - [AddCommasDecimalPoints](https://raw.githubusercontent.com/archernar/scripts/main/sed/AddCommasDecimalPoints) | - [DOS-UnixConversions](https://raw.githubusercontent.com/archernar/scripts/main/sed/DOS-UnixConversions) | - [LeadingTraining](https://raw.githubusercontent.com/archernar/scripts/main/sed/LeadingTraining) | 
+| - [NumberEachLine](https://raw.githubusercontent.com/archernar/scripts/main/sed/NumberEachLine) | 
 
 
 ## awk
