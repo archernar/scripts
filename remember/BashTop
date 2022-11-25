@@ -1,0 +1,8 @@
+#!/usr/bin/bash                                                                                          
+#!/bin/bash                                                                                              
+Tmp="/tmp/t$$"                                                                                          
+Tmp1="/tmp/t$$_$$"                                                                                        
+trap 'exit 0' INT HUP QUIT TERM ALRM USR1                                                                
+trap 'rm -f "$Tmp" "$Tmp1"' EXIT                                                                         
+rm -f "$Tmp"  >/dev/null 2>&1                                                                            
+rm -f "$Tmp1"  >/dev/null 2>&1                                                                           
