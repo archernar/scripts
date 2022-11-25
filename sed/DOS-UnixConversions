@@ -1,0 +1,19 @@
+
+ # IN UNIX ENVIRONMENT: convert DOS newlines (CR/LF) to Unix format
+ sed 's/.$//'               # assumes that all lines end with CR/LF
+ sed 's/^M$//'              # in bash/tcsh, press Ctrl-V then Ctrl-M
+ sed 's/\x0D$//'            # gsed 3.02.80, but top script is easier
+
+ # IN UNIX ENVIRONMENT: convert Unix newlines (LF) to DOS format
+ sed "s/$/`echo -e \\\r`/"            # command line under ksh
+ sed 's/$'"/`echo \\\r`/"             # command line under bash
+ sed "s/$/`echo \\\r`/"               # command line under zsh
+ sed 's/$/\r/'                        # gsed 3.02.80
+
+ # IN DOS ENVIRONMENT: convert Unix newlines (LF) to DOS format
+ sed "s/$//"                          # method 1
+ sed -n p                             # method 2
+
+ # IN DOS ENVIRONMENT: convert DOS newlines (CR/LF) to Unix format
+ # Cannot be done with DOS versions of sed. Use "tr" instead.
+ tr -d \r &lt;infile &gt;outfile            # GNU tr version 1.22 or higher

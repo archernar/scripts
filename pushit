@@ -108,6 +108,7 @@ put() {
 echo "" > README.md
 puttable "flashcards" >> README.md
 puttable "oneliners" >> README.md
+puttable "sed" >> README.md
 puttable "awk" >> README.md
 puttable "bash" >> README.md
 puttable "vimscript" >> README.md
