@@ -1,2 +1,8 @@
 new Random().nextInt(max - min + 1) + min 
 new java.util.Random().nextInt(max - min + 1) + min 
+
+
+public rand(int min, int max) {
+     return new java.util.Random().nextInt(max - min + 1) + min;
+}
+
