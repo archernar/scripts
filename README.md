@@ -73,8 +73,8 @@
 |                                |                                |                                |                                |
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
 | [ANSI.java](https://raw.githubusercontent.com/archernar/scripts/main/java/ANSI.java) | [Die.java](https://raw.githubusercontent.com/archernar/scripts/main/java/Die.java) | [MyMain.java](https://raw.githubusercontent.com/archernar/scripts/main/java/MyMain.java) | [NioSocketServer.java](https://raw.githubusercontent.com/archernar/scripts/main/java/NioSocketServer.java) | 
-| [RollingDice.java](https://raw.githubusercontent.com/archernar/scripts/main/java/RollingDice.java) | [Runner.java](https://raw.githubusercontent.com/archernar/scripts/main/java/Runner.java) | [SimpleSocketServer.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SimpleSocketServer.java) | [SocketConnect.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SocketConnect.java) | 
-
+| [RandomNumber](https://raw.githubusercontent.com/archernar/scripts/main/java/RandomNumber) | [RollingDice.java](https://raw.githubusercontent.com/archernar/scripts/main/java/RollingDice.java) | [Runner.java](https://raw.githubusercontent.com/archernar/scripts/main/java/Runner.java) | [SimpleSocketServer.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SimpleSocketServer.java) | 
+| [SocketConnect.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SocketConnect.java) | 
 
 
 ## css

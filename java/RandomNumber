@@ -1,0 +1,2 @@
+new Random().nextInt(max - min + 1) + min 
+new java.util.Random().nextInt(max - min + 1) + min 
