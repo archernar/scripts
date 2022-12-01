@@ -1,0 +1,51 @@
+#!/usr/bin/bash
+Tmp="/tmp/$$"
+trap 'rm -f "$Tmp" >/dev/null 2>&1' 0
+trap "exit 2" 1 2 3 13 15
+rm -f "$Tmp" >/dev/null 2>&1
+
+_usage_() {
+# 0  - Normal Style (reset)
+# 1  - Bold
+# 2  - Dim
+# 3  - Italic
+# 4  - Underlined
+# 5  - Blinking
+# 7  - Reverse
+# 8  - Invisible
+# 30 - BLACK
+# 31 - RED
+# 32 - GREEN
+# 33 - YELLOW
+# 34 - BLUE
+# 35 - PURPLE
+# 36 - CYAN
+# 37 - WHITE
+bold=$(printf '\033[%sm' "4")
+reset=$(printf '\033[%sm' "0")
+
+cat <<USAGE_TEXT
+
+  ${bold}$(basename "$0") [OPTION]... [FILE]...${reset}
+
+  This is a script template.  Edit this description to print help to users.
+
+  ${bold}Options:${reset}
+    -h, --help              Display this help and exit
+    --loglevel [LEVEL]      One of: FATAL, ERROR, WARN, INFO, NOTICE, DEBUG, ALL, OFF
+                            (Default is 'ERROR')
+    --logfile [FILE]        Full PATH to logfile.  (Default is '${HOME}/logs/$(basename "$0").log')
+    -n, --dryrun            Non-destructive. Makes no permanent changes.
+    -q, --quiet             Quiet (no output)
+    -v, --verbose           Output more information. (Items echoed to 'verbose')
+    --force                 Skip all user interaction.  Implied 'Yes' to all actions.
+
+  ${bold}Example Usage:${reset}
+
+      ${gray}# Run the script and specify log level and log file.${reset}
+      $(basename "$0") -vn --logfile "/path/to/file.log" --loglevel 'WARN'
+USAGE_TEXT
+
+}
+
+_usage_
