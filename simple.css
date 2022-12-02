@@ -78,7 +78,7 @@ body {
 	color: #666;
     xxfamily:Neue Helvetica,SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
     font-family:JetBrains Mono;
-  font-style: normal;
+    font-style: normal;
     font-size:10pt;
     xxxfont: 10pt/normal 'courier new';
 	line-height: 1.40em; 
@@ -95,7 +95,6 @@ h2 {
 	padding: 0px;
 	color: Black;
     font-size:1.5em;
-    xxfont: bold 1.5em "courier new", serif;
 	line-height: 1.00em; 
 	background-color: #dfe3ee;
 	border-collapse: collapse;
@@ -106,7 +105,6 @@ h2 {
 a, a:link,a:visited,a:hover { 
 color: Black; 
 font-size:1.2em;
-xxfont: bold 1.2em "courier new", serif;
 text-decoration: underline;
 }
 tr.odd {
