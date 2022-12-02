@@ -77,7 +77,7 @@ body {
 	padding: 0px;
 	color: #666;
     xxfamily:Neue Helvetica,SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
-    family:JetBrains Mono;
+    font-family:JetBrains Mono;
   font-style: normal;
     font-size:10pt;
     xxxfont: 10pt/normal 'courier new';
