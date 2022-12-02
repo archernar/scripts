@@ -4,7 +4,9 @@ body {
 	margin-right: 1px;
 	padding: 0px;
 	color: #666;
-    font: 10pt/normal 'courier new';
+    family:SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
+    font-size:10px;
+    xxxfont: 10pt/normal 'courier new';
 	line-height: 1.40em; 
 	background-color: #dfe3ee;
 	border-collapse: collapse;
@@ -28,7 +30,7 @@ h2 {
 
 a, a:link,a:visited,a:hover { 
 color: Black; 
-font: bold 1.2em "courier new", serif;
+xxfont: bold 1.2em "courier new", serif;
 text-decoration: underline;
 }
 tr.odd {

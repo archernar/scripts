@@ -43,7 +43,7 @@ Home Repo:   https://github.com/archernar/scripts
 |                                |                                |                                |                                |
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
 | [functionlister.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/functionlister.awk) | [tablesonly.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/tablesonly.awk) | [utils.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/utils.awk) | [gawk.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/gawk.fc) | 
-| [mdt.awk](https://raw.githubusercontent.com/archernar/scripts/main/mdt.awk) | [GawkVars](https://raw.githubusercontent.com/archernar/scripts/main/remember/GawkVars) | 
+| [mdt.awk](https://raw.githubusercontent.com/archernar/scripts/main/mdt.awk) | [qed.awk](https://raw.githubusercontent.com/archernar/scripts/main/qed.awk) | [GawkVars](https://raw.githubusercontent.com/archernar/scripts/main/remember/GawkVars) | 
 
 
 ## bash
