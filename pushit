@@ -4,7 +4,7 @@ trap 'exit 0' INT HUP QUIT TERM ALRM USR1
 trap 'rm -f "$Tmp"' EXIT                                                                         
 rm -f "$Tmp"  >/dev/null 2>&1     
 opentable() {
-    echo "<table valign='top'><tr valign='top'>"
+    echo "<table border=0 valign='top'><tr valign='top'>"
 }
 closetable() {
     echo "</tr></table>"
