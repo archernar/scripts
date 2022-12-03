@@ -2,6 +2,13 @@
 Home Repo:   https://github.com/archernar/scripts
 
 
+## javaExamples
+
+|                                |                                |                                |                                |
+| :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
+
+
+
 ## remember
 
 |                                |                                |                                |                                |
@@ -76,7 +83,7 @@ Home Repo:   https://github.com/archernar/scripts
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
 | [ANSI.java](https://raw.githubusercontent.com/archernar/scripts/main/java/ANSI.java) | [Die.java](https://raw.githubusercontent.com/archernar/scripts/main/java/Die.java) | [MyMain.java](https://raw.githubusercontent.com/archernar/scripts/main/java/MyMain.java) | [NioSocketServer.java](https://raw.githubusercontent.com/archernar/scripts/main/java/NioSocketServer.java) | 
 | [RandomNumber](https://raw.githubusercontent.com/archernar/scripts/main/java/RandomNumber) | [RollingDice.java](https://raw.githubusercontent.com/archernar/scripts/main/java/RollingDice.java) | [Runner.java](https://raw.githubusercontent.com/archernar/scripts/main/java/Runner.java) | [SimpleSocketServer.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SimpleSocketServer.java) | 
-| [SocketConnect.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SocketConnect.java) | [ForEachDirectory](https://raw.githubusercontent.com/archernar/scripts/main/learnjava/java-beginners/ForEachDirectory) | [zed](https://raw.githubusercontent.com/archernar/scripts/main/learnjava/java-beginners/zed) | 
+| [SocketConnect.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SocketConnect.java) | 
 
 
 ## css
