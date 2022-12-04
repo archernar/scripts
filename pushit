@@ -108,7 +108,7 @@ put() {
 echo "" > README.md
 echo "Home Repo:   https://github.com/archernar/scripts" >> README.md
 echo "" >> README.md
-puttable "javaExamples" >> README.md
+puttable "examples" >> README.md
 puttable "remember" >> README.md
 puttable "flashcards" >> README.md
 puttable "oneliners" >> README.md
