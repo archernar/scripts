@@ -44,7 +44,7 @@ Home Repo:   https://github.com/archernar/scripts
 
 |                                |                                |                                |                                |
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
-| [functionlister.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/functionlister.awk) | [tablesonly.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/tablesonly.awk) | [utils.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/utils.awk) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+| [functionlister.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/functionlister.awk) | [includer.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/includer.awk) | [tablesonly.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/tablesonly.awk) | [utils.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/utils.awk) | 
 
 
 
