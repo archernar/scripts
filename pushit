@@ -14,7 +14,7 @@ closetable() {
 # Generate the Markdown
 puttable() {
     find . -type f | grep "$1" | sort  > sam
-    javac Sorter.java
+    #javac Sorter.java
     java Sorter > fred
     cat fred | gawk -v sec="$1" '
     BEGIN {
@@ -111,7 +111,6 @@ put() {
 echo "" > README.md
 echo "Home Repo:   https://github.com/archernar/scripts" >> README.md
 echo "" >> README.md
-puttable "examples" >> README.md
 puttable "remember" >> README.md
 puttable "flashcards" >> README.md
 puttable "oneliners" >> README.md
@@ -120,6 +119,7 @@ puttable "awk" >> README.md
 puttable "bash" >> README.md
 puttable "vimscript" >> README.md
 puttable "java" >> README.md
+puttable "examples" >> README.md
 puttable "css" >> README.md
 puttable "adlist" >> README.md
 puttable "commandfu" >> README.md
