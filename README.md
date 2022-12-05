@@ -17,3 +17,115 @@ Home Repo:   https://github.com/archernar/scripts
 | [J13-Switch](https://raw.githubusercontent.com/archernar/scripts/main/examples/J13-Switch) | [J23-Static (and Final)](https://raw.githubusercontent.com/archernar/scripts/main/examples/J23-Static (and Final)) | [J33-Upcasting and Downcasting](https://raw.githubusercontent.com/archernar/scripts/main/examples/J33-Upcasting and Downcasting) | [J40-Runtime vs. checked Exceptions](https://raw.githubusercontent.com/archernar/scripts/main/examples/J40-Runtime vs. checked Exceptions) | 
 
 
+
+## remember
+
+|                                |                                |                                |                                |
+| :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
+| [BashTop](https://raw.githubusercontent.com/archernar/scripts/main/remember/BashTop) | [GawkVars](https://raw.githubusercontent.com/archernar/scripts/main/remember/GawkVars) | [VimYankPJava](https://raw.githubusercontent.com/archernar/scripts/main/remember/VimYankPJava) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+
+
+
+## flashcards
+
+|                                |                                |                                |                                |
+| :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
+| [gawk.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/gawk.fc) | [mpv.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/mpv.fc) | [vimsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/vimsheet1.fc) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+| [generalsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/generalsheet1.fc) | [tags](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/tags) | [.vim.vimsplit](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/.vim.vimsplit) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+
+
+
+## oneliners
+
+|                                |                                |                                |                                |
+| :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
+| [CaptureDesktop](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/CaptureDesktop) | [GetProcessorName](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/GetProcessorName) | [lsbymodfieddate](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/lsbymodfieddate) | [SSHGenerateKey](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHGenerateKey) | 
+| [CleanFileOfCtrlChars](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/CleanFileOfCtrlChars) | [GetWheather](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/GetWheather) | [MarkdownToHTML](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MarkdownToHTML) | [SSHPullFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHPullFile) | 
+| [CopyFromAListInAFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/CopyFromAListInAFile) | [InstallNFSCommon](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/InstallNFSCommon) | [MostUsedCommands](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MostUsedCommands) | [SSHPushFile](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHPushFile) | 
+| [FigletClock](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/FigletClock) | [InstallopenJDK8](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/InstallopenJDK8) | [RemoveBlankLines](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/RemoveBlankLines) | [SSHRunACommandAndExit](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/SSHRunACommandAndExit) | 
+| [FullPathFind](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/FullPathFind) | [ListAllGitRepos](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ListAllGitRepos) | [RemoveFirstLine](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/RemoveFirstLine) | [startvimnoargs](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/startvimnoargs) | 
+| [FuToRepo](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/FuToRepo) | [ListFilesModInPeriod](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/ListFilesModInPeriod) | [RemoveLastLine](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/RemoveLastLine) | [TopTenProcess](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/TopTenProcess) | 
+
+
+
+## sed
+
+|                                |                                |                                |                                |
+| :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
+| [MostUsedCommands](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MostUsedCommands) | [DOS-UnixConversions](https://raw.githubusercontent.com/archernar/scripts/main/sed/DOS-UnixConversions) | [NumberEachLine](https://raw.githubusercontent.com/archernar/scripts/main/sed/NumberEachLine) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+| [AddCommasDecimalPoints](https://raw.githubusercontent.com/archernar/scripts/main/sed/AddCommasDecimalPoints) | [LeadingTraining](https://raw.githubusercontent.com/archernar/scripts/main/sed/LeadingTraining) | [](https://raw.githubusercontent.com/archernar/scripts/main) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+
+
+
+## awk
+
+|                                |                                |                                |                                |
+| :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
+| [functionlister.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/functionlister.awk) | [utils.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/utils.awk) | [mdt.awk](https://raw.githubusercontent.com/archernar/scripts/main/mdt.awk) | [GawkVars](https://raw.githubusercontent.com/archernar/scripts/main/remember/GawkVars) | 
+| [tablesonly.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/tablesonly.awk) | [gawk.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/gawk.fc) | [qed.awk](https://raw.githubusercontent.com/archernar/scripts/main/qed.awk) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+
+
+
+## bash
+
+|                                |                                |                                |                                |
+| :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
+| [bash.top](https://raw.githubusercontent.com/archernar/scripts/main/bash/bash.top) | [IsHostUp](https://raw.githubusercontent.com/archernar/scripts/main/bash/IsHostUp) | [sitetotext](https://raw.githubusercontent.com/archernar/scripts/main/bash/sitetotext) | [UpperToLowerCase](https://raw.githubusercontent.com/archernar/scripts/main/bash/UpperToLowerCase) | 
+| [BookMarksToHTML](https://raw.githubusercontent.com/archernar/scripts/main/bash/BookMarksToHTML) | [IsNFS](https://raw.githubusercontent.com/archernar/scripts/main/bash/IsNFS) | [sitetotextraw](https://raw.githubusercontent.com/archernar/scripts/main/bash/sitetotextraw) | [UsageTemplate](https://raw.githubusercontent.com/archernar/scripts/main/bash/UsageTemplate) | 
+| [CheckIfFileExists](https://raw.githubusercontent.com/archernar/scripts/main/bash/CheckIfFileExists) | [movefilescriptmaker](https://raw.githubusercontent.com/archernar/scripts/main/bash/movefilescriptmaker) | [slapfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/slapfilename) | [.vim.vimsplit](https://raw.githubusercontent.com/archernar/scripts/main/bash/.vim.vimsplit) | 
+| [FileExistsNotEmpty](https://raw.githubusercontent.com/archernar/scripts/main/bash/FileExistsNotEmpty) | [my](https://raw.githubusercontent.com/archernar/scripts/main/bash/my) | [tagit](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagit) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+| [ForEachDirectory](https://raw.githubusercontent.com/archernar/scripts/main/bash/ForEachDirectory) | [removefromfilename](https://raw.githubusercontent.com/archernar/scripts/main/bash/removefromfilename) | [tagman](https://raw.githubusercontent.com/archernar/scripts/main/bash/tagman) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+| [IsFileEmpty](https://raw.githubusercontent.com/archernar/scripts/main/bash/IsFileEmpty) | [SharedLibrary.bash](https://raw.githubusercontent.com/archernar/scripts/main/bash/SharedLibrary.bash) | [tags](https://raw.githubusercontent.com/archernar/scripts/main/bash/tags) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+
+
+
+## vimscript
+
+|                                |                                |                                |                                |
+| :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
+| [addToMasterIndex.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/addToMasterIndex.vim) | [DeleteNoNameBuffer.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/DeleteNoNameBuffer.vim) | [LoadSessionGlobal.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/LoadSessionGlobal.vim) | [ReSetSession.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/ReSetSession.vim) | 
+| [BufferVisible.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/BufferVisible.vim) | [Dump.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/Dump.vim) | [LoadSession.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/LoadSession.vim) | [SetSession.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/SetSession.vim) | 
+| [BuildTags.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/BuildTags.vim) | [EditHomeFile.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/EditHomeFile.vim) | [LogMessage.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/LogMessage.vim) | [ShowSession.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/ShowSession.vim) | 
+| [CaptureSession.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/CaptureSession.vim) | [Exec.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/Exec.vim) | [LongestLine.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/LongestLine.vim) | [TabCount.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/TabCount.vim) | 
+| [ColMan.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/ColMan.vim) | [FileInSession.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/FileInSession.vim) | [MasterBoxer.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/MasterBoxer.vim) | [WindowExists.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/WindowExists.vim) | 
+| [CopyFiles.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/CopyFiles.vim) | [FullPathFileName.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/FullPathFileName.vim) | [MasterPadder.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/MasterPadder.vim) | [writeMasterIndex.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/writeMasterIndex.vim) | 
+| [DeleteAllBuffers.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/DeleteAllBuffers.vim) | [LoadLastBuffer.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/LoadLastBuffer.vim) | [readMasterIndex.vim](https://raw.githubusercontent.com/archernar/scripts/main/vimscript/readMasterIndex.vim) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+
+
+
+## java
+
+|                                |                                |                                |                                |
+| :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
+| [ANSI.java](https://raw.githubusercontent.com/archernar/scripts/main/java/ANSI.java) | [NioSocketServer.java](https://raw.githubusercontent.com/archernar/scripts/main/java/NioSocketServer.java) | [Runner.java](https://raw.githubusercontent.com/archernar/scripts/main/java/Runner.java) | [Sorter.java](https://raw.githubusercontent.com/archernar/scripts/main/Sorter.java) | 
+| [Die.java](https://raw.githubusercontent.com/archernar/scripts/main/java/Die.java) | [RandomNumber](https://raw.githubusercontent.com/archernar/scripts/main/java/RandomNumber) | [SimpleSocketServer.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SimpleSocketServer.java) | [Sys.java](https://raw.githubusercontent.com/archernar/scripts/main/Sys.java) | 
+| [MyMain.java](https://raw.githubusercontent.com/archernar/scripts/main/java/MyMain.java) | [RollingDice.java](https://raw.githubusercontent.com/archernar/scripts/main/java/RollingDice.java) | [SocketConnect.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SocketConnect.java) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+
+
+
+## css
+
+|                                |                                |                                |                                |
+| :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
+| [simple.css](https://raw.githubusercontent.com/archernar/scripts/main/css/simple.css) | [simple.css](https://raw.githubusercontent.com/archernar/scripts/main/simple.css) | [](https://raw.githubusercontent.com/archernar/scripts/main) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+
+
+
+## adlist
+
+|                                |                                |                                |                                |
+| :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
+| [list.adlist](https://raw.githubusercontent.com/archernar/scripts/main/adlist/list.adlist) | [](https://raw.githubusercontent.com/archernar/scripts/main) | [](https://raw.githubusercontent.com/archernar/scripts/main) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+
+
+
+## commandfu
+
+|                                |                                |                                |                                |
+| :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
+| [cpfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/cpfu.html) | [lsfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/lsfu.html) | [nfsfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/nfsfu.html) | [vimfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/vimfu.html) | 
+| [dffu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/dffu.html) | [mountfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/mountfu.html) | [psfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/psfu.html) | [zed](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/zed) | 
+| [gitfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/gitfu.html) | [mp3fu](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/mp3fu) | [shutdownfu](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/shutdownfu) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+| [lnfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/lnfu.html) | [mvfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/mvfu.html) | [umountfu.html](https://raw.githubusercontent.com/archernar/scripts/main/commandfu/umountfu.html) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+
+
