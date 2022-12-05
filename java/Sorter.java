@@ -19,20 +19,13 @@ public static String getLine(Scanner s, int i) {
 
     public static void ReadFileLineByLineUsingFiles() {
         Scanner s = null;
-        ArrayList<String> inlist = new ArrayList<String>();
-        int ct = 0;
-        int s1 = 0;
-        int pos = -1;
-        int n = -1;
         final int COL = 4;
+        ArrayList<String> inlist = new ArrayList<String>();
+        int N = 0;
         int r = 0;
         int c = 0;
-        int row = 0;
+        int n = -1;
         int rowCount = 0;
-        int ROWS = 0;
-        int COLS = COL;
-        int N = 0;
-        String last="";
 
         try {
                 s = new Scanner(new File("sam"));
@@ -70,7 +63,6 @@ public static String getLine(Scanner s, int i) {
                     r=0;
                     for (int j=0;j<N;j++) {
                         // Sys.putln(r,c);
-                        last = inlist.get(i);
                         list[r][c] = inlist.get(i);i++;
                         r++;
                     }
@@ -78,20 +70,15 @@ public static String getLine(Scanner s, int i) {
                 }
         } 
         catch (Exception e) {
-               System.out.println("**********");
                System.out.println("Caught Exception: " + e.getMessage());
-               System.out.println(r);
-               System.out.println(c);
-               System.out.println("LAST: " + last);
                e.printStackTrace();
-               System.out.println("**********");
                System.exit(1);
         } 
         finally {
                s.close();
         }
 
-                Sys.reset();
+        Sys.reset();
         for (r=0;r<list.length;r++) {
                for (c=0;c<list[0].length;c++) {
                    String sz = list[r][c];
