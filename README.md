@@ -36,8 +36,7 @@ Home Repo:   https://github.com/archernar/scripts
 
 |                                |                                |                                |                                |
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
-| [MostUsedCommands](https://raw.githubusercontent.com/archernar/scripts/main/oneliners/MostUsedCommands) | [DOS-UnixConversions](https://raw.githubusercontent.com/archernar/scripts/main/sed/DOS-UnixConversions) | [NumberEachLine](https://raw.githubusercontent.com/archernar/scripts/main/sed/NumberEachLine) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
-| [AddCommasDecimalPoints](https://raw.githubusercontent.com/archernar/scripts/main/sed/AddCommasDecimalPoints) | [LeadingTraining](https://raw.githubusercontent.com/archernar/scripts/main/sed/LeadingTraining) | [](https://raw.githubusercontent.com/archernar/scripts/main) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+| [AddCommasDecimalPoints](https://raw.githubusercontent.com/archernar/scripts/main/sed/AddCommasDecimalPoints) | [DOS-UnixConversions](https://raw.githubusercontent.com/archernar/scripts/main/sed/DOS-UnixConversions) | [LeadingTraining](https://raw.githubusercontent.com/archernar/scripts/main/sed/LeadingTraining) | [NumberEachLine](https://raw.githubusercontent.com/archernar/scripts/main/sed/NumberEachLine) | 
 
 
 
@@ -45,8 +44,7 @@ Home Repo:   https://github.com/archernar/scripts
 
 |                                |                                |                                |                                |
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
-| [functionlister.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/functionlister.awk) | [utils.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/utils.awk) | [mdt.awk](https://raw.githubusercontent.com/archernar/scripts/main/mdt.awk) | [GawkVars](https://raw.githubusercontent.com/archernar/scripts/main/remember/GawkVars) | 
-| [tablesonly.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/tablesonly.awk) | [gawk.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/gawk.fc) | [qed.awk](https://raw.githubusercontent.com/archernar/scripts/main/qed.awk) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+| [functionlister.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/functionlister.awk) | [tablesonly.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/tablesonly.awk) | [utils.awk](https://raw.githubusercontent.com/archernar/scripts/main/awk/utils.awk) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
 
 
 
@@ -81,10 +79,9 @@ Home Repo:   https://github.com/archernar/scripts
 
 |                                |                                |                                |                                |
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
-| [ANSI.java](https://raw.githubusercontent.com/archernar/scripts/main/java/ANSI.java) | [RandomNumber](https://raw.githubusercontent.com/archernar/scripts/main/java/RandomNumber) | [SimpleSocketServer.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SimpleSocketServer.java) | [Sorter.java](https://raw.githubusercontent.com/archernar/scripts/main/Sorter.java) | 
-| [Die.java](https://raw.githubusercontent.com/archernar/scripts/main/java/Die.java) | [RollingDice.java](https://raw.githubusercontent.com/archernar/scripts/main/java/RollingDice.java) | [SocketConnect.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SocketConnect.java) | [Sys.java](https://raw.githubusercontent.com/archernar/scripts/main/Sys.java) | 
-| [MyMain.java](https://raw.githubusercontent.com/archernar/scripts/main/java/MyMain.java) | [roundup.java](https://raw.githubusercontent.com/archernar/scripts/main/java/roundup.java) | [Sorter.java](https://raw.githubusercontent.com/archernar/scripts/main/java/Sorter.java) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
-| [NioSocketServer.java](https://raw.githubusercontent.com/archernar/scripts/main/java/NioSocketServer.java) | [Runner.java](https://raw.githubusercontent.com/archernar/scripts/main/java/Runner.java) | [Sys.java](https://raw.githubusercontent.com/archernar/scripts/main/java/Sys.java) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+| [ANSI.java](https://raw.githubusercontent.com/archernar/scripts/main/java/ANSI.java) | [NioSocketServer.java](https://raw.githubusercontent.com/archernar/scripts/main/java/NioSocketServer.java) | [roundup.java](https://raw.githubusercontent.com/archernar/scripts/main/java/roundup.java) | [SocketConnect.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SocketConnect.java) | 
+| [Die.java](https://raw.githubusercontent.com/archernar/scripts/main/java/Die.java) | [RandomNumber](https://raw.githubusercontent.com/archernar/scripts/main/java/RandomNumber) | [Runner.java](https://raw.githubusercontent.com/archernar/scripts/main/java/Runner.java) | [Sorter.java](https://raw.githubusercontent.com/archernar/scripts/main/java/Sorter.java) | 
+| [MyMain.java](https://raw.githubusercontent.com/archernar/scripts/main/java/MyMain.java) | [RollingDice.java](https://raw.githubusercontent.com/archernar/scripts/main/java/RollingDice.java) | [SimpleSocketServer.java](https://raw.githubusercontent.com/archernar/scripts/main/java/SimpleSocketServer.java) | [Sys.java](https://raw.githubusercontent.com/archernar/scripts/main/java/Sys.java) | 
 
 
 
@@ -108,7 +105,7 @@ Home Repo:   https://github.com/archernar/scripts
 
 |                                |                                |                                |                                |
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
-| [simple.css](https://raw.githubusercontent.com/archernar/scripts/main/css/simple.css) | [simple.css](https://raw.githubusercontent.com/archernar/scripts/main/simple.css) | [](https://raw.githubusercontent.com/archernar/scripts/main) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+| [simple.css](https://raw.githubusercontent.com/archernar/scripts/main/css/simple.css) | [](https://raw.githubusercontent.com/archernar/scripts/main) | [](https://raw.githubusercontent.com/archernar/scripts/main) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
 
 
 

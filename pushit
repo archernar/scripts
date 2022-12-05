@@ -13,7 +13,7 @@ closetable() {
 
 # Generate the Markdown
 puttable() {
-    find . -type f | grep "$1" | sort  > sam
+    find ./$1 -type f | grep "$1" | sort  > sam
     #javac Sorter.java
     java Sorter > fred
     cat fred | gawk -v sec="$1" '
