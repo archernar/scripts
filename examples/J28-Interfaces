@@ -24,12 +24,18 @@ public class App {
         info.showInfo();
     }
  
-}public interface Info {
+}
+
+public interface Info {
     public void showInfo();
-}public interface IStartable {
+}
+
+public interface IStartable {
     public void start();
     public void stop();
-}public class Machine implements Info {
+}
+
+public class Machine implements Info {
      
     private int id = 7;
      
@@ -40,7 +46,9 @@ public class App {
     public void showInfo() {
         System.out.println("Machine ID is: " + id);
     }
-}public class Person implements Info {
+}
+
+public class Person implements Info {
      
     private String name;
      
