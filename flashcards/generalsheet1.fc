@@ -21,14 +21,15 @@ gawk
     tolower(str)
     toupper(str)
 
-
 #!/usr/bin/bash
 #!/bin/bash                                                                                          
-SCR=$(echo "$0" | gawk '{n=split($0, a, "/"); print a[n];}')
-Tmp=/tmp/$$                                                                                              
-trap 'exit 0' INT HUP QUIT TERM ALRM USR1                                                                
-trap 'rm -f "$Tmp"' EXIT                                                                         
-rm -f "$Tmp"  >/dev/null 2>&1                                                                            
+Tmp="/tmp/file"
+Tmp1="/tmp/$$_$$"
+trap 'exit 0' INT HUP QUIT TERM ALRM USR1
+trap 'rm -f "$Tmp" "$Tmp1"' EXIT
+rm -f "$Tmp"  >/dev/null 2>&1
+rm -f "$Tmp1"  >/dev/null 2>&1
+
 
     ARGC         --  Implies the number of arguments provided at the command line.
     ARGV         --  Array that stores the cmd-line args. Valid index ranges from 0 to ARGC-1.

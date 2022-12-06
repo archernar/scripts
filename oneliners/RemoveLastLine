@@ -1,0 +1,2 @@
+sed -i '$ d' foo.txt
+

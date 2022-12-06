@@ -1,0 +1,34 @@
+function! g:SSF()
+    exe "normal gv"
+    exe "normal y"
+    let l:name = ""
+    let l:name = input('file name: ')
+    if ( l:name == "")
+        let l:name = ".vimrc"
+    endif
+    exe ":e " . "./" . l:name
+    execute "normal p"
+    execute "normal 1G"
+    execute "normal 0"
+endfunction
+function! g:YankToFile()
+    let l:name = ""
+    let l:name = input('file name: ')
+    if ( l:name == "")
+        let l:name = ".vimrc"
+    endif
+    exe ":e " . "./" . l:name
+    execute "normal p"
+    execute "normal 1G"
+    execute "normal 0"
+    execute "w"
+endfunction
+command! DOFILE  exe ":call g:YankToFile()"
+command! DOREM   exe ":!pjava -r " . expand('%')
+command! DOONE   exe ":!pjava -o " . expand('%')
+command! DOJAVA  exe ":!pjava -j " . expand('%')
+command! DOBASH  exe ":!pjava -b " . expand('%')
+command! DOVIM   exe ":!pjava -v " . expand('%')
+command! DOFLASH exe ":!pjava -f " . expand('%')
+command! DOFU    exe ":!pjava -u " . expand('%')
+command! DOSED   exe ":!pjava -s " . expand('%')
