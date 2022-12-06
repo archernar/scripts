@@ -14,7 +14,8 @@ Home Repo:   https://github.com/archernar/scripts
 
 |                                |                                |                                |                                |
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
-| [gawk.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/gawk.fc) | [generalsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/generalsheet1.fc) | [mpv.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/mpv.fc) | [vimsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/vimsheet1.fc) | 
+| [gawk.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/gawk.fc) | [mpv.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/mpv.fc) | [vimsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/vimsheet1.fc) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+| [generalsheet1.fc](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/generalsheet1.fc) | [VimCheater.txt](https://raw.githubusercontent.com/archernar/scripts/main/flashcards/VimCheater.txt) | [](https://raw.githubusercontent.com/archernar/scripts/main) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
 
 
 
