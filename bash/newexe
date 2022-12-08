@@ -1,0 +1,8 @@
+if [[ ! -f "$1" ]]
+then
+    touch "$1"
+    chmod 777 "$1"
+    vi "$1"
+else
+    echo "$1 Exists Already"
+fi
