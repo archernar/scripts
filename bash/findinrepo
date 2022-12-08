@@ -1,0 +1,15 @@
+if [ -f "$1" ]; then
+    find ~/scripts -type f | grep "$1" | sort
+    R=`find ~/scripts -type f | grep "$1" | sort`
+    if [ "$R" == "" ]; then
+        echo "File Not Found"
+        exit 1
+    else
+        echo "File Found, Archiving to ~/SCRIPTSREPOARCHIVE"
+        mv "$1" ~/SCRIPTSREPOARCHIVE
+        exit 1
+    fi
+else
+    echo "File Not Found"
+fi
+
