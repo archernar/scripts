@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+Tmp="/tmp/$$"
+trap 'rm -f "$Tmp" >/dev/null 2>&1' 0
+trap "exit 2" 1 2 3 13 15
+rm -f "$Tmp" >/dev/null 2>&1
+rm -f MP3_*.mp3
+rm -f output.mp3
+
+N=1
+
+ls *.mp3 > $Tmp
+while IFS= read -r f
+do
+    FILE=`echo "$f" | xargs`
+    echo $f
+    NN=`printf "%02d" "$N"`
+    cp "$FILE" "MP3_$NN.mp3"
+    N=$((N+1))
+done < "$Tmp"
+
+ls MP3*.mp3 | \
+    sed -e "s/\(.*\)/file '\1'/" | \
+    ffmpeg -protocol_whitelist 'file,pipe' -f concat -i - -c copy output.mp3
+
+rm -f MP3_*.mp3
