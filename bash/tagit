@@ -1,6 +1,12 @@
 #!/usr/bin/bash
 Tmp=/tmp/$$
 Tmp1=/tmp/$$_$$
+trap 'exit 0' INT HUP QUIT TERM ALRM USR1
+trap 'rm -f "$Tmp" "$Tmp1"' EXIT
+rm -f "$Tmp"  >/dev/null 2>&1
+rm -f "$Tmp1"  >/dev/null 2>&1
+
+
 isnfs () {                                                                                                                       
     LOCAL=`stat -f -c %T "$1"`                                                                                                   
     if [ "$LOCAL" == "nfs" ]; then                                                                                               
@@ -134,6 +140,7 @@ LIST=""
 WRITEIT="yes"
 NORMALIZE=""
 TAGFILE=""
+ONEFILE=""
 SETYEAR=""
 RENAMEFILE=""
 KILLNUMS=""
@@ -157,7 +164,7 @@ SYNCOPTION="NO SET"
 GENRE="17"
 FREETEXT=""
 
-while getopts "juhv:y:123456abpn:irtslmz:xgc" arg
+while getopts "ojuhv:y:123456abpn:irtslmz:xgc" arg
 do
     case $arg in
         j) GENRE="8"
@@ -226,6 +233,8 @@ do
         s) SHUFFLE="yes"
            ;;
         r) RENAMEFILE="yes"
+           ;;
+        o) ONEFILE="yes"
            ;;
         t) TAGFILE="yes"
            ;;
@@ -464,6 +473,79 @@ if [ "$TAGFILE" = "yes" ]; then
         rm -f "$FILE"
     fi
 
+fi
+
+if [ "$ONEFILE" = "yes" ]; then
+    ONEFILE=/tmp/ONEFILE_$$_$$.mp3
+    LOCALONEFILE=ONEFILE_$$_$$.mp3
+    rm -f MP3_$$_*.mp3
+    rm -f "$ONEFILE"
+    N=1
+    echo "Building File List"
+    ls *.mp3 > $Tmp
+    while IFS= read -r f
+    do
+        FILE=`echo "$f" | xargs`
+        NN=`printf "%02d" "$N"`
+        cp "$FILE" "MP3_$$_$NN.mp3"
+        id3v2 -D "MP3_$$_$NN.mp3" >/dev/null 2>&1
+        N=$((N+1))
+    done < "$Tmp"
+    echo "Done"
+    ls MP3_$$_*.mp3 
+    echo "Building Album File"
+
+    ls MP3_$$_*.mp3 | \
+        sed -e "s/\(.*\)/file '\1'/" | \
+        ffmpeg -hide_banner -loglevel error -protocol_whitelist 'file,pipe' -f concat -i - -c copy "$ONEFILE"   2>/dev/null
+    echo "Done"
+    echo "Tagging File"
+    rm -f MP3_$$_*.mp3
+        mv "$ONEFILE" "$LOCALONEFILE"
+        filename="$LOCALONEFILE"
+        id3v2  -D "$filename"
+        let CT=CT+1
+        FN=`pwd`/$filename
+        echo $FN
+        ALB=`echo $FN | gawk -i ~/utils.awk '{print album($0)}'`
+        SNG="$ALB"
+        ART=`echo $FN | gawk -i ~/utils.awk '{print artist($0)}'`
+        echo "Artist "$ART
+        echo "Song   "$SNG
+        echo "Album  "$ALB
+        id3v2  -1 -a "$ART"  "$filename"
+        id3v2  -2 -a "$ART"  "$filename"
+        id3v2  -1 -A "$ALB"  "$filename"
+        id3v2  -2 -A "$ALB"  "$filename"
+        id3v2  -1 -t "$SNG"  "$filename"
+        id3v2  -2 -t "$SNG"  "$filename"
+            FILE=./art.jpg
+            if [ -f "$FILE" ]; then
+                # echo "$FILE exists."
+                cp "$FILE" .
+                eyeD3 --add-image="$FILE":FRONT_COVER "$filename"
+            else
+                FILE=/tmp/art.jpg
+                if [ -f "$FILE" ]; then
+                    # echo "$FILE exists."
+                    cp "$FILE" .
+                    eyeD3 --add-image="$FILE":FRONT_COVER "$filename"
+                fi
+           fi
+        mv "$LOCALONEFILE" "Album-$ALB.mp3"
+        echo          `pwd`/Album-$ALB.mp3
+    echo "Done"
+
+    echo "Copying to the Album Directory"
+    DIRECTORY=/etc/music/Albums
+    if [ -d "$DIRECTORY" ]; then
+        mkdir -p "$DIRECTORY/$ART"
+        cp "Album-$ALB.mp3"  "$DIRECTORY/$ART/$ALB.mp3"
+        rm -f "Album-$ALB.mp3"
+    fi
+    echo "Done"
+
+    exit 0
 fi
 
 if [ "$SETYEAR" = "yes" ]; then
