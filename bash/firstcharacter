@@ -1,0 +1,9 @@
+        firstCharacter=${ART:0:1}
+        firstCharacter=`echo "$firstCharacter" | tr '[:upper:]' '[:lower:]'`
+        # note the escape on the less than operator
+        # https://www.tutorialkart.com/bash-shell-scripting/bash-compare-strings/
+        if [ "$firstCharacter" \< "n" ]; then
+            echo "LESS THAN"
+        else
+            echo "NOT LESS THAN"
+        fi
