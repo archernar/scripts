@@ -1,0 +1,30 @@
+#!/usr/bin/bash
+Tmp=/tmp/$$
+Tmp1=/tmp/$$_$$
+trap 'exit 0' INT HUP QUIT TERM ALRM USR1
+trap 'rm -f "$Tmp" "$Tmp1"' EXIT
+rm -f "$Tmp"  >/dev/null 2>&1
+rm -f "$Tmp1"  >/dev/null 2>&1
+
+
+isnfs () {                                                                                                                       
+    LOCAL=`stat -f -c %T "$1"`                                                                                                   
+    if [ "$LOCAL" == "nfs" ]; then                                                                                               
+         RETVAL="YES"                                                                                                             
+    else                                                                                                                         
+         RETVAL="NO"                                                                                                              
+    fi                                                                                                                           
+}
+
+# The Cube
+# sudo blkid | grep UUID
+D5UUID=""
+D6UUID=""
+sudo mkdir -p  /etc/cube1
+sudo chmod 777 /etc/cube1
+sudo mkdir -p  /etc/cube2
+sudo chmod 777 /etc/cube2
+sudo umount UUID=$D5UUID
+sudo umount UUID=$D6UUID
+sudo mount UUID=$D5UUID /etc/cube1
+sudo mount UUID=$D6UUID /etc/cube2
