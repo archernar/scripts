@@ -1,0 +1,52 @@
+#!/usr/bin/bash
+if [[ "$1" == "" ]]; then
+  echo "Usage: ${0##*/} <script-name>"; exit 2
+fi
+if [[ -f "$1" ]]; then
+    echo "\"$1\" exists on your filesystem."
+    exit 2
+fi
+
+#set -euo pipefail
+
+cat > $1 << "EOM"
+#!/usr/bin/bash
+SCR=$(echo "$0" | gawk '{n=split($0, a, "/"); print a[n];}')
+Tmp="/tmp/"$SCR"_"$$
+Tmp1="/tmp/"$SCR"_"$$"_1"
+Tmp2="/tmp/"$SCR"_"$$"_2"
+trap 'exit 0' INT HUP QUIT TERM ALRM USR1
+trap 'rm -f "$Tmp" "$Tmp1" "$Tmp2"' EXIT
+rm -f "$Tmp" "$Tmp1" "$Tmp2" >/dev/null 2>&1
+
+logmsg() {
+    echo "$(date) $(whoami) $(pwd) $(printf "%-11s" $SCR) $(printf "%-7s" $1) $2" >> /var/log/toc
+}
+msg() {
+    echo $1                                                                       >> /var/log/toc
+}
+logfile() {
+    echo "****************"                                                       >> /var/log/toc
+    echo "** FILE DUMP"                                                           >> /var/log/toc
+    echo "****************"                                                       >> /var/log/toc
+    echo "$(date) $(whoami) $(pwd) $SCR  START $1"                                >> /var/log/toc
+    cat "$1"                                                                      >> /var/log/toc
+    echo "$(date) $(whoami) $(pwd) $SCR  END   $1"                                >> /var/log/toc
+}
+
+while getopts "a:r:" arg
+do
+	case $arg in
+            a) ACCOUNT=$OPTARG
+               ;;
+            r) REGION=$OPTARG
+               ;;
+	      *) exit 0
+               ;;
+	esac
+done
+shift $(($OPTIND - 1))
+
+EOM
+chmod +x $1
+vim $1
