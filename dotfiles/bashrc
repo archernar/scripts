@@ -1,0 +1,119 @@
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+normal=$(printf '\033[0m')                                                                                
+yellow=$(printf '\033[33m')                                                                               
+white=$(printf '\033[37m')                                                                                
+cyan=$(printf '\033[36m') 
+
+# show up to 3 parent dirs, except ~, resolve all other dir aliases
+git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+function collapse_pwd {
+    #relevant_slashes=$(expr $(echo $curr_pwd| tr -d -c /|wc -c) - 1)
+    #echo $curr_pwd| cut -d / -f$(($relevant_slashes>0?$relevant_slashes:1))-
+    curr_pwd=$(pwd | sed -e "s,^$HOME,~,")
+    echo $curr_pwd
+}
+
+#export PS1='${white}$(collapse_pwd) $(git_branch)${normal}»${normal} '
+#export PS1='$(collapse_pwd) $(git_branch)» '
+export PS1='$(collapse_pwd) $(git_branch)>> '
+
+
+
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
+
+# aliases
+alias grep='grep --color=never'
+alias scm='cd /etc/air/scm'
+
+# Alias definitions.
+# if [ -f ~/.bash_aliases ]; then
+#   . ~/.bash_aliases
+# fi
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+export FC1="/home/mestes/1.fc"
+export FC2="/home/mestes/2.fc"
+export FC3="/tmp/applog"
+export FC4="/tmp/vimlog"
+export FC5="./notes"
+export VIMSESSIONDEFAULT=~/.vimsessiondefault
+# Just the name part here
+export VIMSESSION=.vim
+export VIMWINDOW=.vim
+export VIMSPLIT=.vim
+export VIMWINDOWS=.vimwindows
+export VIMLAYOUT=.vimlayout
+export VIMNOSPLITS=.vimnosplits
+export VIMSPLITCMDS="vsplit | split | vertical resize 53"
+export VIMTEMPLATES="/home/mestes/TPLS/"
+export SCRHOME=/etc/center
+export JAVA_HOME=/home/mestes/jdk-16.0.1
+export FC1="/home/mestes/1.fc"
+export FC2="/home/mestes/2.fc"
+
+
+if [ -d "$JAVA_HOME/bin" ] ; then
+    PATH="$JAVA_HOME/bin:$PATH"
+fi
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+if [ -d "./" ] ; then
+    PATH="./:$PATH"
+fi
+if [ -d "/etc/center" ] ; then
+    PATH="/etc/center:$PATH"
+fi

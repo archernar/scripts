@@ -33,6 +33,14 @@ Home Repo:   https://github.com/archernar/scripts
 
 
 
+## dotfiles
+
+|                                |                                |                                |                                |
+| :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
+| [bashrc](https://raw.githubusercontent.com/archernar/scripts/main/dotfiles/bashrc) | [](https://raw.githubusercontent.com/archernar/scripts/main) | [](https://raw.githubusercontent.com/archernar/scripts/main) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+
+
+
 ## sed
 
 |                                |                                |                                |                                |
