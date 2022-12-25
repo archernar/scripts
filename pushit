@@ -114,6 +114,7 @@ echo "" >> README.md
 puttable "remember" >> README.md
 puttable "flashcards" >> README.md
 puttable "oneliners" >> README.md
+puttable "isa" >> README.md
 puttable "dotfiles" >> README.md
 puttable "sed" >> README.md
 puttable "awk" >> README.md
