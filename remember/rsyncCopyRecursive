@@ -1,0 +1,3 @@
+
+
+rsync -avzh --delete --exclude '.cache' --exclude '.config'  --exclude '.thunderbird' ~/mnt ./

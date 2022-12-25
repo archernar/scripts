@@ -6,7 +6,7 @@ Home Repo:   https://github.com/archernar/scripts
 
 |                                |                                |                                |                                |
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
-| [BashTop](https://raw.githubusercontent.com/archernar/scripts/main/remember/BashTop) | [GawkVars](https://raw.githubusercontent.com/archernar/scripts/main/remember/GawkVars) | [VimYankPJava](https://raw.githubusercontent.com/archernar/scripts/main/remember/VimYankPJava) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+| [BashTop](https://raw.githubusercontent.com/archernar/scripts/main/remember/BashTop) | [GawkVars](https://raw.githubusercontent.com/archernar/scripts/main/remember/GawkVars) | [rsyncCopyRecursive](https://raw.githubusercontent.com/archernar/scripts/main/remember/rsyncCopyRecursive) | [VimYankPJava](https://raw.githubusercontent.com/archernar/scripts/main/remember/VimYankPJava) | 
 
 
 
