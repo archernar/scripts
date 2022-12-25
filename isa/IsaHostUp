@@ -1,0 +1,6 @@
+HOSTIP=$1
+if ping -q -c 1 -W 1 $HOSTIP >/dev/null 2>&1; then
+    echo "$HOSTIP is alive"
+else
+    echo "$HOSTIP is not alive"
+fi
