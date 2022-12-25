@@ -37,7 +37,7 @@ Home Repo:   https://github.com/archernar/scripts
 
 |                                |                                |                                |                                |
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
-| [IsaDirExists](https://raw.githubusercontent.com/archernar/scripts/main/isa/IsaDirExists) | [IsaFileExists](https://raw.githubusercontent.com/archernar/scripts/main/isa/IsaFileExists) | [IsaFileNotExist](https://raw.githubusercontent.com/archernar/scripts/main/isa/IsaFileNotExist) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+| [IsaDirExists](https://raw.githubusercontent.com/archernar/scripts/main/isa/IsaDirExists) | [IsaFileEMpty](https://raw.githubusercontent.com/archernar/scripts/main/isa/IsaFileEMpty) | [IsaFileExists](https://raw.githubusercontent.com/archernar/scripts/main/isa/IsaFileExists) | [IsaFileNotExist](https://raw.githubusercontent.com/archernar/scripts/main/isa/IsaFileNotExist) | 
 
 
 
