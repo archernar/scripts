@@ -1,0 +1,4 @@
+if [[ -f <file> ]]; then
+    echo "<file> exists"
+fi
+
