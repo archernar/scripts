@@ -57,6 +57,7 @@ puttable() {
       print ""
     }
     '
+    chmod +x /tmp/allall
 }
 puttableall() {
     find . -type f | sort | gawk -v sec="$1" '
