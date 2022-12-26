@@ -38,8 +38,10 @@ puttable() {
         sub(/[.]/,"",sz)
         n=split(sz, A, "/")
         sz = "[" A[n] "]"  "(" u sz ")"
-        print "cat " $0 >> "/tmp/allall"
-        close("/tmp/allall")
+        if ( $0 ~= "") {
+            print "cat " $0 >> "/tmp/allall"
+            close("/tmp/allall")
+        }
         printf "%s", sz " | "
         ct++
         if ( ct > (COLS-1) ) {
