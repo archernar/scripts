@@ -38,7 +38,7 @@ puttable() {
         sub(/[.]/,"",sz)
         n=split(sz, A, "/")
         sz = "[" A[n] "]"  "(" u sz ")"
-        print "cat " sz >> "/tmp/allall"
+        print "cat " $0 >> "/tmp/allall"
         close("/tmp/allall")
         printf "%s", sz " | "
         ct++
