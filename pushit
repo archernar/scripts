@@ -14,7 +14,7 @@ closetable() {
 # Generate the Markdown
 puttable() {
     rm -f /tmp/allall
-    figlet "$1" | gawk '{print "\"echo # " $0\"}' >> /tmp/allall 
+    figlet "$1" | gawk '{dq="\"";print dq "echo # " $0 dq}' >> /tmp/allall 
     find ./$1 -type f | grep "$1" | sort  > sam
     #javac Sorter.java
     java Sorter > fred
