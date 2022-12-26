@@ -13,6 +13,7 @@ closetable() {
 
 # Generate the Markdown
 puttable() {
+    rm -f /tmp/allall
     find ./$1 -type f | grep "$1" | sort  > sam
     #javac Sorter.java
     java Sorter > fred
@@ -37,6 +38,8 @@ puttable() {
         sub(/[.]/,"",sz)
         n=split(sz, A, "/")
         sz = "[" A[n] "]"  "(" u sz ")"
+        print "cat " sz >> "/tmp/allall"
+        close("/tmp/allall")
         printf "%s", sz " | "
         ct++
         if ( ct > (COLS-1) ) {
