@@ -38,7 +38,7 @@ puttable() {
         sub(/[.]/,"",sz)
         n=split(sz, A, "/")
         sz = "[" A[n] "]"  "(" u sz ")"
-        if ( $0 ~= "") {
+        if ( $0 != "") {
             print "cat " $0 >> "/tmp/allall"
             close("/tmp/allall")
         }
