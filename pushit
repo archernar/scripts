@@ -19,6 +19,7 @@ puttable() {
     java Sorter > fred
     cat fred | gawk -v sec="$1" '
     BEGIN {
+      dq = "\""
       BASE=0
       COLS=4
       ct =BASE
@@ -39,7 +40,7 @@ puttable() {
         n=split(sz, A, "/")
         sz = "[" A[n] "]"  "(" u sz ")"
         if ( $0 != "") {
-            print "cat " $0 >> "/tmp/allall"
+            print "cat " dq $0 dq >> "/tmp/allall"
             close("/tmp/allall")
         }
         printf "%s", sz " | "
