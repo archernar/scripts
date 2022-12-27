@@ -1,0 +1,13 @@
+find /wherever/your/files/hide -type f -exec ls -1rt "{}" +;
+
+
+find . -printf "%T@ %Tc %p\n" | sort -n
+printf arguments from man find:
+
+%Tk: File's last modification time in the format specified by k.
+
+@: seconds since Jan. 1, 1970, 00:00 GMT, with fractional part.
+
+c: locale's date and time (Sat Nov 04 12:02:33 EST 1989).
+
+%p: File's name.
