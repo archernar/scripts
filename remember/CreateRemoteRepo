@@ -1,0 +1,95 @@
+#!/usr/bin/bash
+Tmp="/tmp/$$"
+trap 'rm -f "$Tmp" >/dev/null 2>&1' 0
+trap "exit 2" 1 2 3 13 15
+rm -f "$Tmp" >/dev/null 2>&1
+
+sudo apt update
+sudo apt install git apache2 apache2-utils
+
+# Configuring Apache HTTP Server for Git:
+# Enable Apache mod_env, mod_cgi, mod_alias and mod_rewrite modules
+sudo a2enmod env cgi alias rewrite
+
+# Create a new directory /var/www/git for keeping all the Git repositories
+sudo mkdir /var/www/git
+
+rm -f $Tmp
+cat <<EOF > $Tmp
+<VirtualHost *:80>
+ServerAdmin webmaster@localhost
+ 
+SetEnv GIT_PROJECT_ROOT /var/www/git
+SetEnv GIT_HTTP_EXPORT_ALL
+ScriptAlias /git/ /usr/lib/git-core/git-http-backend/
+ 
+Alias /git /var/www/git
+ 
+<Directory /usr/lib/git-core>
+Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+AllowOverride None
+Require all granted
+</Directory>
+ 
+DocumentRoot /var/www/html
+ 
+<Directory /var/www>
+Options Indexes FollowSymLinks MultiViews
+AllowOverride None
+Require all granted
+</Directory>
+ 
+ 
+ErrorLog ++{APACHE_LOG_DIR}/error.log
+LogLevel warn
+CustomLog ++{APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+EOF
+sudo sed 's/++/$/g' $Tmp > /etc/apache2/sites-available/git.conf
+
+
+# Disable the default Apache site configuration with the following command:
+sudo a2dissite 000-default.conf
+
+# Enable the Git site configuration with the following command:
+$ sudo a2ensite git.conf
+
+# Now, restart Apache HTTP server with the following command:
+sudo systemctl restart apache2
+
+rm -f $Tmp
+cat <<EOF > $Tmp
+   #!/usr/bin/bash                                                                                           
+                                                                                                             
+   #                                                                                                         
+   # https://linuxhint.com/git_server_http_ubuntu/                                                           
+   #                                                                                                         
+                                                                                                             
+   GIT_DIR="/var/www/git"                                                                                    
+   REPO_NAME=++1                                                                                              
+                                                                                                             
+   mkdir -p "++{GIT_DIR}/++{REPO_NAME}.git"                                                                    
+   cd "++{GIT_DIR}/++{REPO_NAME}.git"                                                                          
+                                                                                                             
+   git init --bare &> /dev/null                                                                              
+   touch git-daemon-export-ok                                                                                
+   cp hooks/post-update.sample hooks/post-update                                                             
+   git config http.receivepack true                                                                          
+   git update-server-info                                                                                    
+   chown -Rf www-data:www-data "++{GIT_DIR}/++{REPO_NAME}.git"                                                 
+   echo "Git repository '++{REPO_NAME}' created in ++{GIT_DIR}/++{REPO_NAME}.git"  
+
+EOF
+
+sudo sed 's/++/$/g' $Tmp > /usr/local/bin/git-create-repo.sh
+
+# Create the repo with
+# sudo git-create-repo.sh test
+#
+# Test the repo with
+# git clone http://<IP>/git/test.git
+
+
+
+# https://linuxhint.com/git_server_http_ubuntu/
