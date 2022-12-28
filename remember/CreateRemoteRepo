@@ -1,10 +1,11 @@
 #!/usr/bin/bash
 Tmp="/tmp/$$"
+Tmp1="/tmp/$$__$$"
 trap 'rm -f "$Tmp" >/dev/null 2>&1' 0
 trap "exit 2" 1 2 3 13 15
-rm -f "$Tmp" >/dev/null 2>&1
+rm -f "$Tmp" "$Tmp1"  >/dev/null 2>&1
 
-sudo apt update
+#sudo apt update
 sudo apt install git apache2 apache2-utils
 
 # Configuring Apache HTTP Server for Git:
@@ -12,7 +13,8 @@ sudo apt install git apache2 apache2-utils
 sudo a2enmod env cgi alias rewrite
 
 # Create a new directory /var/www/git for keeping all the Git repositories
-sudo mkdir /var/www/git
+sudo rm -rf /var/www/git
+sudo mkdir -p /var/www/git
 
 rm -f $Tmp
 cat <<EOF > $Tmp
@@ -46,14 +48,19 @@ CustomLog ++{APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 
 EOF
-sudo sed 's/++/$/g' $Tmp > /etc/apache2/sites-available/git.conf
+
+
+echo "**********************************"
+echo "**   Create git.conf"
+sudo sed 's/++/$/g' $Tmp > $Tmp1
+sudo cp $Tmp1 /etc/apache2/sites-available/git.conf
 
 
 # Disable the default Apache site configuration with the following command:
 sudo a2dissite 000-default.conf
 
 # Enable the Git site configuration with the following command:
-$ sudo a2ensite git.conf
+sudo a2ensite git.conf
 
 # Now, restart Apache HTTP server with the following command:
 sudo systemctl restart apache2
@@ -78,17 +85,25 @@ cat <<EOF > $Tmp
    git config http.receivepack true                                                                          
    git update-server-info                                                                                    
    chown -Rf www-data:www-data "++{GIT_DIR}/++{REPO_NAME}.git"                                                 
-   echo "Git repository '++{REPO_NAME}' created in ++{GIT_DIR}/++{REPO_NAME}.git"  
-
+   echo "Git repository created"
 EOF
+sudo sed 's/++/$/g' $Tmp > $Tmp1
+echo "**********************************"
+echo "**   Create git-create-repo.sh"
+sudo cp $Tmp1 /usr/local/bin/git-create-repo.sh
+sudo chmod +x /usr/local/bin/git-create-repo.sh
 
-sudo sed 's/++/$/g' $Tmp > /usr/local/bin/git-create-repo.sh
+MYIP=`curl --silent http://checkip.amazonaws.com`
+echo "$MYIP"
+echo "+---------------------------------------------+"
+echo "# Create the repo with"
+echo "# sudo git-create-repo.sh test"
+echo ""
+echo "# Test the repo with"
+echo "# git clone http://$MYIP/git/test.git"
+echo "+---------------------------------------------+"
+echo ""
 
-# Create the repo with
-# sudo git-create-repo.sh test
-#
-# Test the repo with
-# git clone http://<IP>/git/test.git
 
 
 
