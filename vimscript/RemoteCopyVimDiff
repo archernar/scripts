@@ -1,0 +1,2 @@
+#ssh `whoami`@$1 "cat $2" | diff - $2
+rcp `whoami`@$1:$2 /tmp/remotefile; vimdiff $2 /tmp/remotefile
