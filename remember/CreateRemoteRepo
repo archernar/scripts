@@ -5,17 +5,59 @@ trap 'rm -f "$Tmp" >/dev/null 2>&1' 0
 trap "exit 2" 1 2 3 13 15
 rm -f "$Tmp" "$Tmp1"  >/dev/null 2>&1
 
-#sudo apt update
+KILLREPO="NO"
+APTUPDATE="NO"
+
+while getopts "ku" arg
+do
+	case $arg in
+        k) KILLREPO="YES"
+           ;;
+        u) APTUPDATE="YES"
+           ;;
+	    *) exit 0
+           ;;
+	esac
+done
+shift $(($OPTIND - 1))
+
+echo "**********************************"
+echo "**  Apt update (optional)"
+echo "**"
+if [ "$APTUPDATE" = "YES" ]; then
+    sudo apt update
+fi
+
+echo "**********************************"
+echo "**  Apt installs"
+echo "**"
 sudo apt install git apache2 apache2-utils
 
+echo "**********************************"
+echo "**  Config apache for git"
+echo "**"
 # Configuring Apache HTTP Server for Git:
 # Enable Apache mod_env, mod_cgi, mod_alias and mod_rewrite modules
 sudo a2enmod env cgi alias rewrite
 
+echo "**********************************"
+echo "**  Directory for repos"
+echo "**"
 # Create a new directory /var/www/git for keeping all the Git repositories
-sudo rm -rf /var/www/git
+if [ "$KILLREPO" = "YES" ]; then
+    echo "    **********************************"
+    echo "    **   removing existing repo"
+    echo "    **"
+    sudo rm -rf /var/www/git
+fi
+echo "**********************************"
+echo "**  Assert directory for repos"
+echo "**"
 sudo mkdir -p /var/www/git
 
+echo "**********************************"
+echo "**  Create git.conf"
+echo "**"
 rm -f $Tmp
 cat <<EOF > $Tmp
 <VirtualHost *:80>
@@ -49,22 +91,32 @@ CustomLog ++{APACHE_LOG_DIR}/access.log combined
 
 EOF
 
-
-echo "**********************************"
-echo "**   Create git.conf"
 sudo sed 's/++/$/g' $Tmp > $Tmp1
 sudo cp $Tmp1 /etc/apache2/sites-available/git.conf
 
 
+echo "**********************************"
+echo "**  Disable default apache config"
+echo "**"
 # Disable the default Apache site configuration with the following command:
 sudo a2dissite 000-default.conf
 
+echo "**********************************"
+echo "**  Enable git config"
+echo "**"
 # Enable the Git site configuration with the following command:
 sudo a2ensite git.conf
 
-# Now, restart Apache HTTP server with the following command:
+echo "**********************************"
+echo "**  Restart apache"
+echo "**"
+# restart Apache HTTP server with the following command:
 sudo systemctl restart apache2
 
+echo "**********************************"
+echo "**  Create git-create-repo.sh"
+echo "**"
+rm -f $Tmp
 rm -f $Tmp
 cat <<EOF > $Tmp
    #!/usr/bin/bash                                                                                           
@@ -88,20 +140,29 @@ cat <<EOF > $Tmp
    echo "Git repository created"
 EOF
 sudo sed 's/++/$/g' $Tmp > $Tmp1
-echo "**********************************"
-echo "**   Create git-create-repo.sh"
 sudo cp $Tmp1 /usr/local/bin/git-create-repo.sh
 sudo chmod +x /usr/local/bin/git-create-repo.sh
 
 MYIP=`curl --silent http://checkip.amazonaws.com`
-echo "$MYIP"
-echo "+---------------------------------------------+"
-echo "# Create the repo with"
-echo "# sudo git-create-repo.sh test"
 echo ""
-echo "# Test the repo with"
-echo "# git clone http://$MYIP/git/test.git"
-echo "+---------------------------------------------+"
+echo "+----------------------------------------------------------------------------------------+"
+echo "#"
+echo "#  Repo IP $MYIP"
+echo "#  Repos are in /var/www/git"
+echo "#"
+echo "#  Create the repo with"
+echo "#  sudo git-create-repo.sh test"
+echo "#"
+echo "#  Test the repo with"
+echo "#"
+echo "#  git clone http://$MYIP/git/test.git"
+echo "#"
+echo "#  echo 'H' > a;cp a b; cp a c;git add .;git commit -m 'test commit'"
+echo "#  git push origin"
+echo "#"
+echo "#  echo 'H' > a;cp a b; cp a c;git add .;git commit -m 'test commit'; git push origin"
+echo "#"
+echo "+----------------------------------------------------------------------------------------+"
 echo ""
 
 
