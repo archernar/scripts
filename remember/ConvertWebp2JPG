@@ -1,0 +1,8 @@
+# Single
+ffmpeg -i file.webp out.png
+
+# Folder Full
+
+for x in ls *.webp; do  ffmpeg -i $x ${x%.webp}.jpg; done
+
+    
