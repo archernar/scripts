@@ -1,0 +1,70 @@
+#!/usr/bin/bash
+Tmp="/tmp/$$"
+trap 'rm -f "$Tmp" >/dev/null 2>&1' 0
+trap "exit 2" 1 2 3 13 15
+rm -f "$Tmp" >/dev/null 2>&1
+
+while getopts "a:r:" arg
+do
+	case $arg in
+            a) ACCOUNT=$OPTARG
+               ;;
+            r) REGION=$OPTARG
+               ;;
+	      *) exit 0
+               ;;
+	esac
+done
+shift $(($OPTIND - 1))
+FN="$1"
+
+
+cat <<EOF  | sed "s/TITLE/$1/" > "$1.java.html"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Java Code Example">
+<meta name="keywords" content="Java, Tutorial, Basics, beginners">
+<title>Java Programming Example</title>
+<link rel="stylesheet" href="programming_notes_v3.css">
+<link href="prism.min.css" rel="stylesheet" />
+<link href="prism-line-numbers.min.css" rel="stylesheet" />
+<link href="prism-line-highlight.min.css" rel="stylesheet" />
+</head>
+<body>
+<div id="wrap-outer">
+        <div id="wrap-inner">
+            <div id="content-main">
+                <h3>TITLE</h3>
+<pre><code class="language-java line-numbers">
+EOF
+
+
+
+
+cat "$FN" >> "$1.java.html"
+
+
+
+
+cat <<EOF >> "$1.java.html"
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="programming_notes_v3.js"></script>
+<script src="prism.min.js"></script>
+<script src="prism-line-numbers.min.js"></script>
+<script src="prism-line-highlight.min.js"></script>
+<script src="prism-autoloader.min.js"></script>
+
+</body>
+</html>
+
+EOF
+
+
+#cat Index.html | sed 's/TITLE/$1/' | gawk -f includer.awk > zed.html

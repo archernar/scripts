@@ -6,8 +6,9 @@ Home Repo:   https://github.com/archernar/scripts
 
 |                                |                                |                                |                                |
 | :---------------------------- | :---------------------------- | :---------------------------- | :---------------------------- |
-| [BashTop](https://raw.githubusercontent.com/archernar/scripts/main/remember/BashTop) | [CreateRemoteRepo](https://raw.githubusercontent.com/archernar/scripts/main/remember/CreateRemoteRepo) | [GawkVars](https://raw.githubusercontent.com/archernar/scripts/main/remember/GawkVars) | [rsyncCopyRecursive](https://raw.githubusercontent.com/archernar/scripts/main/remember/rsyncCopyRecursive) | 
-| [ConvertWebp2JPG](https://raw.githubusercontent.com/archernar/scripts/main/remember/ConvertWebp2JPG) | [create_repo](https://raw.githubusercontent.com/archernar/scripts/main/remember/create_repo) | [RemoteCopyVimDiff](https://raw.githubusercontent.com/archernar/scripts/main/remember/RemoteCopyVimDiff) | [VimYankPJava](https://raw.githubusercontent.com/archernar/scripts/main/remember/VimYankPJava) | 
+| [BashTop](https://raw.githubusercontent.com/archernar/scripts/main/remember/BashTop) | [create_repo](https://raw.githubusercontent.com/archernar/scripts/main/remember/create_repo) | [RemoteCopyVimDiff](https://raw.githubusercontent.com/archernar/scripts/main/remember/RemoteCopyVimDiff) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+| [ConvertWebp2JPG](https://raw.githubusercontent.com/archernar/scripts/main/remember/ConvertWebp2JPG) | [GawkVars](https://raw.githubusercontent.com/archernar/scripts/main/remember/GawkVars) | [rsyncCopyRecursive](https://raw.githubusercontent.com/archernar/scripts/main/remember/rsyncCopyRecursive) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
+| [CreateRemoteRepo](https://raw.githubusercontent.com/archernar/scripts/main/remember/CreateRemoteRepo) | [MakeHTMLCodePage](https://raw.githubusercontent.com/archernar/scripts/main/remember/MakeHTMLCodePage) | [VimYankPJava](https://raw.githubusercontent.com/archernar/scripts/main/remember/VimYankPJava) | [](https://raw.githubusercontent.com/archernar/scripts/main) | 
 
 
 
