@@ -27,10 +27,9 @@ cat <<EOF  | sed "s/TITLE/$1/" > "$1.java.html"
 <meta name="description" content="Java Code Example">
 <meta name="keywords" content="Java, Tutorial, Basics, beginners">
 <title>Java Programming Example</title>
-<link rel="stylesheet" href="programming_notes_v3.css">
-<link href="prism.min.css" rel="stylesheet" />
-<link href="prism-line-numbers.min.css" rel="stylesheet" />
-<link href="prism-line-highlight.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="http://www.happyahab.com/pri.css">
+
 </head>
 <body>
 <div id="wrap-outer">
@@ -40,13 +39,7 @@ cat <<EOF  | sed "s/TITLE/$1/" > "$1.java.html"
 <pre><code class="language-java line-numbers">
 EOF
 
-
-
-
 cat "$FN" >> "$1.java.html"
-
-
-
 
 cat <<EOF >> "$1.java.html"
 </code></pre>
@@ -54,12 +47,7 @@ cat <<EOF >> "$1.java.html"
         </div>
     </div>
 </div>
-
-<script src="programming_notes_v3.js"></script>
-<script src="prism.min.js"></script>
-<script src="prism-line-numbers.min.js"></script>
-<script src="prism-line-highlight.min.js"></script>
-<script src="prism-autoloader.min.js"></script>
+<script src="http://www.happyahab.com/pri.js"></script>
 
 </body>
 </html>
