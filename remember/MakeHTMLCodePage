@@ -4,18 +4,6 @@ trap 'rm -f "$Tmp" >/dev/null 2>&1' 0
 trap "exit 2" 1 2 3 13 15
 rm -f "$Tmp" >/dev/null 2>&1
 
-COPY="NO"
-while getopts "c" arg
-do
-	case $arg in
-            c) COPY="YES"
-               ;;
-	      *) exit 0
-               ;;
-	esac
-done
-shift $(($OPTIND - 1))
-
 FN="$1"
 HN="$HOME/HJ/$1.html"
 
