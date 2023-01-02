@@ -8,7 +8,7 @@ FN="$1"
 HN="$HOME/HJ/$1.html"
 
 
-cat <<EOF  | sed "s/TITLE/$1/" > "$HN"
+cat <<EOF > "$Tmp"
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,9 +28,9 @@ cat <<EOF  | sed "s/TITLE/$1/" > "$HN"
 <pre><code class="language-java line-numbers">
 EOF
 
-cat "$FN" >> "$HN"
+cat "$FN" >> "$Tmp"
 
-cat <<EOF >> "$HN"
+cat <<EOF >> "$Tmp"
 </code></pre>
             </div>
         </div>
@@ -43,4 +43,7 @@ cat <<EOF >> "$HN"
 
 EOF
 
-#cat Index.html | sed 's/TITLE/$1/' | gawk -f includer.awk > zed.html
+
+cat $Tmp  | gawk -v rep="$1" '{sz=$0;sub(/^[.][/]/,"",rep);sub(/TITLE/,rep, sz);print sz;}' > "$HN"
+
+
