@@ -1,0 +1,7 @@
+count=1
+while read lineA
+    do 
+        lineB=`sed -n "$count"p fileb`
+        echo "mv \"$lineA\"  \"$lineB.mp3\""
+        count=`expr $count + 1`
+done < filea
